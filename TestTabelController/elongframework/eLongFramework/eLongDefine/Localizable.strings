@@ -1,0 +1,82 @@
+/*
+ Localizable.strings
+ ElongClient
+ 
+ Created by bin xing on 11-1-30.
+ Copyright 2011 DP. All rights reserved.
+
+ by 王曙光
+ 2015.4.21调整，以后此文件只允许存放提示文案
+ 格式如下：
+ "tips_功能描述" = "文案描述"
+ */
+"tips_fieldNameIsError"="中文姓名请勿使用空格，英文姓名请用'/'替代空格";
+"tips_phoneNumIsError"="请正确输入手机号，手机号为1开头的11位数字";
+"tips_emailIsError"="电子邮箱格式不正确，请重新输入";
+"tips_cannotCall"="当前设备不支持通话功能";
+"tips_FailedToLocate"="定位失败，请确认已打开手机定位功能";
+"tips_locating"="正在校准定位，请稍后尝试";
+"tips_latestVersion"="当前版本为最新版本";
+"tips_noCityList"="未搜索到城市列表";
+"tips_uploadAfterSelectPicture"="请您选择图片后上传";
+"tips_limitNumberOfPictures"="一次最多只能上传%d张图片";
+"tips_wrongName"="入住人包含非法姓名“%@”";
+"tips_allNames"="请输入所有入住人姓名";
+"tips_notFoundTheAlipay"="未发现支付宝客户端，请您更换别的%@方式或下载支付宝";
+"tips_notFoundTheWechat"="未发现微信客户端，请您更换别的%@方式或下载微信";
+"tips_wechatVersionIsTooLow"="您微信客户端版本过低，请您更换别的%@方式或更新微信";
+"tips_failedToOrder"="下单失败请重新尝试，或拨打400-666-1166电话预订";
+"tips_notGetTheGuaranteeTime"="未能获取担保时间，请稍候再试";
+"tips_roomIsFull"="该房型满房，请选择其它房型入住！";
+"tips_collectionHotelSucceed"="收藏酒店成功";
+"tips_deletecollectionHotelSucceed"="取消收藏成功";
+"tips_deletecollectionHotelTips" = "将取消对这家酒店的收藏。同时会从“我的收藏的酒店”列表中删除";
+"tips_cannotBookTemporary"="对不起，%@在 %@ 至 %@ 期间暂时不能预订，请选择其它日期。";
+"tips_cameraCannotBeUsed"="相机不可用";
+"tips_notModifyTheInformation"="您还没有修改任何信息哦~";
+"tips_dontSentMultiple"="请不要重复提交。";
+"tips_correctEnteredInformation"="请您帮忙输入正确信息！";
+"tips_nameAdressPhoneNumber"="酒店名，酒店地址，酒店电话，必须填写一个。";
+"tips_hotelNameLessThan"="酒店名不能超过100个字。";
+"tips_adressLessThan"="酒店地址不能超过200个字。";
+"tips_hotelPhoneNumberLessThan"="酒店电话不能超过25个字。";
+"tips_userNameLessThan"="用户姓名不能超过30个字。";
+"tips_userPhoneNumberLessThan"="手机号不能超过11个数字。";
+"tips_networkError"="网络有问题哦，请重试";
+"tips_successfulSubmission"="提交成功";
+"tips_hotelCoordinateDoesntExist"="抱歉，酒店坐标不存在，请使用其它软件进行导航";
+"tips_successfulCollection"="收藏成功";
+"tips_hotelAdressCopied"="酒店地址已复制到剪贴板";
+"tips_networkNoEnergy"="您的网络不太给力，请稍后再试";
+"tips_successfullyAdded"="添加成功！";
+"tips_failedToPassbook"="Passbook文件生成失败";
+"tips_cannotPassbook"="非常抱歉，该订单无法生成Passbook";
+"tips_signatureError"="签名错误";
+"tips_contactService"="联系服务商";
+"tips_orderHasBeenCancelled"="该订单已被取消，请重新预订。";
+"tips_FailedToGetThePaymentPage"="未能获取支付页面，请重试或拨打400-666-1166咨询预订";
+"tips_hotelInformationError"="酒店信息错误";
+"tips_calibrationLocation"="正在校准定位，请稍候";
+"tips_hotelNameContainsIllegalCharacters"="酒店名称包含非法字符";
+"tips_hotelNotFound"="未找到搜索酒店";
+"tips_hotelNotSearch"="未查询到您搜索的酒店";
+"tips_hotelLocationInformationNotFound"="未找到酒店位置信息";
+"tips_returnsWillCancelTheUpload"="返回会取消上传,确定返回?";
+"tips_uploadPicturesAgain"="确定返回重新上传图片?";
+"tips_dontClickTooOften"="请您不要点击的过于频繁";
+"tips_noPictures"="没有可上传的图片";
+"tips_pictureIsTooMuch"="最大上传30张图片,您已经选择了30张图片";
+"tips_haveNotSelectedInPeople"="您尚未选择入住人";
+"tips_onePersonEnough"="每间房只需选择一位入住人";
+"tips_oneRoomOnePerson"="每间房填写一个入住人";
+"tips_cannotSubscribeCannotCollect"="抱歉，该酒店无法预订，暂不支持收藏，谢谢。";
+"tips_leaveApplicationForNavigation"="是否离开应用进行导航？";
+"tips_enterNoMoreThan"="请不要输入超过%d个字。";
+"tips_need_verify_account_hb"="为了保护您的账户安全，我们需要对您的账户进行验证，未验证账户可能无法正常领取和使用红包。";
+"tips_cannot_receive_verify_code"="若收不到验证码，请致电400-688-2277。";
+"tips_verify_code_post_way"="验证码会发送到您的注册手机";
+"tips_need_verify_account"="为了保证您的账户安全，我们需要对您的账户进行验证。";
+"tips_complainSuecces"="在线反馈提交成功";
+"tips_complainFail"="在线反馈提交失败";
+"tips_complainCascadeFail"="级联菜单获取失败";
+

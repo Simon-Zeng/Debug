@@ -1,0 +1,18 @@
+platform :ios, '7.0'
+inhibit_all_warnings!
+
+target 'eLongFramework' do
+    pod 'JSONModel', '~> 1.1.0'
+    pod 'RegexKitLite', '~> 4.0'
+    pod 'pop', '~> 1.0'
+    pod 'FXBlurView', '~> 1.6.3'
+    pod 'SDWebImage', '~> 3.7.2'
+    pod 'Aspects', '~> 1.4.1'
+    pod 'FXLabel', '~> 1.5.8'
+    pod 'TTTAttributedLabelVodafone', '~> 1.13.3.1'
+    pod 'PLCrashReporter', '~> 1.2.0'
+    pod 'Masonry', '~> 0.6.3'
+    pod 'FMDB', '~> 2.5'
+    #pod 'iOS-WebP', '~> 0.4'
+    pod 'ZipArchive', '~> 1.4.0'
+end

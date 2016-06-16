@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D6018FB5-B683-42F4-945D-5CACAA432D96</string>
+	<key>IDESourceControlProjectName</key>
+	<string>eLongFramework</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EA9822721EEEAE0133854C862781FDEB7BB9A82C</key>
+		<string>http://192.168.33.130:8080/iOS/eLongFramework.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>eLongFramework.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EA9822721EEEAE0133854C862781FDEB7BB9A82C</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>http://192.168.33.130:8080/iOS/eLongFramework.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EA9822721EEEAE0133854C862781FDEB7BB9A82C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EA9822721EEEAE0133854C862781FDEB7BB9A82C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>eLongFramework</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>service_list</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>eLongImageTakePicture</string>
+			<key>protocol</key>
+			<string>eLongTakePictureServiceDelegate</string>
+			<key>class</key>
+			<string>eLongTakePictureService</string>
+			<key>singleton</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>eLongImageSelectAndUpload</string>
+			<key>protocol</key>
+			<string>eLongPhotoUploadServiceDelegate</string>
+			<key>class</key>
+			<string>eLongPhotoUploadService</string>
+			<key>singleton</key>
+			<false/>
+		</dict>
+	</array>
+</dict>
+</plist>

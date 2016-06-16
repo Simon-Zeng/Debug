@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>route_list</key>
+	<array>
+		<dict>
+			<key>url</key>
+			<string>hotel/hoteldetail</string>
+			<key>object</key>
+			<string>HotelDetailViewController</string>
+			<key>storyboard</key>
+			<string>storyboard</string>
+		</dict>
+	</array>
+	<key>service_list</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Login</string>
+			<key>protocol</key>
+			<string>LoginProtocol</string>
+			<key>class</key>
+			<string>LoginClass</string>
+			<key>singleton</key>
+			<false/>
+		</dict>
+	</array>
+</dict>
+</plist>

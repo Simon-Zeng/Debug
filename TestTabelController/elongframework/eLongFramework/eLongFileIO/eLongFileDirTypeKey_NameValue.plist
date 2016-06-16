@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>FileDirName</key>
+	<array>
+		<string>MyElong</string>
+		<string>CustomerService</string>
+		<string>Train</string>
+		<string>Flight</string>
+		<string>Hotel</string>
+		<string>LoginAndRegister</string>
+		<string>InterHotel</string>
+		<string>Home</string>
+		<string>Apartment</string>
+		<string>PlayLocal</string>
+		<string>Taxi</string>
+		<string>Groupon</string>
+	</array>
+</dict>
+</plist>

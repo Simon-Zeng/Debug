@@ -1,0 +1,180 @@
+# eLongFramework
+## 代码结构概览
+### eLongBus(总线处理所有的路由协议和服务)
+- `eLongRoutes`
+- `eLongServices`
+- `eLongBus`
+
+### eLongExtension(category)
+* `<Foundation>`
+	- `NSData+Base64`
+	- `NSString+URLEncoding`
+	- `NSArray+Log`
+	- `NSString+TextSize`
+	- `UIView+LY`
+	- `NSDate+Helper`
+
+### eLongStorage(存储模块UserDefault和Keychain)
+* `<Userdefault>`  
+	- `eLongUserDefault`
+* `<Keychain>`
+	* `<KeychainItemWrapper>`
+		- `KeychainItemWrapper`
+		- `eLongKeyChain`
+
+### eLongCountly(Countly打点统计)
+* `<Countly>`
+	- `Countly`
+	- `Countly_OpenUDID`
+	- `Countly.xcdatamodeld`
+	- `CountlyDB`
+- `eLongCountlyEventBase`
+- `eLongCountlyEventClick`
+- `eLongCountlyEventInfo`
+- `elongCountlyEventShow`
+
+### eLongCrash(Crash收集平台)
+- `eLongCrashRequestModel`
+* `<Airbrake>`
+	- `CrashReporter.framework`
+	* `<gcalertview>`
+		- `GCAlelrtView`
+	* `<notifier>`
+		- `ABCrashReport`
+		- `ABNotice`
+		- `ABNotifier.bundle`
+		- `ABNotifier`
+		- `ABNotifierDelegate`
+		- `ABNotifierFunctions`
+
+### eLongDebug(Debug调试控件)
+* `<eLongDebugUI>`
+	- `eLongDebugView`
+	- `eLongDebugServerView`
+	- `eLongDebugActionView`
+	- `eLongDebugBusinessLineView`
+	- `eLongDebugCrashView`
+	- `eLongDebugNetworkView`
+	- `eLongDebugPerformanceView`
+	- `eLongDebugUserDefaultView`
+	- `eLongDebugKeychainView`
+	- `eLongDebugAdsView`
+* `<eLongDebugDB>`
+	- `eLongDebug.xcdatamodeld`
+	- `eLongDebugDB`
+* `<eLongDebugObject>`
+	- `eLongDebugObject`
+	- `eLongDebugNetwork`
+	- `eLongDebugServer`
+	- `eLongDebugPerformance`
+	- `eLongDebugStorage`
+	- `eLongDebugBusinessLine`
+	- `eLongDebugCrash`
+	- `eLongDebugChannel`
+	- `eLongDebugAds`
+* `<eLongDebugDBModel>`	
+	- `eLongDebugNetworkModel`
+	- `eLongDebugServerModel`
+	- `eLongDebugMemoryModel`
+	- `eLongDebugUserDefaultModel`
+	- `eLongDebugKeychainModel`
+	- `eLongDebugBusinessModel`
+	- `eLongDebugCrashModel`
+	- `eLongDebugChannelModel`
+	- `eLongDebugAdsModel`
+	- `eLongDebugManager`
+
+### eLongGPS(GPS模块)
+- `eLongLocation.bundle`
+- `eLongLocation`
+
+### eLongAccount(账户相关模块)
+- `eLongAccountDefine`
+- `eLongAccountInstanceBase`
+- `eLongAccountManager`
+- `eLongAccountUserInstance`
+- `eLongAccountCAInstance`
+- `eLongAccountHongBaoInstance`
+- `eLongAccountOrdersInstance`
+- `eLongAccountredDotInstance`
+* `Model`
+	- `eLongAccountUserModel`
+	- `eLongAccountCAModel`
+	- `eLongAccountModfiyUserRequestModel`
+	- `eLongAccountOrdersRequestModel`
+	- `eLongAccountAddressRequestModel`
+	- `eLongInvoiceRequestModel`
+	- `eLongCustomerRequestModel`
+	- `eLongRedDotModel`
+
+### eLongLoadImage(网络图片加载模块)
+* `<SDWebImage>`
+	- `eLongImageManager`
+	- `UIButton+eLongLoadImage`
+	- `UIImageView+eLongLoadImage`
+
+### eLongMVCBase(基础MVC模块)
+- `eLongResponseBaseModel`
+- `eLongResponseBaseModel`
+- `eLongRequestBaseModel`
+- `eLongRequestBaseModel`
+- `eLongMVCBase`
+
+### eLongJSONModel(JSONModel模块)
+- `JSONKeyMapper`
+- `JSONValueTransformer`
+- `JSONModel`
+- `JSONModelArray`
+- `JSONModelClassProperty`
+- `JSONModelError`
+
+### eLongLogger(日志模块)
+* `<DTBonjour>`
+	- `eLongLogBonjour`
+	- `eLongLogger`
+	- `eLongLoggerComment`
+
+### eLongNetworking(基层网络模块)
+- `eLongNetworking`
+* `<Cache>`
+	- `eLongNetworkCache`
+* `<ContentEncoding>`
+	- `eLongHTTPAESEncoding`
+	- `eLongHTTPBase64Encoding`
+	- `eLongHTTPContentEncoding`
+	- `eLongHTTPGNUzipEncoding`
+	- `eLongHTTPLZSSEncoding`
+	- `eLongHTTPURLEncoding`
+    - `eLongHTTPEncryption`
+* `<NSURLConnection>`
+	- `eLongHTTPRequest`
+	- `eLongHTTPRequestDelegate`
+	- `eLongHTTPRequestOperation`
+	- `eLongHTTPRequestOperationDelegate`
+* `<Reachability>`
+	- `eLongNetworkReachability`
+* `<Request>`
+	- `eLongNetworkRequest`
+* `<Serialization>`
+	- `eLongNetworkSerialiaztion`
+
+### eLongJSONKit
+- `JONSKit`
+
+### eLongUMeng
+- `MobClick`
+- `MobClickSocialAnalytics`
+- `eLongUMeng`
+* `libMobClickLibrary.a`
+
+### eLongFileIO
+- `eLongFileOUtils`
+- `eLongFileOManager`
+* `<FCFileManager>`
+	- `FCFileManager`
+* `<FileIOModel>`
+	- `eLongFileIOEnum`
+	- `eLongFileReadModel`
+	- `eLongFileWriteModel`
+* `<Resource>`
+	- `eLongFileDirTypeKey_NameValue.plist`

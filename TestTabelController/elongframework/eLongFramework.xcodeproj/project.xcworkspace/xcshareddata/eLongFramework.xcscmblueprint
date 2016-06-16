@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A2EB35C4FFD63268E6712DD0D35BDDE149CC8D26",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "168385b2-9697-48c0-9a38-a2aa40b88458++5566" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A2EB35C4FFD63268E6712DD0D35BDDE149CC8D26" : 0,
+    "168385b2-9697-48c0-9a38-a2aa40b88458++5566" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D6018FB5-B683-42F4-945D-5CACAA432D96",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A2EB35C4FFD63268E6712DD0D35BDDE149CC8D26" : "eLongFramework",
+    "168385b2-9697-48c0-9a38-a2aa40b88458++5566" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "eLongFramework",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "eLongFramework.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/svn.elong.cn\/svn\/Code",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "168385b2-9697-48c0-9a38-a2aa40b88458++5566"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/192.168.33.130:8080\/iOS\/eLongFramework.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A2EB35C4FFD63268E6712DD0D35BDDE149CC8D26"
+    }
+  ]
+}
