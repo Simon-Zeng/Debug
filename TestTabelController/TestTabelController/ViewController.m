@@ -13,6 +13,8 @@
 #import "feedState.h"
 #import "feedFactory.h"
 #import "feeData.h"
+#import "DebugManager.h"
+#import "DebugView.h"
 
 @interface ViewController ()
 
@@ -22,6 +24,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (void)test
+{
     baoxiaoModel *baoxiao = [[baoxiaoModel alloc]init];
     baoxiao.count = @"42342";
     baoxiao.remark = @"这是一个报销";
@@ -47,6 +53,7 @@
     
     [feed1 feedWihthFeedData:data1];
     [feed2 feedWihthFeedData:data2];
+
 }
 
 - (void)didReceiveMemoryWarning {

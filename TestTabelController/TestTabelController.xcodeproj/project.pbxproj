@@ -26,32 +26,35 @@
 		35403D471D05C556005D25CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35403D451D05C556005D25CE /* LaunchScreen.storyboard */; };
 		359142BF1D1317A5003EC0F4 /* Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 359142BE1D1317A5003EC0F4 /* Debug.m */; };
 		359142C41D131B6C003EC0F4 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 359142C31D131B6C003EC0F4 /* PhotoViewController.m */; };
+		359142C91D177545003EC0F4 /* DebugManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 359142C81D177545003EC0F4 /* DebugManager.m */; };
+		359142CC1D17755F003EC0F4 /* DebugView.m in Sources */ = {isa = PBXBuildFile; fileRef = 359142CB1D17755F003EC0F4 /* DebugView.m */; };
+		359142CF1D177578003EC0F4 /* DebugModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 359142CE1D177578003EC0F4 /* DebugModel.m */; };
 		35FC157E1D0BB62200A71FFB /* feedState.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FC157D1D0BB62200A71FFB /* feedState.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		05E45D16D5A26320E45D7783 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		350206321D0C3FB4005787EE /* baoxiaoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = baoxiaoModel.h; sourceTree = "<group>"; };
-		350206331D0C3FB4005787EE /* baoxiaoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = baoxiaoModel.m; sourceTree = "<group>"; };
-		350206351D0C3FCE005787EE /* qingjiaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qingjiaModel.h; sourceTree = "<group>"; };
-		350206361D0C3FCE005787EE /* qingjiaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = qingjiaModel.m; sourceTree = "<group>"; };
-		350206381D0C469F005787EE /* checkFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checkFeed.h; sourceTree = "<group>"; };
-		350206391D0C469F005787EE /* checkFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checkFeed.m; sourceTree = "<group>"; };
-		3502063B1D0C4F69005787EE /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Context.h; sourceTree = "<group>"; };
-		3502063C1D0C4F69005787EE /* Context.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Context.m; sourceTree = "<group>"; };
-		3502063E1D0C4F7F005787EE /* State.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = State.h; sourceTree = "<group>"; };
-		3502063F1D0C4FAD005787EE /* UnauthorizedState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnauthorizedState.h; sourceTree = "<group>"; };
-		350206401D0C4FAD005787EE /* UnauthorizedState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnauthorizedState.m; sourceTree = "<group>"; };
-		350206421D0C4FBA005787EE /* authorizedState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = authorizedState.h; sourceTree = "<group>"; };
-		350206431D0C4FBA005787EE /* authorizedState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = authorizedState.m; sourceTree = "<group>"; };
-		350206451D0CD437005787EE /* feeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = feeData.h; sourceTree = "<group>"; };
-		350206461D0CD437005787EE /* feeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = feeData.m; sourceTree = "<group>"; };
-		350206481D0CD460005787EE /* feedFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = feedFactory.h; sourceTree = "<group>"; };
-		350206491D0CD461005787EE /* feedFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = feedFactory.m; sourceTree = "<group>"; };
-		3502064B1D0CD47B005787EE /* feed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = feed.h; sourceTree = "<group>"; };
-		3502064C1D0CD47B005787EE /* feed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = feed.m; sourceTree = "<group>"; };
-		3502064E1D0CD4B1005787EE /* concrteFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = concrteFeed.h; sourceTree = "<group>"; };
-		3502064F1D0CD4B1005787EE /* concrteFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = concrteFeed.m; sourceTree = "<group>"; };
+		350206321D0C3FB4005787EE /* baoxiaoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = baoxiaoModel.h; path = ../baoxiaoModel.h; sourceTree = "<group>"; };
+		350206331D0C3FB4005787EE /* baoxiaoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = baoxiaoModel.m; path = ../baoxiaoModel.m; sourceTree = "<group>"; };
+		350206351D0C3FCE005787EE /* qingjiaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qingjiaModel.h; path = ../qingjiaModel.h; sourceTree = "<group>"; };
+		350206361D0C3FCE005787EE /* qingjiaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = qingjiaModel.m; path = ../qingjiaModel.m; sourceTree = "<group>"; };
+		350206381D0C469F005787EE /* checkFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = checkFeed.h; path = ../checkFeed.h; sourceTree = "<group>"; };
+		350206391D0C469F005787EE /* checkFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = checkFeed.m; path = ../checkFeed.m; sourceTree = "<group>"; };
+		3502063B1D0C4F69005787EE /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Context.h; path = ../Context.h; sourceTree = "<group>"; };
+		3502063C1D0C4F69005787EE /* Context.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Context.m; path = ../Context.m; sourceTree = "<group>"; };
+		3502063E1D0C4F7F005787EE /* State.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = State.h; path = ../State.h; sourceTree = "<group>"; };
+		3502063F1D0C4FAD005787EE /* UnauthorizedState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnauthorizedState.h; path = ../UnauthorizedState.h; sourceTree = "<group>"; };
+		350206401D0C4FAD005787EE /* UnauthorizedState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnauthorizedState.m; path = ../UnauthorizedState.m; sourceTree = "<group>"; };
+		350206421D0C4FBA005787EE /* authorizedState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = authorizedState.h; path = ../authorizedState.h; sourceTree = "<group>"; };
+		350206431D0C4FBA005787EE /* authorizedState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = authorizedState.m; path = ../authorizedState.m; sourceTree = "<group>"; };
+		350206451D0CD437005787EE /* feeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = feeData.h; path = ../feeData.h; sourceTree = "<group>"; };
+		350206461D0CD437005787EE /* feeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = feeData.m; path = ../feeData.m; sourceTree = "<group>"; };
+		350206481D0CD460005787EE /* feedFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = feedFactory.h; path = ../feedFactory.h; sourceTree = "<group>"; };
+		350206491D0CD461005787EE /* feedFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = feedFactory.m; path = ../feedFactory.m; sourceTree = "<group>"; };
+		3502064B1D0CD47B005787EE /* feed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = feed.h; path = ../feed.h; sourceTree = "<group>"; };
+		3502064C1D0CD47B005787EE /* feed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = feed.m; path = ../feed.m; sourceTree = "<group>"; };
+		3502064E1D0CD4B1005787EE /* concrteFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = concrteFeed.h; path = ../concrteFeed.h; sourceTree = "<group>"; };
+		3502064F1D0CD4B1005787EE /* concrteFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = concrteFeed.m; path = ../concrteFeed.m; sourceTree = "<group>"; };
 		35403D341D05C556005D25CE /* TestTabelController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTabelController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35403D381D05C556005D25CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35403D3A1D05C556005D25CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -66,8 +69,14 @@
 		359142BE1D1317A5003EC0F4 /* Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Debug.m; sourceTree = "<group>"; };
 		359142C21D131B6C003EC0F4 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
 		359142C31D131B6C003EC0F4 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
-		35FC157C1D0BB62200A71FFB /* feedState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = feedState.h; sourceTree = "<group>"; };
-		35FC157D1D0BB62200A71FFB /* feedState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = feedState.m; sourceTree = "<group>"; };
+		359142C71D177545003EC0F4 /* DebugManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugManager.h; sourceTree = "<group>"; };
+		359142C81D177545003EC0F4 /* DebugManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugManager.m; sourceTree = "<group>"; };
+		359142CA1D17755F003EC0F4 /* DebugView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugView.h; sourceTree = "<group>"; };
+		359142CB1D17755F003EC0F4 /* DebugView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugView.m; sourceTree = "<group>"; };
+		359142CD1D177578003EC0F4 /* DebugModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugModel.h; sourceTree = "<group>"; };
+		359142CE1D177578003EC0F4 /* DebugModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugModel.m; sourceTree = "<group>"; };
+		35FC157C1D0BB62200A71FFB /* feedState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = feedState.h; path = ../feedState.h; sourceTree = "<group>"; };
+		35FC157D1D0BB62200A71FFB /* feedState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = feedState.m; path = ../feedState.m; sourceTree = "<group>"; };
 		6DE3402A784B8CB390207E55 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EF335B609005355AA2D2EA25 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -113,6 +122,7 @@
 		35403D361D05C556005D25CE /* TestTabelController */ = {
 			isa = PBXGroup;
 			children = (
+				359142C61D1774CE003EC0F4 /* Test */,
 				359142C11D131B4E003EC0F4 /* SimpleTableView */,
 				359142C01D1319F2003EC0F4 /* Memento */,
 				359142BC1D13178A003EC0F4 /* DeubgView */,
@@ -125,6 +135,52 @@
 				35403D451D05C556005D25CE /* LaunchScreen.storyboard */,
 				35403D481D05C556005D25CE /* Info.plist */,
 				35403D371D05C556005D25CE /* Supporting Files */,
+			);
+			path = TestTabelController;
+			sourceTree = "<group>";
+		};
+		35403D371D05C556005D25CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				35403D381D05C556005D25CE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		359142BC1D13178A003EC0F4 /* DeubgView */ = {
+			isa = PBXGroup;
+			children = (
+				359142BD1D1317A5003EC0F4 /* Debug.h */,
+				359142BE1D1317A5003EC0F4 /* Debug.m */,
+				359142C71D177545003EC0F4 /* DebugManager.h */,
+				359142C81D177545003EC0F4 /* DebugManager.m */,
+				359142CA1D17755F003EC0F4 /* DebugView.h */,
+				359142CB1D17755F003EC0F4 /* DebugView.m */,
+				359142CD1D177578003EC0F4 /* DebugModel.h */,
+				359142CE1D177578003EC0F4 /* DebugModel.m */,
+			);
+			path = DeubgView;
+			sourceTree = "<group>";
+		};
+		359142C01D1319F2003EC0F4 /* Memento */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Memento;
+			sourceTree = "<group>";
+		};
+		359142C11D131B4E003EC0F4 /* SimpleTableView */ = {
+			isa = PBXGroup;
+			children = (
+				359142C21D131B6C003EC0F4 /* PhotoViewController.h */,
+				359142C31D131B6C003EC0F4 /* PhotoViewController.m */,
+			);
+			path = SimpleTableView;
+			sourceTree = "<group>";
+		};
+		359142C61D1774CE003EC0F4 /* Test */ = {
+			isa = PBXGroup;
+			children = (
 				35FC157C1D0BB62200A71FFB /* feedState.h */,
 				35FC157D1D0BB62200A71FFB /* feedState.m */,
 				350206321D0C3FB4005787EE /* baoxiaoModel.h */,
@@ -149,40 +205,7 @@
 				3502064E1D0CD4B1005787EE /* concrteFeed.h */,
 				3502064F1D0CD4B1005787EE /* concrteFeed.m */,
 			);
-			path = TestTabelController;
-			sourceTree = "<group>";
-		};
-		35403D371D05C556005D25CE /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				35403D381D05C556005D25CE /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		359142BC1D13178A003EC0F4 /* DeubgView */ = {
-			isa = PBXGroup;
-			children = (
-				359142BD1D1317A5003EC0F4 /* Debug.h */,
-				359142BE1D1317A5003EC0F4 /* Debug.m */,
-			);
-			path = DeubgView;
-			sourceTree = "<group>";
-		};
-		359142C01D1319F2003EC0F4 /* Memento */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Memento;
-			sourceTree = "<group>";
-		};
-		359142C11D131B4E003EC0F4 /* SimpleTableView */ = {
-			isa = PBXGroup;
-			children = (
-				359142C21D131B6C003EC0F4 /* PhotoViewController.h */,
-				359142C31D131B6C003EC0F4 /* PhotoViewController.m */,
-			);
-			path = SimpleTableView;
+			path = Test;
 			sourceTree = "<group>";
 		};
 		411E955DCC1350655185C279 /* Pods */ = {
@@ -322,8 +345,11 @@
 				350206411D0C4FAD005787EE /* UnauthorizedState.m in Sources */,
 				35403D3C1D05C556005D25CE /* AppDelegate.m in Sources */,
 				35403D391D05C556005D25CE /* main.m in Sources */,
+				359142C91D177545003EC0F4 /* DebugManager.m in Sources */,
+				359142CF1D177578003EC0F4 /* DebugModel.m in Sources */,
 				350206371D0C3FCE005787EE /* qingjiaModel.m in Sources */,
 				350206341D0C3FB4005787EE /* baoxiaoModel.m in Sources */,
+				359142CC1D17755F003EC0F4 /* DebugView.m in Sources */,
 				359142C41D131B6C003EC0F4 /* PhotoViewController.m in Sources */,
 				359142BF1D1317A5003EC0F4 /* Debug.m in Sources */,
 				3502064A1D0CD461005787EE /* feedFactory.m in Sources */,
