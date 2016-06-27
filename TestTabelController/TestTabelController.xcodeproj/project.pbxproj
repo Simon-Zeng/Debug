@@ -29,8 +29,37 @@
 		359142C91D177545003EC0F4 /* DebugManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 359142C81D177545003EC0F4 /* DebugManager.m */; };
 		359142CC1D17755F003EC0F4 /* DebugView.m in Sources */ = {isa = PBXBuildFile; fileRef = 359142CB1D17755F003EC0F4 /* DebugView.m */; };
 		359142CF1D177578003EC0F4 /* DebugModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 359142CE1D177578003EC0F4 /* DebugModel.m */; };
+		359142E11D1F8D0F003EC0F4 /* TestTabelControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 359142E01D1F8D0F003EC0F4 /* TestTabelControllerTests.m */; };
+		359142EB1D1F8EBC003EC0F4 /* VVStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 359142EA1D1F8EBC003EC0F4 /* VVStack.m */; };
+		359142EC1D1F8EBC003EC0F4 /* VVStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 359142EA1D1F8EBC003EC0F4 /* VVStack.m */; };
+		35D542BC1D1FD1EE00240126 /* DebugObject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35D542BA1D1FD1EE00240126 /* DebugObject.xcdatamodeld */; };
+		35D542BD1D1FD1EE00240126 /* DebugObject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35D542BA1D1FD1EE00240126 /* DebugObject.xcdatamodeld */; };
+		35D542CB1D1FD3BA00240126 /* Crash+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D542C01D1FD3BA00240126 /* Crash+CoreDataProperties.m */; };
+		35D542CC1D1FD3BA00240126 /* Crash+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D542C01D1FD3BA00240126 /* Crash+CoreDataProperties.m */; };
+		35D542CD1D1FD3BA00240126 /* Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D542C21D1FD3BA00240126 /* Crash.m */; };
+		35D542CE1D1FD3BA00240126 /* Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D542C21D1FD3BA00240126 /* Crash.m */; };
+		35D542CF1D1FD3BA00240126 /* NetWork+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D542C41D1FD3BA00240126 /* NetWork+CoreDataProperties.m */; };
+		35D542D01D1FD3BA00240126 /* NetWork+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D542C41D1FD3BA00240126 /* NetWork+CoreDataProperties.m */; };
+		35D542D11D1FD3BA00240126 /* NetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D542C61D1FD3BA00240126 /* NetWork.m */; };
+		35D542D21D1FD3BA00240126 /* NetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D542C61D1FD3BA00240126 /* NetWork.m */; };
+		35D542D31D1FD3BA00240126 /* DeviceID+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D542C81D1FD3BA00240126 /* DeviceID+CoreDataProperties.m */; };
+		35D542D41D1FD3BA00240126 /* DeviceID+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D542C81D1FD3BA00240126 /* DeviceID+CoreDataProperties.m */; };
+		35D542D51D1FD3BA00240126 /* DeviceID.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D542CA1D1FD3BA00240126 /* DeviceID.m */; };
+		35D542D61D1FD3BA00240126 /* DeviceID.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D542CA1D1FD3BA00240126 /* DeviceID.m */; };
+		35D542D91D1FD46F00240126 /* DebugDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D542D81D1FD46F00240126 /* DebugDB.m */; };
+		35D542DA1D1FD46F00240126 /* DebugDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D542D81D1FD46F00240126 /* DebugDB.m */; };
 		35FC157E1D0BB62200A71FFB /* feedState.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FC157D1D0BB62200A71FFB /* feedState.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		359142E31D1F8D0F003EC0F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35403D2C1D05C556005D25CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35403D331D05C556005D25CE;
+			remoteInfo = TestTabelController;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		05E45D16D5A26320E45D7783 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +104,27 @@
 		359142CB1D17755F003EC0F4 /* DebugView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugView.m; sourceTree = "<group>"; };
 		359142CD1D177578003EC0F4 /* DebugModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugModel.h; sourceTree = "<group>"; };
 		359142CE1D177578003EC0F4 /* DebugModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugModel.m; sourceTree = "<group>"; };
+		359142D41D1F7DC0003EC0F4 /* DebugMarco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugMarco.h; sourceTree = "<group>"; };
+		359142DE1D1F8D0F003EC0F4 /* TestTabelControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTabelControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		359142E01D1F8D0F003EC0F4 /* TestTabelControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTabelControllerTests.m; sourceTree = "<group>"; };
+		359142E21D1F8D0F003EC0F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		359142E91D1F8EBC003EC0F4 /* VVStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVStack.h; sourceTree = "<group>"; };
+		359142EA1D1F8EBC003EC0F4 /* VVStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVStack.m; sourceTree = "<group>"; };
+		35D542BB1D1FD1EE00240126 /* DebugObject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DebugObject.xcdatamodel; sourceTree = "<group>"; };
+		35D542BF1D1FD3BA00240126 /* Crash+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Crash+CoreDataProperties.h"; sourceTree = "<group>"; };
+		35D542C01D1FD3BA00240126 /* Crash+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Crash+CoreDataProperties.m"; sourceTree = "<group>"; };
+		35D542C11D1FD3BA00240126 /* Crash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crash.h; sourceTree = "<group>"; };
+		35D542C21D1FD3BA00240126 /* Crash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Crash.m; sourceTree = "<group>"; };
+		35D542C31D1FD3BA00240126 /* NetWork+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NetWork+CoreDataProperties.h"; sourceTree = "<group>"; };
+		35D542C41D1FD3BA00240126 /* NetWork+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetWork+CoreDataProperties.m"; sourceTree = "<group>"; };
+		35D542C51D1FD3BA00240126 /* NetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWork.h; sourceTree = "<group>"; };
+		35D542C61D1FD3BA00240126 /* NetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWork.m; sourceTree = "<group>"; };
+		35D542C71D1FD3BA00240126 /* DeviceID+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DeviceID+CoreDataProperties.h"; sourceTree = "<group>"; };
+		35D542C81D1FD3BA00240126 /* DeviceID+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DeviceID+CoreDataProperties.m"; sourceTree = "<group>"; };
+		35D542C91D1FD3BA00240126 /* DeviceID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceID.h; sourceTree = "<group>"; };
+		35D542CA1D1FD3BA00240126 /* DeviceID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceID.m; sourceTree = "<group>"; };
+		35D542D71D1FD46F00240126 /* DebugDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugDB.h; sourceTree = "<group>"; };
+		35D542D81D1FD46F00240126 /* DebugDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugDB.m; sourceTree = "<group>"; };
 		35FC157C1D0BB62200A71FFB /* feedState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = feedState.h; path = ../feedState.h; sourceTree = "<group>"; };
 		35FC157D1D0BB62200A71FFB /* feedState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = feedState.m; path = ../feedState.m; sourceTree = "<group>"; };
 		6DE3402A784B8CB390207E55 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +137,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1511652C6324EA4ED83680A2 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		359142DB1D1F8D0F003EC0F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				35403D361D05C556005D25CE /* TestTabelController */,
+				359142DF1D1F8D0F003EC0F4 /* TestTabelControllerTests */,
 				35403D351D05C556005D25CE /* Products */,
 				411E955DCC1350655185C279 /* Pods */,
 				2EDA806BC2B9B2BC2CFFFAAF /* Frameworks */,
@@ -115,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				35403D341D05C556005D25CE /* TestTabelController.app */,
+				359142DE1D1F8D0F003EC0F4 /* TestTabelControllerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,6 +181,7 @@
 		35403D361D05C556005D25CE /* TestTabelController */ = {
 			isa = PBXGroup;
 			children = (
+				359142E81D1F8E9C003EC0F4 /* VVStack */,
 				359142C61D1774CE003EC0F4 /* Test */,
 				359142C11D131B4E003EC0F4 /* SimpleTableView */,
 				359142C01D1319F2003EC0F4 /* Memento */,
@@ -150,6 +210,8 @@
 		359142BC1D13178A003EC0F4 /* DeubgView */ = {
 			isa = PBXGroup;
 			children = (
+				35D542BE1D1FD26200240126 /* DebugModel */,
+				35D542B91D1FD18E00240126 /* DebugDB */,
 				359142BD1D1317A5003EC0F4 /* Debug.h */,
 				359142BE1D1317A5003EC0F4 /* Debug.m */,
 				359142C71D177545003EC0F4 /* DebugManager.h */,
@@ -158,6 +220,7 @@
 				359142CB1D17755F003EC0F4 /* DebugView.m */,
 				359142CD1D177578003EC0F4 /* DebugModel.h */,
 				359142CE1D177578003EC0F4 /* DebugModel.m */,
+				359142D41D1F7DC0003EC0F4 /* DebugMarco.h */,
 			);
 			path = DeubgView;
 			sourceTree = "<group>";
@@ -208,6 +271,53 @@
 			path = Test;
 			sourceTree = "<group>";
 		};
+		359142DF1D1F8D0F003EC0F4 /* TestTabelControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				359142E01D1F8D0F003EC0F4 /* TestTabelControllerTests.m */,
+				359142E21D1F8D0F003EC0F4 /* Info.plist */,
+			);
+			path = TestTabelControllerTests;
+			sourceTree = "<group>";
+		};
+		359142E81D1F8E9C003EC0F4 /* VVStack */ = {
+			isa = PBXGroup;
+			children = (
+				359142E91D1F8EBC003EC0F4 /* VVStack.h */,
+				359142EA1D1F8EBC003EC0F4 /* VVStack.m */,
+			);
+			path = VVStack;
+			sourceTree = "<group>";
+		};
+		35D542B91D1FD18E00240126 /* DebugDB */ = {
+			isa = PBXGroup;
+			children = (
+				35D542BA1D1FD1EE00240126 /* DebugObject.xcdatamodeld */,
+				35D542D71D1FD46F00240126 /* DebugDB.h */,
+				35D542D81D1FD46F00240126 /* DebugDB.m */,
+			);
+			path = DebugDB;
+			sourceTree = "<group>";
+		};
+		35D542BE1D1FD26200240126 /* DebugModel */ = {
+			isa = PBXGroup;
+			children = (
+				35D542BF1D1FD3BA00240126 /* Crash+CoreDataProperties.h */,
+				35D542C01D1FD3BA00240126 /* Crash+CoreDataProperties.m */,
+				35D542C11D1FD3BA00240126 /* Crash.h */,
+				35D542C21D1FD3BA00240126 /* Crash.m */,
+				35D542C31D1FD3BA00240126 /* NetWork+CoreDataProperties.h */,
+				35D542C41D1FD3BA00240126 /* NetWork+CoreDataProperties.m */,
+				35D542C51D1FD3BA00240126 /* NetWork.h */,
+				35D542C61D1FD3BA00240126 /* NetWork.m */,
+				35D542C71D1FD3BA00240126 /* DeviceID+CoreDataProperties.h */,
+				35D542C81D1FD3BA00240126 /* DeviceID+CoreDataProperties.m */,
+				35D542C91D1FD3BA00240126 /* DeviceID.h */,
+				35D542CA1D1FD3BA00240126 /* DeviceID.m */,
+			);
+			path = DebugModel;
+			sourceTree = "<group>";
+		};
 		411E955DCC1350655185C279 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +350,24 @@
 			productReference = 35403D341D05C556005D25CE /* TestTabelController.app */;
 			productType = "com.apple.product-type.application";
 		};
+		359142DD1D1F8D0F003EC0F4 /* TestTabelControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 359142E51D1F8D0F003EC0F4 /* Build configuration list for PBXNativeTarget "TestTabelControllerTests" */;
+			buildPhases = (
+				359142DA1D1F8D0F003EC0F4 /* Sources */,
+				359142DB1D1F8D0F003EC0F4 /* Frameworks */,
+				359142DC1D1F8D0F003EC0F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				359142E41D1F8D0F003EC0F4 /* PBXTargetDependency */,
+			);
+			name = TestTabelControllerTests;
+			productName = TestTabelControllerTests;
+			productReference = 359142DE1D1F8D0F003EC0F4 /* TestTabelControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -251,6 +379,10 @@
 				TargetAttributes = {
 					35403D331D05C556005D25CE = {
 						CreatedOnToolsVersion = 7.3.1;
+					};
+					359142DD1D1F8D0F003EC0F4 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 35403D331D05C556005D25CE;
 					};
 				};
 			};
@@ -268,6 +400,7 @@
 			projectRoot = "";
 			targets = (
 				35403D331D05C556005D25CE /* TestTabelController */,
+				359142DD1D1F8D0F003EC0F4 /* TestTabelControllerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -280,6 +413,13 @@
 				35403D471D05C556005D25CE /* LaunchScreen.storyboard in Resources */,
 				35403D441D05C556005D25CE /* Assets.xcassets in Resources */,
 				35403D421D05C556005D25CE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		359142DC1D1F8D0F003EC0F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,28 +479,62 @@
 			buildActionMask = 2147483647;
 			files = (
 				3502064D1D0CD47B005787EE /* feed.m in Sources */,
+				35D542D91D1FD46F00240126 /* DebugDB.m in Sources */,
 				350206441D0C4FBA005787EE /* authorizedState.m in Sources */,
 				35403D3F1D05C556005D25CE /* ViewController.m in Sources */,
 				3502063D1D0C4F69005787EE /* Context.m in Sources */,
 				350206411D0C4FAD005787EE /* UnauthorizedState.m in Sources */,
 				35403D3C1D05C556005D25CE /* AppDelegate.m in Sources */,
+				35D542D11D1FD3BA00240126 /* NetWork.m in Sources */,
+				35D542BC1D1FD1EE00240126 /* DebugObject.xcdatamodeld in Sources */,
 				35403D391D05C556005D25CE /* main.m in Sources */,
+				35D542CD1D1FD3BA00240126 /* Crash.m in Sources */,
+				35D542D31D1FD3BA00240126 /* DeviceID+CoreDataProperties.m in Sources */,
+				35D542D51D1FD3BA00240126 /* DeviceID.m in Sources */,
 				359142C91D177545003EC0F4 /* DebugManager.m in Sources */,
 				359142CF1D177578003EC0F4 /* DebugModel.m in Sources */,
 				350206371D0C3FCE005787EE /* qingjiaModel.m in Sources */,
 				350206341D0C3FB4005787EE /* baoxiaoModel.m in Sources */,
 				359142CC1D17755F003EC0F4 /* DebugView.m in Sources */,
+				35D542CB1D1FD3BA00240126 /* Crash+CoreDataProperties.m in Sources */,
 				359142C41D131B6C003EC0F4 /* PhotoViewController.m in Sources */,
 				359142BF1D1317A5003EC0F4 /* Debug.m in Sources */,
+				359142EB1D1F8EBC003EC0F4 /* VVStack.m in Sources */,
 				3502064A1D0CD461005787EE /* feedFactory.m in Sources */,
 				3502063A1D0C469F005787EE /* checkFeed.m in Sources */,
+				35D542CF1D1FD3BA00240126 /* NetWork+CoreDataProperties.m in Sources */,
 				350206471D0CD437005787EE /* feeData.m in Sources */,
 				350206501D0CD4B1005787EE /* concrteFeed.m in Sources */,
 				35FC157E1D0BB62200A71FFB /* feedState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		359142DA1D1F8D0F003EC0F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35D542D41D1FD3BA00240126 /* DeviceID+CoreDataProperties.m in Sources */,
+				35D542CE1D1FD3BA00240126 /* Crash.m in Sources */,
+				35D542D61D1FD3BA00240126 /* DeviceID.m in Sources */,
+				35D542DA1D1FD46F00240126 /* DebugDB.m in Sources */,
+				35D542D21D1FD3BA00240126 /* NetWork.m in Sources */,
+				35D542BD1D1FD1EE00240126 /* DebugObject.xcdatamodeld in Sources */,
+				35D542D01D1FD3BA00240126 /* NetWork+CoreDataProperties.m in Sources */,
+				35D542CC1D1FD3BA00240126 /* Crash+CoreDataProperties.m in Sources */,
+				359142EC1D1F8EBC003EC0F4 /* VVStack.m in Sources */,
+				359142E11D1F8D0F003EC0F4 /* TestTabelControllerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		359142E41D1F8D0F003EC0F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 35403D331D05C556005D25CE /* TestTabelController */;
+			targetProxy = 359142E31D1F8D0F003EC0F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		35403D401D05C556005D25CE /* Main.storyboard */ = {
@@ -470,6 +644,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COPY_HEADERS_RUN_UNIFDEF = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				INFOPLIST_FILE = TestTabelController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wzg.-.TestTabelController";
@@ -483,10 +658,35 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COPY_HEADERS_RUN_UNIFDEF = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				INFOPLIST_FILE = TestTabelController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wzg.-.TestTabelController";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		359142E61D1F8D0F003EC0F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TestTabelControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wzg.-.TestTabelControllerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestTabelController.app/TestTabelController";
+			};
+			name = Debug;
+		};
+		359142E71D1F8D0F003EC0F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TestTabelControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wzg.-.TestTabelControllerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestTabelController.app/TestTabelController";
 			};
 			name = Release;
 		};
@@ -511,7 +711,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		359142E51D1F8D0F003EC0F4 /* Build configuration list for PBXNativeTarget "TestTabelControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				359142E61D1F8D0F003EC0F4 /* Debug */,
+				359142E71D1F8D0F003EC0F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		35D542BA1D1FD1EE00240126 /* DebugObject.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				35D542BB1D1FD1EE00240126 /* DebugObject.xcdatamodel */,
+			);
+			currentVersion = 35D542BB1D1FD1EE00240126 /* DebugObject.xcdatamodel */;
+			path = DebugObject.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 35403D2C1D05C556005D25CE /* Project object */;
 }

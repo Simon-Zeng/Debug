@@ -62,7 +62,8 @@
 #pragma mark - action
 - (void)handleSwipeFromLeft:(UISwipeGestureRecognizer *)ges
 {
-
+    NSTimeInterval beginTime = CACurrentMediaTime();
+    NSString *timeConsume = [NSString stringWithFormat:@"耗费时间:%f",beginTime - CACurrentMediaTime()];
 }
 
 - (void)handleSwipeFromRight:(UISwipeGestureRecognizer *)ges
