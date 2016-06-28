@@ -10,4 +10,15 @@
 
 @implementation DebugManager
 
++ (DebugNetWork *)networkInstance
+{
+    static DebugNetWork *network = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        network = [[DebugNetWork alloc]init];
+    });
+    
+    return network;
+}
+
 @end

@@ -17,13 +17,24 @@
 #import "DebugView.h"
 
 @interface ViewController ()
-
+@property (nonatomic,strong) UIWindow *window;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.window = [[[UIApplication sharedApplication] delegate] window];
+    DebugView *debug = [[DebugView alloc]initWithFrame:CGRectZero];
+    debug.rootVc = self.navigationController;
+    [debug showOverWindow];
+    [[UIApplication sharedApplication].keyWindow addSubview:debug];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetWindow) name:UIWindowDidBecomeKeyNotification object:nil];
+}
+
+- (void)resetWindow{
+    [self.window makeKeyWindow];
 }
 
 - (void)test

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1511652C6324EA4ED83680A2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF335B609005355AA2D2EA25 /* libPods.a */; };
+		2D6CCF471D2258D000C08A2B /* DebugObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CCF461D2258D000C08A2B /* DebugObject.m */; };
+		2D6CCF4A1D2258F700C08A2B /* DebugNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CCF491D2258F700C08A2B /* DebugNetWork.m */; };
 		350206341D0C3FB4005787EE /* baoxiaoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 350206331D0C3FB4005787EE /* baoxiaoModel.m */; };
 		350206371D0C3FCE005787EE /* qingjiaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 350206361D0C3FCE005787EE /* qingjiaModel.m */; };
 		3502063A1D0C469F005787EE /* checkFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 350206391D0C469F005787EE /* checkFeed.m */; };
@@ -63,6 +65,10 @@
 
 /* Begin PBXFileReference section */
 		05E45D16D5A26320E45D7783 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		2D6CCF451D2258D000C08A2B /* DebugObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugObject.h; sourceTree = "<group>"; };
+		2D6CCF461D2258D000C08A2B /* DebugObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugObject.m; sourceTree = "<group>"; };
+		2D6CCF481D2258F700C08A2B /* DebugNetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugNetWork.h; sourceTree = "<group>"; };
+		2D6CCF491D2258F700C08A2B /* DebugNetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugNetWork.m; sourceTree = "<group>"; };
 		350206321D0C3FB4005787EE /* baoxiaoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = baoxiaoModel.h; path = ../baoxiaoModel.h; sourceTree = "<group>"; };
 		350206331D0C3FB4005787EE /* baoxiaoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = baoxiaoModel.m; path = ../baoxiaoModel.m; sourceTree = "<group>"; };
 		350206351D0C3FCE005787EE /* qingjiaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qingjiaModel.h; path = ../qingjiaModel.h; sourceTree = "<group>"; };
@@ -100,8 +106,8 @@
 		359142C31D131B6C003EC0F4 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		359142C71D177545003EC0F4 /* DebugManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugManager.h; sourceTree = "<group>"; };
 		359142C81D177545003EC0F4 /* DebugManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugManager.m; sourceTree = "<group>"; };
-		359142CA1D17755F003EC0F4 /* DebugView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugView.h; sourceTree = "<group>"; };
-		359142CB1D17755F003EC0F4 /* DebugView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugView.m; sourceTree = "<group>"; };
+		359142CA1D17755F003EC0F4 /* DebugView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebugView.h; path = ../DebugView.h; sourceTree = "<group>"; };
+		359142CB1D17755F003EC0F4 /* DebugView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DebugView.m; path = ../DebugView.m; sourceTree = "<group>"; };
 		359142CD1D177578003EC0F4 /* DebugModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugModel.h; sourceTree = "<group>"; };
 		359142CE1D177578003EC0F4 /* DebugModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugModel.m; sourceTree = "<group>"; };
 		359142D41D1F7DC0003EC0F4 /* DebugMarco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugMarco.h; sourceTree = "<group>"; };
@@ -150,6 +156,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D6CCF441D22589300C08A2B /* DebugObject */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CCF451D2258D000C08A2B /* DebugObject.h */,
+				2D6CCF461D2258D000C08A2B /* DebugObject.m */,
+				2D6CCF481D2258F700C08A2B /* DebugNetWork.h */,
+				2D6CCF491D2258F700C08A2B /* DebugNetWork.m */,
+			);
+			path = DebugObject;
+			sourceTree = "<group>";
+		};
+		2D6CCF4B1D225A1400C08A2B /* DebugVIew */ = {
+			isa = PBXGroup;
+			children = (
+				359142CA1D17755F003EC0F4 /* DebugView.h */,
+				359142CB1D17755F003EC0F4 /* DebugView.m */,
+			);
+			path = DebugVIew;
+			sourceTree = "<group>";
+		};
 		2EDA806BC2B9B2BC2CFFFAAF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,14 +236,14 @@
 		359142BC1D13178A003EC0F4 /* DeubgView */ = {
 			isa = PBXGroup;
 			children = (
+				2D6CCF4B1D225A1400C08A2B /* DebugVIew */,
+				2D6CCF441D22589300C08A2B /* DebugObject */,
 				35D542BE1D1FD26200240126 /* DebugModel */,
 				35D542B91D1FD18E00240126 /* DebugDB */,
 				359142BD1D1317A5003EC0F4 /* Debug.h */,
 				359142BE1D1317A5003EC0F4 /* Debug.m */,
 				359142C71D177545003EC0F4 /* DebugManager.h */,
 				359142C81D177545003EC0F4 /* DebugManager.m */,
-				359142CA1D17755F003EC0F4 /* DebugView.h */,
-				359142CB1D17755F003EC0F4 /* DebugView.m */,
 				359142CD1D177578003EC0F4 /* DebugModel.h */,
 				359142CE1D177578003EC0F4 /* DebugModel.m */,
 				359142D41D1F7DC0003EC0F4 /* DebugMarco.h */,
@@ -379,6 +405,7 @@
 				TargetAttributes = {
 					35403D331D05C556005D25CE = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = ANV3YKEKP6;
 					};
 					359142DD1D1F8D0F003EC0F4 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -482,6 +509,7 @@
 				35D542D91D1FD46F00240126 /* DebugDB.m in Sources */,
 				350206441D0C4FBA005787EE /* authorizedState.m in Sources */,
 				35403D3F1D05C556005D25CE /* ViewController.m in Sources */,
+				2D6CCF471D2258D000C08A2B /* DebugObject.m in Sources */,
 				3502063D1D0C4F69005787EE /* Context.m in Sources */,
 				350206411D0C4FAD005787EE /* UnauthorizedState.m in Sources */,
 				35403D3C1D05C556005D25CE /* AppDelegate.m in Sources */,
@@ -489,6 +517,7 @@
 				35D542BC1D1FD1EE00240126 /* DebugObject.xcdatamodeld in Sources */,
 				35403D391D05C556005D25CE /* main.m in Sources */,
 				35D542CD1D1FD3BA00240126 /* Crash.m in Sources */,
+				2D6CCF4A1D2258F700C08A2B /* DebugNetWork.m in Sources */,
 				35D542D31D1FD3BA00240126 /* DeviceID+CoreDataProperties.m in Sources */,
 				35D542D51D1FD3BA00240126 /* DeviceID.m in Sources */,
 				359142C91D177545003EC0F4 /* DebugManager.m in Sources */,
@@ -643,12 +672,15 @@
 			baseConfigurationReference = 6DE3402A784B8CB390207E55 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_HEADERS_RUN_UNIFDEF = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				INFOPLIST_FILE = TestTabelController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wzg.-.TestTabelController";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -657,12 +689,15 @@
 			baseConfigurationReference = 05E45D16D5A26320E45D7783 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_HEADERS_RUN_UNIFDEF = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				INFOPLIST_FILE = TestTabelController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wzg.-.TestTabelController";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
