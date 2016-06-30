@@ -119,12 +119,39 @@
         cell.textLabel.lineBreakMode = NSLineBreakByCharWrapping;
         cell.selectedBackgroundView = [[UIView alloc] init];
         cell.selectedBackgroundView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.6];
-        cell.textLabel.textAlignment = NSTextAlignmentCenter;
     }
     cell.textLabel.text = [self.actions objectAtIndex:indexPath.row];
     return cell;
 }
 #pragma mark - delegate
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    eLongDebugActionView *actionView = nil;
+//    switch (indexPath.row) {
+//        case 0:{
+//            // 服务器
+//            actionView = [[eLongDebugNetworkView alloc] initWithFrame:CGRectZero];
+//        }
+//            break;
+//        case 1:{
+//            // 业务线
+//            actionView = [[eLongDebugPerformanceView alloc] initWithFrame:CGRectZero];
+//        }
+//            break;
+//        case 2:{
+//            // Crash
+//            actionView = [[eLongDebugCrashView alloc] initWithFrame:CGRectZero];
+//        }
+//            break;
+//        case 3:{
+//            // 设备id
+//            
+//        }
+//            break;
+//        default:
+//            break;
+//    }
+//    [actionView showOverWindow];
+}
 
 #pragma mark - property
 - (void)setHidden:(BOOL)hidden
