@@ -11,7 +11,7 @@
 #import "DebugDB.h"
 #import "NetWork.h"
 
-static NSString *networkDebugModelName = @"Network";        // 网络存储数据表名
+static NSString *networkDebugModelName = @"NetWork";        // 网络存储数据表名
 static const NSInteger requestMaxCacheAge = 60 * 60 * 12;   // 数据最长保留时间为0.5天
 
 @implementation DebugNetWork

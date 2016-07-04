@@ -22,7 +22,7 @@
 #import "DebugManager.h"
 #import "NSString+Extension.h"
 
-@interface ViewController ()<NSURLSessionDelegate>
+@interface ViewController ()<NSURLSessionTaskDelegate>
 @property (nonatomic,strong) UIWindow *window;
 @end
 
@@ -36,6 +36,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    DebugNetWork *debugNet = [DebugManager networkInstance];
+    NetWork *net = [debugNet beginRequest];
+    
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn addTarget:self action:@selector(get) forControlEvents:UIControlEventTouchUpInside];
     btn.frame = CGRectMake(100, 100, 100, 50);
@@ -63,50 +66,7 @@
     
 }
 
-- (NSString *)translation:(NSString *)arebic
 
-{   NSString *str = arebic;
-    
-    NSArray *arabic_numerals = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"0"];
-    NSArray *chinese_numerals = @[@"壹",@"贰",@"叁",@"肆",@"伍",@"陆",@"柒",@"捌",@"玖",@"零"];
-    NSArray *digits = @[@"个",@"十",@"百",@"千",@"万",@"十",@"百",@"千",@"亿",@"十",@"百",@"千",@"兆"];
-    NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:chinese_numerals forKeys:arabic_numerals];
-    
-    NSMutableArray *sums = [NSMutableArray array];
-    for (int i = 0; i < str.length; i ++) {
-        NSString *substr = [str substringWithRange:NSMakeRange(i, 1)];
-        NSString *a = [dictionary objectForKey:substr];
-        NSString *b = digits[str.length -i-1];
-        NSString *sum = [a stringByAppendingString:b];
-        if ([a isEqualToString:chinese_numerals[9]])
-        {
-            if([b isEqualToString:digits[4]] || [b isEqualToString:digits[8]])
-            {
-                sum = b;
-                if ([[sums lastObject] isEqualToString:chinese_numerals[9]])
-                {
-                    [sums removeLastObject];
-                }
-            }else
-            {
-                sum = chinese_numerals[9];
-            }
-            
-            if ([[sums lastObject] isEqualToString:sum])
-            {
-                continue;
-            }
-        }
-        
-        [sums addObject:sum];
-    }
-    
-    NSString *sumStr = [sums  componentsJoinedByString:@""];
-    NSString *chinese = [sumStr substringToIndex:sumStr.length-1];
-    NSLog(@"%@",str);
-    NSLog(@"%@",chinese);
-    return chinese;
-}
 
 - (void)get
 {
@@ -116,14 +76,14 @@
 //    }];
 //    [task resume];
     
-    NSURLSession *session2 = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:[[NSOperationQueue alloc]init]];
+    NSURLSession *session2 = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:[NSOperationQueue mainQueue]];
     NSURLSessionTask *task2 = [session2 dataTaskWithURL:[NSURL URLWithString:@"https://www.baidu.com"]];
     [task2 resume];
 }
 
 - (void)post
 {
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:[NSOperationQueue mainQueue]];
     NSURL *url = [NSURL URLWithString:@"https://www.baidu.com"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     request.HTTPMethod = @"POST";
@@ -132,7 +92,7 @@
 //                                    }
     request.HTTPBody = [@"" dataUsingEncoding:NSUTF8StringEncoding];
     NSURLSessionTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-       NSLog(@"%@",[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil]);
+//       NSLog(@"%@",[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil]);
     }];
     
     [task resume];
@@ -172,6 +132,13 @@
 
 }
 
+- (void)aspectCreateSession
+{
+    [NSURLSession aspect_hookSelector:@selector(sharedSession) withOptions:AspectPositionBefore usingBlock:^(id<AspectInfo> aspectInfo){
+        NSLog(@"请求开始");
+    } error:NULL];
+}
+
 - (void)aspectGet
 {
     [NSURLSession aspect_hookSelector:@selector(dataTaskWithURL:completionHandler:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo){
@@ -181,11 +148,14 @@
 
 - (void)aspectPost
 {
-    __block NetWork *netWorkModel = [[NetWork alloc]init];
-    [NSURLSession aspect_hookSelector:@selector(dataTaskWithRequest:completionHandler:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo,NSMutableURLRequest *requset){
+    DebugNetWork *debugNet = [DebugManager networkInstance];
+    debugNet.enable = YES;
+    __block NetWork *net = [debugNet beginRequest];
+    [NSURLSession aspect_hookSelector:@selector(dataTaskWithRequest:completionHandler:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo,NSMutableURLRequest *requset,void (^block)(NSData * __nullable data, NSURLResponse * __nullable response, NSError * __nullable error)){
         NSString *path = [requset.URL.absoluteString safeString];
         NSString *method = [requset.HTTPMethod safeString];
         NSString *type = [[requset.allHTTPHeaderFields valueForKey:@"Content-Type"] safeString];
+        
 //        NSNumber *size = @(data.length);
 //        NSString *dataString = nil;
 //        if (data) {
@@ -195,16 +165,17 @@
 //        }
         //NSString *body = [[NSString alloc] initWithData:operation.currentReq.HTTPBody encoding:NSUTF8StringEncoding];
         NSString *header = [NetworkSerialization jsonStringWithObject:requset.allHTTPHeaderFields];
-        netWorkModel.path = path;
-        netWorkModel.method = method;
-        netWorkModel.type = type;
-        netWorkModel.header = header;
+        net.path = path;
+        net.method = method;
+        net.type = type;
+        net.header = header;
         DebugNetWork *debugNetWork = [DebugManager networkInstance];
-        [debugNetWork endRequest:netWorkModel];
+        [debugNetWork endRequest:net];
+        NSLog(@"网络记录模型为%@",net);
     } error:NULL];
     
     
-    NSLog(@"网络记录模型为%@",netWorkModel);
+    
 }
 
 #pragma mark - NSURLSessionDelegate
@@ -223,9 +194,28 @@
 
 }
 
+// 接收到服务器的响应
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler
+{
+    NSLog(@"didReceiveResponse");
+    completionHandler(NSURLSessionResponseAllow);
+}
+// 接收到服务器返回的数据
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data
+{
+    NSLog(@"didReceiveData");
+}
+// 请求完毕
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error
+{
+    NSLog(@"didCompleteWithError");
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 @end
