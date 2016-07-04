@@ -10,6 +10,7 @@
 
 @interface DebugView : UIView
 @property (nonatomic, assign)BOOL hidden;
+@property (nonatomic, strong)UIViewController *root;
 - (void)showOverWindow;
 
 @end

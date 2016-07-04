@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1511652C6324EA4ED83680A2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF335B609005355AA2D2EA25 /* libPods.a */; };
+		3500A4B21D28AC1500F55CF6 /* DebugHttpMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3500A4B11D28AC1500F55CF6 /* DebugHttpMonitor.m */; };
+		3500A4B61D28AF6D00F55CF6 /* NSUserDefaults+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3500A4B51D28AF6D00F55CF6 /* NSUserDefaults+Extension.m */; };
+		3500A4BC1D28B22400F55CF6 /* DebugURLSessionConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 3500A4BB1D28B22400F55CF6 /* DebugURLSessionConfiguration.m */; };
 		350206341D0C3FB4005787EE /* baoxiaoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 350206331D0C3FB4005787EE /* baoxiaoModel.m */; };
 		350206371D0C3FCE005787EE /* qingjiaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 350206361D0C3FCE005787EE /* qingjiaModel.m */; };
 		3502063A1D0C469F005787EE /* checkFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 350206391D0C469F005787EE /* checkFeed.m */; };
@@ -63,6 +66,12 @@
 
 /* Begin PBXFileReference section */
 		05E45D16D5A26320E45D7783 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		3500A4B01D28AC1500F55CF6 /* DebugHttpMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugHttpMonitor.h; sourceTree = "<group>"; };
+		3500A4B11D28AC1500F55CF6 /* DebugHttpMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugHttpMonitor.m; sourceTree = "<group>"; };
+		3500A4B41D28AF6D00F55CF6 /* NSUserDefaults+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Extension.h"; sourceTree = "<group>"; };
+		3500A4B51D28AF6D00F55CF6 /* NSUserDefaults+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Extension.m"; sourceTree = "<group>"; };
+		3500A4BA1D28B22400F55CF6 /* DebugURLSessionConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugURLSessionConfiguration.h; sourceTree = "<group>"; };
+		3500A4BB1D28B22400F55CF6 /* DebugURLSessionConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugURLSessionConfiguration.m; sourceTree = "<group>"; };
 		350206321D0C3FB4005787EE /* baoxiaoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = baoxiaoModel.h; path = ../baoxiaoModel.h; sourceTree = "<group>"; };
 		350206331D0C3FB4005787EE /* baoxiaoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = baoxiaoModel.m; path = ../baoxiaoModel.m; sourceTree = "<group>"; };
 		350206351D0C3FCE005787EE /* qingjiaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qingjiaModel.h; path = ../qingjiaModel.h; sourceTree = "<group>"; };
@@ -158,6 +167,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3500A4AF1D28AB0A00F55CF6 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				3500A4B01D28AC1500F55CF6 /* DebugHttpMonitor.h */,
+				3500A4B11D28AC1500F55CF6 /* DebugHttpMonitor.m */,
+				3500A4BA1D28B22400F55CF6 /* DebugURLSessionConfiguration.h */,
+				3500A4BB1D28B22400F55CF6 /* DebugURLSessionConfiguration.m */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		3500A4B31D28AF4B00F55CF6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3500A4B41D28AF6D00F55CF6 /* NSUserDefaults+Extension.h */,
+				3500A4B51D28AF6D00F55CF6 /* NSUserDefaults+Extension.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		35403D2B1D05C556005D25CE = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +239,8 @@
 		359142BC1D13178A003EC0F4 /* DeubgView */ = {
 			isa = PBXGroup;
 			children = (
+				3500A4B31D28AF4B00F55CF6 /* Extension */,
+				3500A4AF1D28AB0A00F55CF6 /* NetWork */,
 				35D542BE1D1FD26200240126 /* DebugModel */,
 				35D542B91D1FD18E00240126 /* DebugDB */,
 				359142BD1D1317A5003EC0F4 /* Debug.h */,
@@ -481,6 +512,7 @@
 				3502064D1D0CD47B005787EE /* feed.m in Sources */,
 				35D542D91D1FD46F00240126 /* DebugDB.m in Sources */,
 				350206441D0C4FBA005787EE /* authorizedState.m in Sources */,
+				3500A4B61D28AF6D00F55CF6 /* NSUserDefaults+Extension.m in Sources */,
 				35403D3F1D05C556005D25CE /* ViewController.m in Sources */,
 				3502063D1D0C4F69005787EE /* Context.m in Sources */,
 				350206411D0C4FAD005787EE /* UnauthorizedState.m in Sources */,
@@ -491,6 +523,7 @@
 				35D542CD1D1FD3BA00240126 /* Crash.m in Sources */,
 				35D542D31D1FD3BA00240126 /* DeviceID+CoreDataProperties.m in Sources */,
 				35D542D51D1FD3BA00240126 /* DeviceID.m in Sources */,
+				3500A4BC1D28B22400F55CF6 /* DebugURLSessionConfiguration.m in Sources */,
 				359142C91D177545003EC0F4 /* DebugManager.m in Sources */,
 				359142CF1D177578003EC0F4 /* DebugModel.m in Sources */,
 				350206371D0C3FCE005787EE /* qingjiaModel.m in Sources */,
@@ -500,6 +533,7 @@
 				359142C41D131B6C003EC0F4 /* PhotoViewController.m in Sources */,
 				359142BF1D1317A5003EC0F4 /* Debug.m in Sources */,
 				359142EB1D1F8EBC003EC0F4 /* VVStack.m in Sources */,
+				3500A4B21D28AC1500F55CF6 /* DebugHttpMonitor.m in Sources */,
 				3502064A1D0CD461005787EE /* feedFactory.m in Sources */,
 				3502063A1D0C469F005787EE /* checkFeed.m in Sources */,
 				35D542CF1D1FD3BA00240126 /* NetWork+CoreDataProperties.m in Sources */,

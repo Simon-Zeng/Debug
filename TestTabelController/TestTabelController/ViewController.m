@@ -24,6 +24,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    DebugView *debug  = [[DebugView alloc]init];
+    debug.root = self;
+    [debug showOverWindow];
 }
 
 - (void)test

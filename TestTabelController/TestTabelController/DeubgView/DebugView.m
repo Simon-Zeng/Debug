@@ -45,7 +45,7 @@
 - (void)showOverWindow
 {
     self.window = [[UIWindow alloc]initWithFrame:CGRectMake(100, 0, [UIScreen mainScreen].bounds.size.width - 100, 20)];
-//    self.window.rootViewController
+    self.window.rootViewController = _root;
     self.window.windowLevel = UIWindowLevelStatusBar + 10;
     self.window.hidden = NO;
     

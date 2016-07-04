@@ -24,4 +24,8 @@
 #define beginTime NSTimeInterval beginTime = CACurrentMediaTime();
 #define consumeTime 
 
+//string
+#define STRINGHASVALUE(str)		(str && [str isKindOfClass:[NSString class]] && [str stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]].length > 0)
+
+
 #endif /* DebugMarco_h */
