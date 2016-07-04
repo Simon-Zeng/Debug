@@ -118,4 +118,28 @@
     return fetchedObjects;
 }
 
+- (NSArray *)selectDataFromEntity:(NSString *)entityName query:(NSPredicate *)predicate
+{
+     return [self selectDataFromEntity:entityName query:predicate sort:nil];
+}
+
+- (NSArray *)selectDataFromEntity:(NSString *)entityName query:(NSPredicate *)predicate sort:(NSSortDescriptor *)sort
+{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    NSFetchRequest *requst = [[NSFetchRequest alloc]init];
+    [requst setEntity:[NSEntityDescription entityForName:entityName inManagedObjectContext:context]];
+    if (sort) {
+        [requst setSortDescriptors:[NSArray arrayWithObject:sort]];
+    }
+    
+    if (predicate) {
+        [requst setPredicate:predicate];
+    }
+    
+    NSError *error = nil;
+    NSArray *result = [context executeFetchRequest:requst error:&error];
+    return result;
+}
+
 @end

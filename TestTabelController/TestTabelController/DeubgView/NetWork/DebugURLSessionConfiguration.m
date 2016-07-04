@@ -54,7 +54,10 @@
     Method originalMethod = class_getInstanceMethod(original, selector);
     Method stubMethod= class_getInstanceMethod(stub, selector);
 
-    NSAssert(!originalMethod || !stubMethod, @"方法不存在");
+    if (!originalMethod || !stubMethod) {
+        [NSException raise:NSInternalInconsistencyException format:@"Couldn't load NEURLSessionConfiguration."];
+    }
+//    NSAssert(!originalMethod || !stubMethod, @"方法不存在");
     
     method_exchangeImplementations(originalMethod, stubMethod);
 }

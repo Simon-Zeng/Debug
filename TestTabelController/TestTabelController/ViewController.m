@@ -21,6 +21,7 @@
 #import "DebugNetWork.h"
 #import "DebugManager.h"
 #import "NSString+Extension.h"
+#import "DebugHttpMonitor.h"
 
 @interface ViewController ()<NSURLSessionTaskDelegate>
 @property (nonatomic,strong) UIWindow *window;
@@ -36,12 +37,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
+    [DebugHttpMonitor setNetMonitorEnable:YES];
     self.view.backgroundColor = [UIColor whiteColor];
     
 //    DebugView *debug  = [[DebugView alloc]init];
 //    debug.root = self;
 //    [debug showOverWindow];
+
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn addTarget:self action:@selector(get) forControlEvents:UIControlEventTouchUpInside];
     btn.frame = CGRectMake(100, 100, 100, 50);
@@ -86,18 +89,36 @@
 
 - (void)post
 {
+    
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:[NSOperationQueue mainQueue]];
-    NSURL *url = [NSURL URLWithString:@"https://www.baidu.com"];
+    NSURL *url = [NSURL URLWithString:@"https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/AFNetworking/2.5.4/AFNetworking.podspec.json"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    request.timeoutInterval = 30;
+    [request setAllHTTPHeaderFields:@{@"Content-Type":@"2"}];
     request.HTTPMethod = @"POST";
-//    request.allHTTPHeaderFields = @{
-//                                    
-//                                    }
-    request.HTTPBody = [@"" dataUsingEncoding:NSUTF8StringEncoding];
+    //    request.allHTTPHeaderFields = @{
+    //
+    //                                    }
+    NSData *postData = [@"key1=value1&key2=value2" dataUsingEncoding:NSUTF8StringEncoding];
+    request.HTTPBody = postData;
     NSURLSessionTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-//       NSLog(@"%@",[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil]);
+        NSLog(@"%@",data);
     }];
     
+//    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+//    
+//    NSURL *url = [NSURL URLWithString:@"https://www.baidu.com"];
+//    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+//    request.HTTPMethod = @"POST";
+//    request.HTTPBody = [@"" dataUsingEncoding:NSUTF8StringEncoding];
+//    request.timeoutInterval = 5;
+//    NSURLSessionTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+////       NSLog(@"%@",[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil]);
+//    }];
+    
+    [task resume];
+    [task resume];
+    [task resume];
     [task resume];
 }
 
