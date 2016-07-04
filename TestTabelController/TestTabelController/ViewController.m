@@ -36,9 +36,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    DebugNetWork *debugNet = [DebugManager networkInstance];
-    NetWork *net = [debugNet beginRequest];
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+//    DebugView *debug  = [[DebugView alloc]init];
+//    debug.root = self;
+//    [debug showOverWindow];
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn addTarget:self action:@selector(get) forControlEvents:UIControlEventTouchUpInside];
     btn.frame = CGRectMake(100, 100, 100, 50);
@@ -100,6 +103,7 @@
 
 - (void)resetWindow{
     [self.window makeKeyWindow];
+
 }
 
 - (void)test
