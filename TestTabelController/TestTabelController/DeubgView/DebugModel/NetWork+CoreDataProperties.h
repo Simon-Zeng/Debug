@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSNumber *size;
 @property (nullable, nonatomic, retain) NSNumber *statusCode;
 @property (nullable, nonatomic, retain) NSString *type;
-
+@property (nullable, nonatomic, retain) NSString *method;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DebugNetWork.h"
 
 @interface DebugManager : NSObject
+
++ (DebugNetWork *)networkInstance;
 
 @end

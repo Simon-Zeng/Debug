@@ -37,6 +37,19 @@
         self.actionTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         self.actionTableView.rowHeight = 60;
         self.actionTableView.backgroundColor = [UIColor clearColor];
+        [self addSubview:self.actionTableView];
+        
+        // 收起按钮
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [btn setTitle:@"收起" forState:UIControlStateNormal];
+        btn.titleLabel.font = [UIFont systemFontOfSize:14.0f];
+        [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+        btn.frame = CGRectMake(0, self.frame.size.height - 40, self.frame.size.width, 40);
+        [self addSubview:btn];
+        btn.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.6];
+        
+        _hidden = YES;
     }
     return self;
 }
@@ -45,7 +58,11 @@
 - (void)showOverWindow
 {
     self.window = [[UIWindow alloc]initWithFrame:CGRectMake(100, 0, [UIScreen mainScreen].bounds.size.width - 100, 20)];
+
     self.window.rootViewController = _root;
+
+    self.window.rootViewController = self.rootVc;
+
     self.window.windowLevel = UIWindowLevelStatusBar + 10;
     self.window.hidden = NO;
     
@@ -60,18 +77,31 @@
 }
 
 #pragma mark - action
+- (void) btnClick:(id)sender{
+    self.hidden = YES;
+}
+
 - (void)handleSwipeFromLeft:(UISwipeGestureRecognizer *)ges
 {
-    NSTimeInterval beginTime = CACurrentMediaTime();
-    NSString *timeConsume = [NSString stringWithFormat:@"耗费时间:%f",beginTime - CACurrentMediaTime()];
+    CGPoint point = [ges locationInView:ges.view];
+    if (point.y < 20) {
+        self.hidden = YES;
+    }
 }
 
 - (void)handleSwipeFromRight:(UISwipeGestureRecognizer *)ges
 {
-
+    CGPoint point = [ges locationInView:ges.view];
+    if (point.y < 20) {
+        self.hidden = NO;
+    }
 }
 
 #pragma mark - dataSource
+- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.actions.count;
@@ -93,16 +123,63 @@
         cell.textLabel.lineBreakMode = NSLineBreakByCharWrapping;
         cell.selectedBackgroundView = [[UIView alloc] init];
         cell.selectedBackgroundView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.6];
-        cell.textLabel.textAlignment = NSTextAlignmentCenter;
     }
     cell.textLabel.text = [self.actions objectAtIndex:indexPath.row];
     return cell;
 }
 #pragma mark - delegate
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    eLongDebugActionView *actionView = nil;
+//    switch (indexPath.row) {
+//        case 0:{
+//            // 服务器
+//            actionView = [[eLongDebugNetworkView alloc] initWithFrame:CGRectZero];
+//        }
+//            break;
+//        case 1:{
+//            // 业务线
+//            actionView = [[eLongDebugPerformanceView alloc] initWithFrame:CGRectZero];
+//        }
+//            break;
+//        case 2:{
+//            // Crash
+//            actionView = [[eLongDebugCrashView alloc] initWithFrame:CGRectZero];
+//        }
+//            break;
+//        case 3:{
+//            // 设备id
+//            
+//        }
+//            break;
+//        default:
+//            break;
+//    }
+//    [actionView showOverWindow];
+}
 
 #pragma mark - property
 - (void)setHidden:(BOOL)hidden
 {
-    
+    if (hidden != _hidden) {
+        _hidden = hidden;
+        if (!self.superview) {
+            [[UIApplication sharedApplication].keyWindow addSubview:self];
+        }
+        if (hidden) {
+            [UIView animateWithDuration:0.3 animations:^{
+                CGFloat screenWidth = ([[UIScreen mainScreen] bounds].size.width);
+                CGFloat screenHeight = ([[UIScreen mainScreen] bounds].size.height);
+                self.frame = CGRectMake(screenWidth, 80, self.frame.size.width, screenHeight - 80 * 2);
+            }];
+            [self.actionTableView reloadData];
+        }else {
+            [UIView animateWithDuration:0.3 animations:^{
+                CGFloat screenWidth = ([[UIScreen mainScreen] bounds].size.width);
+                CGFloat screenHeight = ([[UIScreen mainScreen] bounds].size.height);
+                self.frame = CGRectMake(screenWidth - self.frame.size.width, 80, self.frame.size.width, screenHeight - 80 * 2);
+            }];
+        }
+    }
+
 }
 @end

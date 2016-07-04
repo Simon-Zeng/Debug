@@ -15,21 +15,138 @@
 #import "feeData.h"
 #import "DebugManager.h"
 #import "DebugView.h"
+#import "Aspects.h"
+#import "NetWork.h"
+#import "NetworkSerialization.h"
+#import "DebugNetWork.h"
+#import "DebugManager.h"
+#import "NSString+Extension.h"
 
-@interface ViewController ()
-
+@interface ViewController ()<NSURLSessionDelegate>
+@property (nonatomic,strong) UIWindow *window;
 @end
 
 @implementation ViewController
+- (IBAction)getClick:(id)sender {
+    [self get];
+}
+- (IBAction)postClick:(id)sender {
+    [self post];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    DebugView *debug  = [[DebugView alloc]init];
-    debug.root = self;
+//    DebugView *debug  = [[DebugView alloc]init];
+//    debug.root = self;
+//    [debug showOverWindow];
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn addTarget:self action:@selector(get) forControlEvents:UIControlEventTouchUpInside];
+    btn.frame = CGRectMake(100, 100, 100, 50);
+    btn.titleLabel.text = @"get";
+    btn.backgroundColor = [UIColor redColor];
+    [self.view addSubview:btn];
+    
+    UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn1 addTarget:self action:@selector(post) forControlEvents:UIControlEventTouchUpInside];
+    btn1.frame = CGRectMake(100, 200, 100, 50);
+    btn1.titleLabel.text = @"post";
+    btn1.backgroundColor = [UIColor redColor];
+    [self.view addSubview:btn1];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.window = [[[UIApplication sharedApplication] delegate] window];
+    DebugView *debug = [[DebugView alloc]initWithFrame:CGRectZero];
+    debug.rootVc = self.navigationController;
     [debug showOverWindow];
+    [[UIApplication sharedApplication].keyWindow addSubview:debug];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetWindow) name:UIWindowDidBecomeKeyNotification object:nil];
+    
+    [self aspectGet];
+    [self aspectPost];
+    
+}
+
+- (NSString *)translation:(NSString *)arebic
+
+{   NSString *str = arebic;
+    
+    NSArray *arabic_numerals = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"0"];
+    NSArray *chinese_numerals = @[@"壹",@"贰",@"叁",@"肆",@"伍",@"陆",@"柒",@"捌",@"玖",@"零"];
+    NSArray *digits = @[@"个",@"十",@"百",@"千",@"万",@"十",@"百",@"千",@"亿",@"十",@"百",@"千",@"兆"];
+    NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:chinese_numerals forKeys:arabic_numerals];
+    
+    NSMutableArray *sums = [NSMutableArray array];
+    for (int i = 0; i < str.length; i ++) {
+        NSString *substr = [str substringWithRange:NSMakeRange(i, 1)];
+        NSString *a = [dictionary objectForKey:substr];
+        NSString *b = digits[str.length -i-1];
+        NSString *sum = [a stringByAppendingString:b];
+        if ([a isEqualToString:chinese_numerals[9]])
+        {
+            if([b isEqualToString:digits[4]] || [b isEqualToString:digits[8]])
+            {
+                sum = b;
+                if ([[sums lastObject] isEqualToString:chinese_numerals[9]])
+                {
+                    [sums removeLastObject];
+                }
+            }else
+            {
+                sum = chinese_numerals[9];
+            }
+            
+            if ([[sums lastObject] isEqualToString:sum])
+            {
+                continue;
+            }
+        }
+        
+        [sums addObject:sum];
+    }
+    
+    NSString *sumStr = [sums  componentsJoinedByString:@""];
+    NSString *chinese = [sumStr substringToIndex:sumStr.length-1];
+    NSLog(@"%@",str);
+    NSLog(@"%@",chinese);
+    return chinese;
+}
+
+- (void)get
+{
+//    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+//    NSURLSessionTask *task = [session dataTaskWithURL:[NSURL URLWithString:@"https://www.baidu.com"] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+//        NSLog(@"%@",[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil]);
+//    }];
+//    [task resume];
+    
+    NSURLSession *session2 = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:[[NSOperationQueue alloc]init]];
+    NSURLSessionTask *task2 = [session2 dataTaskWithURL:[NSURL URLWithString:@"https://www.baidu.com"]];
+    [task2 resume];
+}
+
+- (void)post
+{
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    NSURL *url = [NSURL URLWithString:@"https://www.baidu.com"];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    request.HTTPMethod = @"POST";
+//    request.allHTTPHeaderFields = @{
+//                                    
+//                                    }
+    request.HTTPBody = [@"" dataUsingEncoding:NSUTF8StringEncoding];
+    NSURLSessionTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+       NSLog(@"%@",[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil]);
+    }];
+    
+    [task resume];
+}
+
+- (void)resetWindow{
+    [self.window makeKeyWindow];
+
 }
 
 - (void)test
@@ -59,6 +176,57 @@
     
     [feed1 feedWihthFeedData:data1];
     [feed2 feedWihthFeedData:data2];
+
+}
+
+- (void)aspectGet
+{
+    [NSURLSession aspect_hookSelector:@selector(dataTaskWithURL:completionHandler:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo){
+        NSLog(@"%@",aspectInfo);
+    } error:NULL];
+}
+
+- (void)aspectPost
+{
+    __block NetWork *netWorkModel = [[NetWork alloc]init];
+    [NSURLSession aspect_hookSelector:@selector(dataTaskWithRequest:completionHandler:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo,NSMutableURLRequest *requset){
+        NSString *path = [requset.URL.absoluteString safeString];
+        NSString *method = [requset.HTTPMethod safeString];
+        NSString *type = [[requset.allHTTPHeaderFields valueForKey:@"Content-Type"] safeString];
+//        NSNumber *size = @(data.length);
+//        NSString *dataString = nil;
+//        if (data) {
+//            dataString = [eLongNetworkSerialization jsonStringWithObject:[eLongNetworkSerialization jsonObjectWithData:data]];
+//        }else{
+//            dataString = @"error";
+//        }
+        //NSString *body = [[NSString alloc] initWithData:operation.currentReq.HTTPBody encoding:NSUTF8StringEncoding];
+        NSString *header = [NetworkSerialization jsonStringWithObject:requset.allHTTPHeaderFields];
+        netWorkModel.path = path;
+        netWorkModel.method = method;
+        netWorkModel.type = type;
+        netWorkModel.header = header;
+        DebugNetWork *debugNetWork = [DebugManager networkInstance];
+        [debugNetWork endRequest:netWorkModel];
+    } error:NULL];
+    
+    
+    NSLog(@"网络记录模型为%@",netWorkModel);
+}
+
+#pragma mark - NSURLSessionDelegate
+- (void)URLSession:(NSURLSession *)session didBecomeInvalidWithError:(NSError *)error
+{
+
+}
+
+- (void)URLSession:(NSURLSession *)session didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler
+{
+
+}
+
+- (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession *)session
+{
 
 }
 

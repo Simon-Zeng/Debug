@@ -22,5 +22,6 @@
 @dynamic size;
 @dynamic statusCode;
 @dynamic type;
+@dynamic method;
 
 @end
