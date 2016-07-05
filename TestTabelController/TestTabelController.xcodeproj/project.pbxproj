@@ -8,20 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		1511652C6324EA4ED83680A2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF335B609005355AA2D2EA25 /* libPods.a */; };
-
-		3500A4B21D28AC1500F55CF6 /* DebugHttpMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3500A4B11D28AC1500F55CF6 /* DebugHttpMonitor.m */; };
-		3500A4B61D28AF6D00F55CF6 /* NSUserDefaults+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3500A4B51D28AF6D00F55CF6 /* NSUserDefaults+Extension.m */; };
-		3500A4BC1D28B22400F55CF6 /* DebugURLSessionConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 3500A4BB1D28B22400F55CF6 /* DebugURLSessionConfiguration.m */; };
-
 		2D47547F1D2510EB0018A5FE /* NetworkSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D47547E1D2510EB0018A5FE /* NetworkSerialization.m */; };
 		2D4754831D251B190018A5FE /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4754821D251B190018A5FE /* NSString+Extension.m */; };
+		2D4CB4A31D2BC86E00B8023B /* DebugSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4CB4A21D2BC86E00B8023B /* DebugSearchBar.m */; };
+		2D4CB4A61D2BC89000B8023B /* UIScrollView+AddSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4CB4A51D2BC89000B8023B /* UIScrollView+AddSearch.m */; };
 		2D6CCF471D2258D000C08A2B /* DebugObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CCF461D2258D000C08A2B /* DebugObject.m */; };
 		2D6CCF4A1D2258F700C08A2B /* DebugNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CCF491D2258F700C08A2B /* DebugNetWork.m */; };
 		2D9E060C1D23A86500B7934E /* DebugActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E060B1D23A86500B7934E /* DebugActionView.m */; };
 		2D9E060F1D23A89600B7934E /* DebugActionNetWorkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E060E1D23A89600B7934E /* DebugActionNetWorkView.m */; };
 		2D9E06121D23A8AB00B7934E /* DebugActionCrashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E06111D23A8AB00B7934E /* DebugActionCrashView.m */; };
 		2D9E06151D23A8C700B7934E /* DebugActionMemoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E06141D23A8C700B7934E /* DebugActionMemoryView.m */; };
-
+		3500A4B21D28AC1500F55CF6 /* DebugHttpMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3500A4B11D28AC1500F55CF6 /* DebugHttpMonitor.m */; };
+		3500A4B61D28AF6D00F55CF6 /* NSUserDefaults+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3500A4B51D28AF6D00F55CF6 /* NSUserDefaults+Extension.m */; };
+		3500A4BC1D28B22400F55CF6 /* DebugURLSessionConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 3500A4BB1D28B22400F55CF6 /* DebugURLSessionConfiguration.m */; };
 		350206341D0C3FB4005787EE /* baoxiaoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 350206331D0C3FB4005787EE /* baoxiaoModel.m */; };
 		350206371D0C3FCE005787EE /* qingjiaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 350206361D0C3FCE005787EE /* qingjiaModel.m */; };
 		3502063A1D0C469F005787EE /* checkFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 350206391D0C469F005787EE /* checkFeed.m */; };
@@ -77,18 +76,14 @@
 
 /* Begin PBXFileReference section */
 		05E45D16D5A26320E45D7783 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-
-		3500A4B01D28AC1500F55CF6 /* DebugHttpMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugHttpMonitor.h; sourceTree = "<group>"; };
-		3500A4B11D28AC1500F55CF6 /* DebugHttpMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugHttpMonitor.m; sourceTree = "<group>"; };
-		3500A4B41D28AF6D00F55CF6 /* NSUserDefaults+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Extension.h"; sourceTree = "<group>"; };
-		3500A4B51D28AF6D00F55CF6 /* NSUserDefaults+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Extension.m"; sourceTree = "<group>"; };
-		3500A4BA1D28B22400F55CF6 /* DebugURLSessionConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugURLSessionConfiguration.h; sourceTree = "<group>"; };
-		3500A4BB1D28B22400F55CF6 /* DebugURLSessionConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugURLSessionConfiguration.m; sourceTree = "<group>"; };
-
 		2D47547D1D2510EB0018A5FE /* NetworkSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkSerialization.h; sourceTree = "<group>"; };
 		2D47547E1D2510EB0018A5FE /* NetworkSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkSerialization.m; sourceTree = "<group>"; };
 		2D4754811D251B190018A5FE /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		2D4754821D251B190018A5FE /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		2D4CB4A11D2BC86E00B8023B /* DebugSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugSearchBar.h; sourceTree = "<group>"; };
+		2D4CB4A21D2BC86E00B8023B /* DebugSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugSearchBar.m; sourceTree = "<group>"; };
+		2D4CB4A41D2BC89000B8023B /* UIScrollView+AddSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+AddSearch.h"; sourceTree = "<group>"; };
+		2D4CB4A51D2BC89000B8023B /* UIScrollView+AddSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+AddSearch.m"; sourceTree = "<group>"; };
 		2D6CCF451D2258D000C08A2B /* DebugObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugObject.h; sourceTree = "<group>"; };
 		2D6CCF461D2258D000C08A2B /* DebugObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugObject.m; sourceTree = "<group>"; };
 		2D6CCF481D2258F700C08A2B /* DebugNetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugNetWork.h; sourceTree = "<group>"; };
@@ -101,7 +96,12 @@
 		2D9E06111D23A8AB00B7934E /* DebugActionCrashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugActionCrashView.m; sourceTree = "<group>"; };
 		2D9E06131D23A8C700B7934E /* DebugActionMemoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugActionMemoryView.h; sourceTree = "<group>"; };
 		2D9E06141D23A8C700B7934E /* DebugActionMemoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugActionMemoryView.m; sourceTree = "<group>"; };
-
+		3500A4B01D28AC1500F55CF6 /* DebugHttpMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugHttpMonitor.h; sourceTree = "<group>"; };
+		3500A4B11D28AC1500F55CF6 /* DebugHttpMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugHttpMonitor.m; sourceTree = "<group>"; };
+		3500A4B41D28AF6D00F55CF6 /* NSUserDefaults+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Extension.h"; sourceTree = "<group>"; };
+		3500A4B51D28AF6D00F55CF6 /* NSUserDefaults+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Extension.m"; sourceTree = "<group>"; };
+		3500A4BA1D28B22400F55CF6 /* DebugURLSessionConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugURLSessionConfiguration.h; sourceTree = "<group>"; };
+		3500A4BB1D28B22400F55CF6 /* DebugURLSessionConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugURLSessionConfiguration.m; sourceTree = "<group>"; };
 		350206321D0C3FB4005787EE /* baoxiaoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = baoxiaoModel.h; path = ../baoxiaoModel.h; sourceTree = "<group>"; };
 		350206331D0C3FB4005787EE /* baoxiaoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = baoxiaoModel.m; path = ../baoxiaoModel.m; sourceTree = "<group>"; };
 		350206351D0C3FCE005787EE /* qingjiaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qingjiaModel.h; path = ../qingjiaModel.h; sourceTree = "<group>"; };
@@ -212,6 +212,17 @@
 				2D4754821D251B190018A5FE /* NSString+Extension.m */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		2D4CB4A01D2BC81300B8023B /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				2D4CB4A11D2BC86E00B8023B /* DebugSearchBar.h */,
+				2D4CB4A21D2BC86E00B8023B /* DebugSearchBar.m */,
+				2D4CB4A41D2BC89000B8023B /* UIScrollView+AddSearch.h */,
+				2D4CB4A51D2BC89000B8023B /* UIScrollView+AddSearch.m */,
+			);
+			path = SearchBar;
 			sourceTree = "<group>";
 		};
 		2D6CCF441D22589300C08A2B /* DebugObject */ = {
@@ -325,13 +336,11 @@
 		359142BC1D13178A003EC0F4 /* DeubgView */ = {
 			isa = PBXGroup;
 			children = (
-
+				2D4CB4A01D2BC81300B8023B /* SearchBar */,
 				3500A4B31D28AF4B00F55CF6 /* Extension */,
 				3500A4AF1D28AB0A00F55CF6 /* NetWork */,
-
 				2D6CCF4B1D225A1400C08A2B /* DebugVIew */,
 				2D6CCF441D22589300C08A2B /* DebugObject */,
-
 				35D542BE1D1FD26200240126 /* DebugModel */,
 				35D542B91D1FD18E00240126 /* DebugDB */,
 				359142BD1D1317A5003EC0F4 /* Debug.h */,
@@ -600,6 +609,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3502064D1D0CD47B005787EE /* feed.m in Sources */,
+				2D4CB4A61D2BC89000B8023B /* UIScrollView+AddSearch.m in Sources */,
 				35D542D91D1FD46F00240126 /* DebugDB.m in Sources */,
 				350206441D0C4FBA005787EE /* authorizedState.m in Sources */,
 				3500A4B61D28AF6D00F55CF6 /* NSUserDefaults+Extension.m in Sources */,
@@ -628,17 +638,15 @@
 				359142C41D131B6C003EC0F4 /* PhotoViewController.m in Sources */,
 				359142BF1D1317A5003EC0F4 /* Debug.m in Sources */,
 				359142EB1D1F8EBC003EC0F4 /* VVStack.m in Sources */,
-
 				3500A4B21D28AC1500F55CF6 /* DebugHttpMonitor.m in Sources */,
-
 				2D9E06121D23A8AB00B7934E /* DebugActionCrashView.m in Sources */,
-
 				3502064A1D0CD461005787EE /* feedFactory.m in Sources */,
 				3502063A1D0C469F005787EE /* checkFeed.m in Sources */,
 				35D542CF1D1FD3BA00240126 /* NetWork+CoreDataProperties.m in Sources */,
 				350206471D0CD437005787EE /* feeData.m in Sources */,
 				2D9E060F1D23A89600B7934E /* DebugActionNetWorkView.m in Sources */,
 				2D9E06151D23A8C700B7934E /* DebugActionMemoryView.m in Sources */,
+				2D4CB4A31D2BC86E00B8023B /* DebugSearchBar.m in Sources */,
 				350206501D0CD4B1005787EE /* concrteFeed.m in Sources */,
 				35FC157E1D0BB62200A71FFB /* feedState.m in Sources */,
 			);

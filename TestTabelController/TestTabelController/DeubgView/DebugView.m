@@ -7,6 +7,8 @@
 //
 
 #import "DebugView.h"
+#import "DebugActionView.h"
+#import "DebugActionNetWorkView.h"
 
 @interface DebugView()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong)UITableView *actionTableView;
@@ -129,32 +131,32 @@
 }
 #pragma mark - delegate
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    eLongDebugActionView *actionView = nil;
-//    switch (indexPath.row) {
-//        case 0:{
-//            // 服务器
-//            actionView = [[eLongDebugNetworkView alloc] initWithFrame:CGRectZero];
-//        }
-//            break;
-//        case 1:{
-//            // 业务线
-//            actionView = [[eLongDebugPerformanceView alloc] initWithFrame:CGRectZero];
-//        }
-//            break;
-//        case 2:{
-//            // Crash
-//            actionView = [[eLongDebugCrashView alloc] initWithFrame:CGRectZero];
-//        }
-//            break;
-//        case 3:{
-//            // 设备id
-//            
-//        }
-//            break;
-//        default:
-//            break;
-//    }
-//    [actionView showOverWindow];
+    DebugActionView *actionView = nil;
+    switch (indexPath.row) {
+        case 0:{
+            // 服务器
+            actionView = [[DebugActionNetWorkView alloc] initWithFrame:CGRectZero];
+        }
+            break;
+        case 1:{
+            // 业务线
+            
+        }
+            break;
+        case 2:{
+            // Crash
+
+        }
+            break;
+        case 3:{
+            // 设备id
+            
+        }
+            break;
+        default:
+            break;
+    }
+    [actionView showOverWindow];
 }
 
 #pragma mark - property

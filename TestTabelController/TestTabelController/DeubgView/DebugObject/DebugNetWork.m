@@ -14,6 +14,10 @@
 static NSString *networkDebugModelName = @"NetWork";        // 网络存储数据表名
 static const NSInteger requestMaxCacheAge = 60 * 60 * 12;   // 数据最长保留时间为0.5天
 
+@interface DebugNetWork()
+@property (nonatomic, strong)NSArray *fiterList;
+@end
+
 @implementation DebugNetWork
 - (instancetype)init
 {
@@ -97,5 +101,28 @@ static const NSInteger requestMaxCacheAge = 60 * 60 * 12;   // 数据最长保�
                                    query:query
                                     sort:sort];
 
+}
+
+- (NSArray *)setFilterList:(NSArray<NSString *> *)list
+{
+    if (!self.enable) {
+        return nil;
+    }
+    
+    if (!list.count) {
+        return [self requests];
+    }
+    
+    DebugDB *db = [DebugDB shareInstance];
+    NSMutableArray *arrM = [NSMutableArray array];
+    NSPredicate *query = nil;
+    for (NSString *str in list) {
+        query = [NSPredicate predicateWithFormat:@"path CONTAINS %@",str];
+        NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"beginDate" ascending:NO];
+        [arrM addObjectsFromArray:[db selectDataFromEntity:networkDebugModelName
+                                  query:query
+                                                      sort:sort]];
+    }
+    return arrM.copy;
 }
 @end

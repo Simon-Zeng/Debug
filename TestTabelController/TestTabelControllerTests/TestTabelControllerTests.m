@@ -36,6 +36,7 @@
     NetWork *model = [net beginRequest];
     model.method = @"post";
     model.beginDate = [NSDate date];
+    model.data = @"dadahdahdsjakhskdjhaj";
     [net endRequest:model];
     
     NSLog(@"%@",net.requests);

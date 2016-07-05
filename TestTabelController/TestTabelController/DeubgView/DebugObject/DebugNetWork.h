@@ -46,5 +46,11 @@
  *  @return 所有符合条件的请求Model
  */
 - (NSArray *) requestsBeginDate:(NSDate *)beginDate endDate:(NSDate *)endDate;
+/**
+ *  设置网络请求的过滤名单,为了过滤日志分析和轮询类的请求
+ *
+ *  @param list 过滤名单
+ */
+- (NSArray *)setFilterList:(NSArray<NSString *> *)list;
 
 @end
