@@ -15,13 +15,13 @@
 
 static NSString * const netMonitorEnable = @"netMonitorEnable";
 static NSString * const netflowCount = @"netflowCount";
+static NSString * const newUrl = @"netNewUrl";
 #define UserDefaults [NSUserDefaults standardUserDefaults]
 @interface DebugHttpMonitor()<NSURLConnectionDataDelegate>
 @property (nonatomic, strong)NetWork *netWorkModel;
 @property (nonatomic, strong)NSURLConnection *connection;
 @property (nonatomic, strong)NSURLResponse *response;
 @property (nonatomic, strong)NSMutableData *data;
-
 @end
 
 @implementation DebugHttpMonitor
@@ -51,6 +51,11 @@ static NSString * const netflowCount = @"netflowCount";
     return [[UserDefaults valueForKey:netMonitorEnable] boolValue];
 }
 
++ (void)exchangeRequestUrlWithNewUrl:(NSString *)url
+{
+    [UserDefaults setBool:url forKey:newUrl];
+    [UserDefaults synchronize];
+}
 #pragma mark - superClass
 + (void)load
 {
@@ -75,6 +80,10 @@ static NSString * const netflowCount = @"netflowCount";
 + (NSURLRequest *)canonicalRequestForRequest:(NSURLRequest *)request
 {
     NSMutableURLRequest *aRequest = request.mutableCopy;
+    NSString *url = [UserDefaults valueForKey:newUrl];
+    if (url.length) {
+        //wzgtodo:替换url的host
+    }
     [NSURLProtocol setProperty:@YES forKey:@"DebugHttpMonitor" inRequest:aRequest];
     return aRequest.copy;
 }

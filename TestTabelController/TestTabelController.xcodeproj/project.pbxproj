@@ -18,6 +18,11 @@
 		2D9E060F1D23A89600B7934E /* DebugActionNetWorkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E060E1D23A89600B7934E /* DebugActionNetWorkView.m */; };
 		2D9E06121D23A8AB00B7934E /* DebugActionCrashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E06111D23A8AB00B7934E /* DebugActionCrashView.m */; };
 		2D9E06151D23A8C700B7934E /* DebugActionMemoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E06141D23A8C700B7934E /* DebugActionMemoryView.m */; };
+		2DC373C51D2CE32C00CD04EA /* DebugServeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC373C41D2CE32C00CD04EA /* DebugServeView.m */; };
+		2DC373C81D2CE3F400CD04EA /* DebugServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC373C71D2CE3F400CD04EA /* DebugServer.m */; };
+		2DC373D31D2CE4DA00CD04EA /* Server+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC373D01D2CE4DA00CD04EA /* Server+CoreDataProperties.m */; };
+		2DC373D41D2CE4DA00CD04EA /* Server.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC373D21D2CE4DA00CD04EA /* Server.m */; };
+		2DC373D71D2CE71400CD04EA /* NSURLRequest+Exchange.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC373D61D2CE71400CD04EA /* NSURLRequest+Exchange.m */; };
 		3500A4B21D28AC1500F55CF6 /* DebugHttpMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3500A4B11D28AC1500F55CF6 /* DebugHttpMonitor.m */; };
 		3500A4B61D28AF6D00F55CF6 /* NSUserDefaults+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3500A4B51D28AF6D00F55CF6 /* NSUserDefaults+Extension.m */; };
 		3500A4BC1D28B22400F55CF6 /* DebugURLSessionConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 3500A4BB1D28B22400F55CF6 /* DebugURLSessionConfiguration.m */; };
@@ -96,6 +101,16 @@
 		2D9E06111D23A8AB00B7934E /* DebugActionCrashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugActionCrashView.m; sourceTree = "<group>"; };
 		2D9E06131D23A8C700B7934E /* DebugActionMemoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugActionMemoryView.h; sourceTree = "<group>"; };
 		2D9E06141D23A8C700B7934E /* DebugActionMemoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugActionMemoryView.m; sourceTree = "<group>"; };
+		2DC373C31D2CE32C00CD04EA /* DebugServeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugServeView.h; sourceTree = "<group>"; };
+		2DC373C41D2CE32C00CD04EA /* DebugServeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugServeView.m; sourceTree = "<group>"; };
+		2DC373C61D2CE3F400CD04EA /* DebugServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugServer.h; sourceTree = "<group>"; };
+		2DC373C71D2CE3F400CD04EA /* DebugServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugServer.m; sourceTree = "<group>"; };
+		2DC373CF1D2CE4DA00CD04EA /* Server+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Server+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2DC373D01D2CE4DA00CD04EA /* Server+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Server+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2DC373D11D2CE4DA00CD04EA /* Server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Server.h; sourceTree = "<group>"; };
+		2DC373D21D2CE4DA00CD04EA /* Server.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Server.m; sourceTree = "<group>"; };
+		2DC373D51D2CE71400CD04EA /* NSURLRequest+Exchange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+Exchange.h"; sourceTree = "<group>"; };
+		2DC373D61D2CE71400CD04EA /* NSURLRequest+Exchange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+Exchange.m"; sourceTree = "<group>"; };
 		3500A4B01D28AC1500F55CF6 /* DebugHttpMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugHttpMonitor.h; sourceTree = "<group>"; };
 		3500A4B11D28AC1500F55CF6 /* DebugHttpMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugHttpMonitor.m; sourceTree = "<group>"; };
 		3500A4B41D28AF6D00F55CF6 /* NSUserDefaults+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Extension.h"; sourceTree = "<group>"; };
@@ -232,6 +247,8 @@
 				2D6CCF461D2258D000C08A2B /* DebugObject.m */,
 				2D6CCF481D2258F700C08A2B /* DebugNetWork.h */,
 				2D6CCF491D2258F700C08A2B /* DebugNetWork.m */,
+				2DC373C61D2CE3F400CD04EA /* DebugServer.h */,
+				2DC373C71D2CE3F400CD04EA /* DebugServer.m */,
 			);
 			path = DebugObject;
 			sourceTree = "<group>";
@@ -249,6 +266,8 @@
 				2D9E06111D23A8AB00B7934E /* DebugActionCrashView.m */,
 				2D9E06131D23A8C700B7934E /* DebugActionMemoryView.h */,
 				2D9E06141D23A8C700B7934E /* DebugActionMemoryView.m */,
+				2DC373C31D2CE32C00CD04EA /* DebugServeView.h */,
+				2DC373C41D2CE32C00CD04EA /* DebugServeView.m */,
 			);
 			path = DebugVIew;
 			sourceTree = "<group>";
@@ -268,6 +287,8 @@
 				3500A4B11D28AC1500F55CF6 /* DebugHttpMonitor.m */,
 				3500A4BA1D28B22400F55CF6 /* DebugURLSessionConfiguration.h */,
 				3500A4BB1D28B22400F55CF6 /* DebugURLSessionConfiguration.m */,
+				2DC373D51D2CE71400CD04EA /* NSURLRequest+Exchange.h */,
+				2DC373D61D2CE71400CD04EA /* NSURLRequest+Exchange.m */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -431,6 +452,10 @@
 		35D542BE1D1FD26200240126 /* DebugModel */ = {
 			isa = PBXGroup;
 			children = (
+				2DC373CF1D2CE4DA00CD04EA /* Server+CoreDataProperties.h */,
+				2DC373D01D2CE4DA00CD04EA /* Server+CoreDataProperties.m */,
+				2DC373D11D2CE4DA00CD04EA /* Server.h */,
+				2DC373D21D2CE4DA00CD04EA /* Server.m */,
 				35D542BF1D1FD3BA00240126 /* Crash+CoreDataProperties.h */,
 				35D542C01D1FD3BA00240126 /* Crash+CoreDataProperties.m */,
 				35D542C11D1FD3BA00240126 /* Crash.h */,
@@ -617,15 +642,18 @@
 				2D6CCF471D2258D000C08A2B /* DebugObject.m in Sources */,
 				3502063D1D0C4F69005787EE /* Context.m in Sources */,
 				350206411D0C4FAD005787EE /* UnauthorizedState.m in Sources */,
+				2DC373C81D2CE3F400CD04EA /* DebugServer.m in Sources */,
 				2D4754831D251B190018A5FE /* NSString+Extension.m in Sources */,
 				35403D3C1D05C556005D25CE /* AppDelegate.m in Sources */,
 				35D542D11D1FD3BA00240126 /* NetWork.m in Sources */,
 				35D542BC1D1FD1EE00240126 /* DebugObject.xcdatamodeld in Sources */,
 				35403D391D05C556005D25CE /* main.m in Sources */,
 				35D542CD1D1FD3BA00240126 /* Crash.m in Sources */,
+				2DC373D31D2CE4DA00CD04EA /* Server+CoreDataProperties.m in Sources */,
 				2D6CCF4A1D2258F700C08A2B /* DebugNetWork.m in Sources */,
 				35D542D31D1FD3BA00240126 /* DeviceID+CoreDataProperties.m in Sources */,
 				2D9E060C1D23A86500B7934E /* DebugActionView.m in Sources */,
+				2DC373C51D2CE32C00CD04EA /* DebugServeView.m in Sources */,
 				35D542D51D1FD3BA00240126 /* DeviceID.m in Sources */,
 				3500A4BC1D28B22400F55CF6 /* DebugURLSessionConfiguration.m in Sources */,
 				359142C91D177545003EC0F4 /* DebugManager.m in Sources */,
@@ -639,8 +667,10 @@
 				359142BF1D1317A5003EC0F4 /* Debug.m in Sources */,
 				359142EB1D1F8EBC003EC0F4 /* VVStack.m in Sources */,
 				3500A4B21D28AC1500F55CF6 /* DebugHttpMonitor.m in Sources */,
+				2DC373D41D2CE4DA00CD04EA /* Server.m in Sources */,
 				2D9E06121D23A8AB00B7934E /* DebugActionCrashView.m in Sources */,
 				3502064A1D0CD461005787EE /* feedFactory.m in Sources */,
+				2DC373D71D2CE71400CD04EA /* NSURLRequest+Exchange.m in Sources */,
 				3502063A1D0C469F005787EE /* checkFeed.m in Sources */,
 				35D542CF1D1FD3BA00240126 /* NetWork+CoreDataProperties.m in Sources */,
 				350206471D0CD437005787EE /* feeData.m in Sources */,

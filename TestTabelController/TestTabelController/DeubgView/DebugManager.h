@@ -8,9 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "DebugNetWork.h"
+#import "DebugServer.h"
 
 @interface DebugManager : NSObject
 
 + (DebugNetWork *)networkInstance;
+
++ (DebugServer *)serverInstance;
 
 @end

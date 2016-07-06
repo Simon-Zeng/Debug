@@ -63,6 +63,14 @@ static const NSInteger requestMaxCacheAge = 60 * 60 * 12;   // 数据最长保�
     DebugDB *db = [DebugDB shareInstance];
     [db removeDataFromEntity:networkDebugModelName query:[NSPredicate predicateWithFormat: @"(beginDate < %@)",[[NSDate alloc] initWithTimeIntervalSinceNow:-requestMaxCacheAge]]];
     [db saveContext];
+    
+    NSArray *result = [db selectDataFromEntity:networkDebugModelName query:[NSPredicate predicateWithFormat: @"(beginDate < %@)",[[NSDate alloc] initWithTimeIntervalSinceNow:-requestMaxCacheAge]]];
+    
+    CGFloat count = [[[NSUserDefaults standardUserDefaults] valueForKey:@"netflowCount"] floatValue];
+    for (NetWork *net in result) {
+        count -= net.size.floatValue;
+    }
+    [[NSUserDefaults standardUserDefaults] setValue:@(count) forKey:@"netflowCount"];
 }
 
 - (void) clearRequest
@@ -73,6 +81,8 @@ static const NSInteger requestMaxCacheAge = 60 * 60 * 12;   // 数据最长保�
     DebugDB *db = [DebugDB shareInstance];
     [db clearEntity:networkDebugModelName];
     [db saveContext];
+    
+    [[NSUserDefaults standardUserDefaults] setValue:@(0) forKey:@"netflowCount"];
 }
 
 - (NSArray *) requests

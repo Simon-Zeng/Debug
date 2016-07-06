@@ -67,8 +67,8 @@
     [[UIApplication sharedApplication].keyWindow addSubview:debug];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetWindow) name:UIWindowDidBecomeKeyNotification object:nil];
     
-    [self aspectGet];
-    [self aspectPost];
+//    [self aspectGet];
+//    [self aspectPost];
     
 }
 
@@ -117,14 +117,10 @@
 //    }];
     
     [task resume];
-    [task resume];
-    [task resume];
-    [task resume];
 }
 
 - (void)resetWindow{
     [self.window makeKeyWindow];
-
 }
 
 - (void)test
@@ -176,31 +172,28 @@
     DebugNetWork *debugNet = [DebugManager networkInstance];
     debugNet.enable = YES;
     __block NetWork *net = [debugNet beginRequest];
-    [NSURLSession aspect_hookSelector:@selector(dataTaskWithRequest:completionHandler:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo,NSMutableURLRequest *requset,void (^block)(NSData * __nullable data, NSURLResponse * __nullable response, NSError * __nullable error)){
-        NSString *path = [requset.URL.absoluteString safeString];
-        NSString *method = [requset.HTTPMethod safeString];
-        NSString *type = [[requset.allHTTPHeaderFields valueForKey:@"Content-Type"] safeString];
-        
-//        NSNumber *size = @(data.length);
-//        NSString *dataString = nil;
-//        if (data) {
-//            dataString = [eLongNetworkSerialization jsonStringWithObject:[eLongNetworkSerialization jsonObjectWithData:data]];
-//        }else{
-//            dataString = @"error";
-//        }
-        //NSString *body = [[NSString alloc] initWithData:operation.currentReq.HTTPBody encoding:NSUTF8StringEncoding];
-        NSString *header = [NetworkSerialization jsonStringWithObject:requset.allHTTPHeaderFields];
-        net.path = path;
-        net.method = method;
-        net.type = type;
-        net.header = header;
-        DebugNetWork *debugNetWork = [DebugManager networkInstance];
-        [debugNetWork endRequest:net];
-        NSLog(@"网络记录模型为%@",net);
-    } error:NULL];
-    
-    
-    
+//    [NSURLSession aspect_hookSelector:@selector(dataTaskWithRequest:completionHandler:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo,NSMutableURLRequest *requset,void (^block)(NSData * __nullable data, NSURLResponse * __nullable response, NSError * __nullable error)){
+//        NSString *path = [requset.URL.absoluteString safeString];
+//        NSString *method = [requset.HTTPMethod safeString];
+//        NSString *type = [[requset.allHTTPHeaderFields valueForKey:@"Content-Type"] safeString];
+//        
+////        NSNumber *size = @(data.length);
+////        NSString *dataString = nil;
+////        if (data) {
+////            dataString = [eLongNetworkSerialization jsonStringWithObject:[eLongNetworkSerialization jsonObjectWithData:data]];
+////        }else{
+////            dataString = @"error";
+////        }
+//        //NSString *body = [[NSString alloc] initWithData:operation.currentReq.HTTPBody encoding:NSUTF8StringEncoding];
+//        NSString *header = [NetworkSerialization jsonStringWithObject:requset.allHTTPHeaderFields];
+//        net.path = path;
+//        net.method = method;
+//        net.type = type;
+//        net.header = header;
+//        DebugNetWork *debugNetWork = [DebugManager networkInstance];
+//        [debugNetWork endRequest:net];
+//        NSLog(@"网络记录模型为%@",net);
+//    } error:NULL];
 }
 
 #pragma mark - NSURLSessionDelegate

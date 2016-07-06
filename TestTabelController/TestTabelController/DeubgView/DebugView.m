@@ -9,11 +9,13 @@
 #import "DebugView.h"
 #import "DebugActionView.h"
 #import "DebugActionNetWorkView.h"
+#import "DebugServeView.h"
 
 @interface DebugView()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong)UITableView *actionTableView;
 @property (nonatomic, strong)NSArray *actions;
 @property (nonatomic, strong)UIWindow *window;
+
 
 @end
 
@@ -31,7 +33,7 @@
         self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.6];
         
         //数据源
-        self.actions = @[@"网络",@"内存",@"崩溃",@"设备ID"];
+        self.actions = @[@"网络",@"服务器",@"内存",@"崩溃"];
         
         self.actionTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeigth - 40)];
         self.actionTableView.delegate = self;
@@ -134,13 +136,13 @@
     DebugActionView *actionView = nil;
     switch (indexPath.row) {
         case 0:{
-            // 服务器
+            // 网络
             actionView = [[DebugActionNetWorkView alloc] initWithFrame:CGRectZero];
         }
             break;
         case 1:{
-            // 业务线
-            
+            // 服务器
+            actionView = [[DebugServeView alloc]initWithFrame:CGRectZero];
         }
             break;
         case 2:{

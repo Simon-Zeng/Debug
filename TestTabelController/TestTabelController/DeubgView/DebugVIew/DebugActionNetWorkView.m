@@ -10,6 +10,7 @@
 #import "DebugNetWork.h"
 #import "NetWork.h"
 #import "DebugManager.h"
+#import "DebugHttpMonitor.h"
 
 @interface DebugActionNetWorkView()<UITextFieldDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong) UITableView *networkTableView;
@@ -24,6 +25,9 @@
 - (id) initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         // 请求列表
+#ifdef DEBUG
+        [DebugHttpMonitor setNetMonitorEnable:YES];
+#endif
         self.debugNetwork = [DebugManager networkInstance];
         self.requests = [self.debugNetwork requests];
         
@@ -61,15 +65,23 @@
         self.detailTextView.hidden = YES;
         
         // 清除按钮
-        UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.networkTableView.frame.size.width, 40)];
+        UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.networkTableView.frame.size.width, 55)];
         
         UIButton *clearBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        clearBtn.frame = headerView.bounds;
+        clearBtn.frame = CGRectMake(0, 0, self.networkTableView.frame.size.width, 40);
         clearBtn.titleLabel.font = [UIFont boldSystemFontOfSize:14.0];
         [clearBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         [clearBtn setTitle:@"清除数据" forState:UIControlStateNormal];
         [clearBtn addTarget:self action:@selector(clearBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         [headerView addSubview:clearBtn];
+        
+        UILabel *flowTotal = [[UILabel alloc]init];
+        flowTotal.frame = CGRectMake(0, 40, self.networkTableView.frame.size.width, 15);
+        flowTotal.textColor = [UIColor redColor];
+        flowTotal.font = [UIFont boldSystemFontOfSize:14.0];
+        flowTotal.text = [NSString stringWithFormat:@"请求流量和:%.2f",[[[NSUserDefaults standardUserDefaults] valueForKey:@"netflowCount"] doubleValue]];
+        [flowTotal sizeToFit];
+        [headerView addSubview:flowTotal];
         self.networkTableView.tableHeaderView = headerView;
         
         UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.networkTableView.frame.size.width, 40)];

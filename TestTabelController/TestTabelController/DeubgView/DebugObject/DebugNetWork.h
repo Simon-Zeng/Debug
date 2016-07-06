@@ -24,7 +24,7 @@
  */
 - (void) endRequest:(NetWork *)networkModel;
 /**
- *  清空过期的数据
+ *  清空过期的数据(过期时长为半天)
  */
 - (void) cleanRequest;
 /**

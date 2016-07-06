@@ -142,4 +142,51 @@
     return result;
 }
 
+- (void)clearEntity:(NSString *)entityName
+{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:context];
+    NSFetchRequest *request = [[NSFetchRequest alloc]init];
+    [request setIncludesPropertyValues:NO];
+    [request setEntity:entity];
+    NSError *error = nil;
+    
+    NSArray *datas = [context executeFetchRequest:request error:&error];
+    if (!error && datas.count) {
+        for (NSManagedObject *obj in datas) {
+            [context deleteObject:obj];
+        }
+        
+        if (![context save:&error]) {
+            NSLog(@"error:%@",error);
+        }
+    }
+}
+
+- (BOOL)remove:(NSManagedObject *)model
+{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    [context deleteObject:model];
+    NSError *error = nil;
+    if (![context save:&error]) {
+        NSLog(@"error:%@",error);
+        return NO;
+    }
+    return YES;
+}
+
+- (BOOL)removeDataFromEntity:(NSString *)entityName query:(NSPredicate *)predicate
+{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSArray *result = [self selectDataFromEntity:entityName query:predicate];
+    for (NSManagedObject *obj in result) {
+        [context deleteObject:obj];
+        NSError *error = nil;
+        if (![context save:&error]) {
+            NSLog(@"error:%@",error);
+            return NO;
+        }
+    }
+    return YES;
+}
 @end

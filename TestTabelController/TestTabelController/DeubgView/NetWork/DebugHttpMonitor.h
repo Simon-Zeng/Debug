@@ -13,7 +13,15 @@
  *  打开网络监听
  */
 + (void)setNetMonitorEnable:(BOOL)enable;
-
+/**
+ *  当前监听器是否可用
+ */
 + (BOOL)isEnable;
+/**
+ *  替换请求
+ *
+ *  @param url 替换后的请求
+ */
++ (void)exchangeRequestUrlWithNewUrl:(NSString *)url;
 
 @end

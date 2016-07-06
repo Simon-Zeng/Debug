@@ -17,8 +17,19 @@
     dispatch_once(&onceToken, ^{
         network = [[DebugNetWork alloc]init];
     });
-    
+
     return network;
+}
+
++ (DebugServer *)serverInstance
+{
+    static DebugServer *server = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        server = [[DebugServer alloc]init];
+    });
+    
+    return server;
 }
 
 @end
