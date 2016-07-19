@@ -53,7 +53,7 @@ static NSString * const newUrl = @"netNewUrl";
 
 + (void)exchangeRequestUrlWithNewUrl:(NSString *)url
 {
-    [UserDefaults setBool:url forKey:newUrl];
+    [UserDefaults setValue:url forKey:newUrl];
     [UserDefaults synchronize];
 }
 #pragma mark - superClass
@@ -83,6 +83,9 @@ static NSString * const newUrl = @"netNewUrl";
     NSString *url = [UserDefaults valueForKey:newUrl];
     if (url.length) {
         //wzgtodo:替换url的host
+        NSURLComponents *components = [NSURLComponents componentsWithURL:aRequest.URL resolvingAgainstBaseURL:YES];
+        components.scheme = url;
+        aRequest = [NSMutableURLRequest requestWithURL:components.URL];
     }
     [NSURLProtocol setProperty:@YES forKey:@"DebugHttpMonitor" inRequest:aRequest];
     return aRequest.copy;

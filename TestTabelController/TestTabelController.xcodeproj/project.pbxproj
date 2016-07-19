@@ -10,6 +10,8 @@
 		1511652C6324EA4ED83680A2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF335B609005355AA2D2EA25 /* libPods.a */; };
 		2D47547F1D2510EB0018A5FE /* NetworkSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D47547E1D2510EB0018A5FE /* NetworkSerialization.m */; };
 		2D4754831D251B190018A5FE /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4754821D251B190018A5FE /* NSString+Extension.m */; };
+		2D4C8E231D3882A600A1ABED /* NSString+NumberMore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4C8E221D3882A600A1ABED /* NSString+NumberMore.m */; };
+		2D4C8E251D3883C800A1ABED /* Confuse.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D4C8E241D3883C800A1ABED /* Confuse.plist */; };
 		2D4CB4A31D2BC86E00B8023B /* DebugSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4CB4A21D2BC86E00B8023B /* DebugSearchBar.m */; };
 		2D4CB4A61D2BC89000B8023B /* UIScrollView+AddSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4CB4A51D2BC89000B8023B /* UIScrollView+AddSearch.m */; };
 		2D6CCF471D2258D000C08A2B /* DebugObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CCF461D2258D000C08A2B /* DebugObject.m */; };
@@ -85,6 +87,9 @@
 		2D47547E1D2510EB0018A5FE /* NetworkSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkSerialization.m; sourceTree = "<group>"; };
 		2D4754811D251B190018A5FE /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		2D4754821D251B190018A5FE /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		2D4C8E211D3882A600A1ABED /* NSString+NumberMore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NumberMore.h"; sourceTree = "<group>"; };
+		2D4C8E221D3882A600A1ABED /* NSString+NumberMore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NumberMore.m"; sourceTree = "<group>"; };
+		2D4C8E241D3883C800A1ABED /* Confuse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Confuse.plist; sourceTree = "<group>"; };
 		2D4CB4A11D2BC86E00B8023B /* DebugSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugSearchBar.h; sourceTree = "<group>"; };
 		2D4CB4A21D2BC86E00B8023B /* DebugSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugSearchBar.m; sourceTree = "<group>"; };
 		2D4CB4A41D2BC89000B8023B /* UIScrollView+AddSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+AddSearch.h"; sourceTree = "<group>"; };
@@ -229,6 +234,22 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		2D4C8E1F1D3880F200A1ABED /* WiFi */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WiFi;
+			sourceTree = "<group>";
+		};
+		2D4C8E201D38827200A1ABED /* Number */ = {
+			isa = PBXGroup;
+			children = (
+				2D4C8E211D3882A600A1ABED /* NSString+NumberMore.h */,
+				2D4C8E221D3882A600A1ABED /* NSString+NumberMore.m */,
+			);
+			path = Number;
+			sourceTree = "<group>";
+		};
 		2D4CB4A01D2BC81300B8023B /* SearchBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +291,13 @@
 				2DC373C41D2CE32C00CD04EA /* DebugServeView.m */,
 			);
 			path = DebugVIew;
+			sourceTree = "<group>";
+		};
+		2D74EC8D1D35E77800545FB8 /* Protect */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protect;
 			sourceTree = "<group>";
 		};
 		2EDA806BC2B9B2BC2CFFFAAF /* Frameworks */ = {
@@ -325,6 +353,9 @@
 		35403D361D05C556005D25CE /* TestTabelController */ = {
 			isa = PBXGroup;
 			children = (
+				2D4C8E201D38827200A1ABED /* Number */,
+				2D4C8E1F1D3880F200A1ABED /* WiFi */,
+				2D74EC8D1D35E77800545FB8 /* Protect */,
 				2D4754801D251AC90018A5FE /* Extension */,
 				2D47547C1D2510CF0018A5FE /* NetWorkSerialization */,
 				2D4754321D24BE850018A5FE /* NSURLConAccept */,
@@ -426,6 +457,7 @@
 			children = (
 				359142E01D1F8D0F003EC0F4 /* TestTabelControllerTests.m */,
 				359142E21D1F8D0F003EC0F4 /* Info.plist */,
+				2D4C8E241D3883C800A1ABED /* Confuse.plist */,
 			);
 			path = TestTabelControllerTests;
 			sourceTree = "<group>";
@@ -575,6 +607,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D4C8E251D3883C800A1ABED /* Confuse.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,6 +704,7 @@
 				2D9E06121D23A8AB00B7934E /* DebugActionCrashView.m in Sources */,
 				3502064A1D0CD461005787EE /* feedFactory.m in Sources */,
 				2DC373D71D2CE71400CD04EA /* NSURLRequest+Exchange.m in Sources */,
+				2D4C8E231D3882A600A1ABED /* NSString+NumberMore.m in Sources */,
 				3502063A1D0C469F005787EE /* checkFeed.m in Sources */,
 				35D542CF1D1FD3BA00240126 /* NetWork+CoreDataProperties.m in Sources */,
 				350206471D0CD437005787EE /* feeData.m in Sources */,
