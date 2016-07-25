@@ -28,11 +28,15 @@
     [super setUp];
     _stack = [VVStack new];
     [DebugHttpMonitor setNetMonitorEnable:YES];
-    
 }
 
 - (void)confusionPlist
 {
+    NSDictionary *student = @{
+                              @"age":@(12),
+                              @"name":@"小明",
+                              @"school":@"家里蹲"
+                              };
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Confuse" ofType:@"plist"];
     NSDictionary *confusePlist = [[NSDictionary alloc]initWithContentsOfFile:path];
     XCTAssertNil(confusePlist,@"字典不能为空");
@@ -40,25 +44,21 @@
 }
 
 - (void)tearDown {
-    
-    
     //    [self post];
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
     
-    [self transFormProcessToRadians:0.6];
-    
 }
 
-- (void)transFormProcessToRadians:(CGFloat)process
-{
-    
-    CGFloat height = 100;//直径
-    CGFloat r = height/2;
-//    CGFloat result = degreesToRadians(process * 360);
-    //超出半径的高度
-    CGFloat moreH = cosf(process) * r;
-}
+//- (void)transFormProcessToRadians:(CGFloat)process
+//{
+//    
+//    CGFloat height = 100;//直径
+//    CGFloat r = height/2;
+////    CGFloat result = degreesToRadians(process * 360);
+//    //超出半径的高度
+//    CGFloat moreH = cosf(process) * r;
+//}
 
 - (void)test1{
     _stack = nil;

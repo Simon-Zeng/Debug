@@ -22,6 +22,9 @@
 #import "DebugManager.h"
 #import "NSString+Extension.h"
 #import "DebugHttpMonitor.h"
+#import "ProcessView.h"
+#import "Masonry.h"
+#import "BubbleView.h"
 
 @interface ViewController ()<NSURLSessionTaskDelegate>
 @property (nonatomic,strong) UIWindow *window;
@@ -59,6 +62,25 @@
     btn1.backgroundColor = [UIColor redColor];
     [self.view addSubview:btn1];
     
+    UIEdgeInsets padding = UIEdgeInsetsMake(10, 10, 10, 10);
+    
+    UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn2.backgroundColor = [UIColor redColor];
+    [btn2 setTitle:@"改变" forState:UIControlStateNormal];
+    [self.view addSubview:btn2];
+    [btn2 addTarget:self action:@selector(changeUrl) forControlEvents:UIControlEventTouchUpInside];
+    [btn2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(100);
+        make.top.mas_equalTo(300);
+        make.height.width.mas_equalTo(50);
+    }];
+    
+    BubbleView *bubble = [[BubbleView alloc]initWithPoint:CGPointMake(100, 400) superView:self.view];
+    bubble.bWidth = 10;
+    bubble.bColor = [UIColor redColor];
+    bubble.title.text = @"99";
+    bubble.viscosity = 0.6;
+
     self.view.backgroundColor = [UIColor whiteColor];
     self.window = [[[UIApplication sharedApplication] delegate] window];
     DebugView *debug = [[DebugView alloc]initWithFrame:CGRectZero];
@@ -67,12 +89,60 @@
     [[UIApplication sharedApplication].keyWindow addSubview:debug];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetWindow) name:UIWindowDidBecomeKeyNotification object:nil];
     
+//    ProcessView *process = [[ProcessView alloc]initWithFrame:CGRectMake(100, 100, 200, 200)];
+//    [self.view addSubview:process];
+    
 //    [self aspectGet];
 //    [self aspectPost];
     
 }
 
+- (void)changeUrl
+{
+    [DebugHttpMonitor exchangeRequestUrlWithNewUrl:@"www.wzg.com"];
+}
 
+
+//- (void)drawGradient
+//{
+//    CGFloat circelRadius = 100;
+//    CGFloat lineWidth = 5;
+//    size_t colorsCount = 2;
+//    CGFloat colors[12] = {
+//        0.01f, 0.99f, 0.01f, 1.0f,
+//        0.01f, 0.99f, 0.99f, 1.0f,
+//        0.99f, 0.99f, 0.01f, 1.0f
+//    };
+//    CGFloat locations[3] = {
+//        0.0f,
+//        0.5f,
+//        1.0f
+//    };
+//    CGPoint beginP = CGPointMake(0, 0);
+//    CGPoint endP = CGPointMake(320.f, 460.f);
+//    //圆路径
+//    UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(CGRectGetWidth(self.frame) / 2, CGRectGetHeight(self.frame) / 2)
+//                                                        radius:(circelRadius - lineWidth) / 2
+//                                                    startAngle:degreesToRadians(-90)
+//                                                      endAngle:degreesToRadians(270)
+//                                                     clockwise:YES];
+//    
+//    [path addClip];
+//    
+//    CGColorSpaceRef space = CGColorSpaceCreateDeviceRGB();
+//    CGContextRef context = UIGraphicsGetCurrentContext();
+//    CGGradientRef gradient = CGGradientCreateWithColorComponents(space, colors, locations, colorsCount);
+//    
+//    //    CG_EXTERN CGGradientRef __nullable CGGradientCreateWithColorComponents(
+//    //                                                                           CGColorSpaceRef __nullable space, const CGFloat * __nullable components,
+//    //                                                                           const CGFloat * __nullable locations, size_t count)
+//    //渐变
+//    CGContextDrawLinearGradient(context, gradient, beginP, endP, 0);
+//    
+//    //    CGContextDrawRadialGradient(<#CGContextRef  _Nullable c#>, <#CGGradientRef  _Nullable gradient#>, <#CGPoint startCenter#>, <#CGFloat startRadius#>, <#CGPoint endCenter#>, <#CGFloat endRadius#>, <#CGGradientDrawingOptions options#>)
+//    CGColorSpaceRelease(space);
+//    CGGradientRelease(gradient);
+//}
 
 - (void)get
 {

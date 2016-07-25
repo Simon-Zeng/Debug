@@ -1,6 +1,13 @@
 platform :ios, '8.0'
+#use_frameworks!个别需要用到它，比如reactiveCocoa
+
+
+target 'TestTabelController' do
 pod 'AFNetworking'
 pod 'Aspects'
 # pod 'IQKeyboardManager', '~> 3.2.0.3'
  pod 'MJRefresh'
  pod 'MJExtension'
+ pod 'pop'
+ pod 'Masonry'
+end
