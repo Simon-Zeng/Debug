@@ -10,4 +10,5 @@ pod 'Aspects'
  pod 'MJExtension'
  pod 'pop'
  pod 'Masonry'
+ pod 'SDAutoLayout'
 end

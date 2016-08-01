@@ -25,9 +25,14 @@
 #import "ProcessView.h"
 #import "Masonry.h"
 #import "BubbleView.h"
+#import "SearchTestVc.h"
+#import "DebugVc.h"
+#import "AnimateVc.h"
 
-@interface ViewController ()<NSURLSessionTaskDelegate>
+@interface ViewController ()<NSURLSessionTaskDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UIWindow *window;
+@property (weak, nonatomic) IBOutlet UITableView *table;
+@property (nonatomic, strong)NSArray *dataList;
 @end
 
 @implementation ViewController
@@ -38,9 +43,22 @@
     [self post];
 }
 
+- (NSArray *)dataList
+{
+    return @[@"debug监听网络",@"新特性-searchapi",@"气泡动画"];
+}
+
+- (NSArray<UIViewController *> *)subVcs
+{
+    SearchTestVc *search = [[SearchTestVc alloc]init];
+    DebugVc *Debug = [[DebugVc alloc]init];
+    AnimateVc *animate = [[AnimateVc alloc]init];
+    return [NSArray arrayWithObjects:search,Debug,animate, nil];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     [DebugHttpMonitor setNetMonitorEnable:YES];
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -266,44 +284,57 @@
 //    } error:NULL];
 }
 
+#pragma mark - native api
+#pragma mark UITableViewDelegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.dataList.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    }
+    cell.textLabel.text = self.dataList[indexPath.row];
+    return cell;
+}
+#pragma mark UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
 #pragma mark - NSURLSessionDelegate
-- (void)URLSession:(NSURLSession *)session didBecomeInvalidWithError:(NSError *)error
-{
-
-}
-
-- (void)URLSession:(NSURLSession *)session didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler
-{
-
-}
-
-- (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession *)session
-{
-
-}
-
-// 接收到服务器的响应
-- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler
-{
-    NSLog(@"didReceiveResponse");
-    completionHandler(NSURLSessionResponseAllow);
-}
-// 接收到服务器返回的数据
-- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data
-{
-    NSLog(@"didReceiveData");
-}
-// 请求完毕
-- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error
-{
-    NSLog(@"didCompleteWithError");
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
-
+//- (void)URLSession:(NSURLSession *)session didBecomeInvalidWithError:(NSError *)error
+//{
+//
+//}
+//
+//- (void)URLSession:(NSURLSession *)session didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler
+//{
+//
+//}
+//
+//- (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession *)session
+//{
+//
+//}
+//
+//// 接收到服务器的响应
+//- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler
+//{
+//    NSLog(@"didReceiveResponse");
+//    completionHandler(NSURLSessionResponseAllow);
+//}
+//// 接收到服务器返回的数据
+//- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data
+//{
+//    NSLog(@"didReceiveData");
+//}
+//// 请求完毕
+//- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error
+//{
+//    NSLog(@"didCompleteWithError");
+//}
 @end

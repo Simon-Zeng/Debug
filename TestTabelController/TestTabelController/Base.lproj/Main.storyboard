@@ -17,33 +17,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmS-Oc-suT">
-                                <rect key="frame" x="253" y="79" width="95" height="30"/>
-                                <state key="normal" title="get"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eqt-AL-Moq">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <action selector="getClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gc0-Us-csD"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="jPs-MQ-lLF"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="L1R-is-YXY"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXJ-CT-oNP">
-                                <rect key="frame" x="265" y="234" width="71" height="30"/>
-                                <state key="normal" title="post"/>
-                                <connections>
-                                    <action selector="postClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MBD-Zz-x7v"/>
-                                </connections>
-                            </button>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="GmS-Oc-suT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="59" id="8lg-0p-Wvh"/>
-                            <constraint firstItem="CXJ-CT-oNP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E37-sf-TQx"/>
-                            <constraint firstItem="GmS-Oc-suT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RT7-R3-ncX"/>
-                            <constraint firstItem="CXJ-CT-oNP" firstAttribute="top" secondItem="GmS-Oc-suT" secondAttribute="bottom" constant="125" id="v9k-Iy-bmr"/>
+                            <constraint firstItem="eqt-AL-Moq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="D4b-Kc-K3G"/>
+                            <constraint firstAttribute="trailing" secondItem="eqt-AL-Moq" secondAttribute="trailing" id="HNK-4m-OFb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eqt-AL-Moq" secondAttribute="bottom" id="U2S-hZ-P1P"/>
+                            <constraint firstItem="eqt-AL-Moq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="z9h-RF-EZe"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="table" destination="eqt-AL-Moq" id="Szw-Vq-9aK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="265"/>
+            <point key="canvasLocation" x="294" y="214"/>
         </scene>
     </scenes>
 </document>

@@ -20,6 +20,12 @@
 		2D6AF0C61D4201FB00CC465F /* CustomerLabelContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6AF0C51D4201FB00CC465F /* CustomerLabelContent.m */; };
 		2D6CCF471D2258D000C08A2B /* DebugObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CCF461D2258D000C08A2B /* DebugObject.m */; };
 		2D6CCF4A1D2258F700C08A2B /* DebugNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CCF491D2258F700C08A2B /* DebugNetWork.m */; };
+		2D75DE2D1D4F3DB6009789CD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D75DE2C1D4F3DB6009789CD /* MobileCoreServices.framework */; };
+		2D75DE2F1D4F3DBC009789CD /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D75DE2E1D4F3DBC009789CD /* CoreSpotlight.framework */; };
+		2D75DE321D4F3E6E009789CD /* SearchApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D75DE311D4F3E6E009789CD /* SearchApiManager.m */; };
+		2D75DE351D4F3E99009789CD /* SearchTestVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D75DE341D4F3E99009789CD /* SearchTestVc.m */; };
+		2D75DE381D4F46D2009789CD /* DebugVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D75DE371D4F46D2009789CD /* DebugVc.m */; };
+		2D75DE3B1D4F475B009789CD /* AnimateVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D75DE3A1D4F475B009789CD /* AnimateVc.m */; };
 		2D9E060C1D23A86500B7934E /* DebugActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E060B1D23A86500B7934E /* DebugActionView.m */; };
 		2D9E060F1D23A89600B7934E /* DebugActionNetWorkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E060E1D23A89600B7934E /* DebugActionNetWorkView.m */; };
 		2D9E06121D23A8AB00B7934E /* DebugActionCrashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E06111D23A8AB00B7934E /* DebugActionCrashView.m */; };
@@ -112,6 +118,16 @@
 		2D6CCF461D2258D000C08A2B /* DebugObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugObject.m; sourceTree = "<group>"; };
 		2D6CCF481D2258F700C08A2B /* DebugNetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugNetWork.h; sourceTree = "<group>"; };
 		2D6CCF491D2258F700C08A2B /* DebugNetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugNetWork.m; sourceTree = "<group>"; };
+		2D75DE2C1D4F3DB6009789CD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		2D75DE2E1D4F3DBC009789CD /* CoreSpotlight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSpotlight.framework; path = System/Library/Frameworks/CoreSpotlight.framework; sourceTree = SDKROOT; };
+		2D75DE301D4F3E6E009789CD /* SearchApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchApiManager.h; sourceTree = "<group>"; };
+		2D75DE311D4F3E6E009789CD /* SearchApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchApiManager.m; sourceTree = "<group>"; };
+		2D75DE331D4F3E99009789CD /* SearchTestVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTestVc.h; sourceTree = "<group>"; };
+		2D75DE341D4F3E99009789CD /* SearchTestVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTestVc.m; sourceTree = "<group>"; };
+		2D75DE361D4F46D2009789CD /* DebugVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugVc.h; sourceTree = "<group>"; };
+		2D75DE371D4F46D2009789CD /* DebugVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugVc.m; sourceTree = "<group>"; };
+		2D75DE391D4F475B009789CD /* AnimateVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimateVc.h; sourceTree = "<group>"; };
+		2D75DE3A1D4F475B009789CD /* AnimateVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimateVc.m; sourceTree = "<group>"; };
 		2D9E060A1D23A86500B7934E /* DebugActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugActionView.h; sourceTree = "<group>"; };
 		2D9E060B1D23A86500B7934E /* DebugActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugActionView.m; sourceTree = "<group>"; };
 		2D9E060D1D23A89600B7934E /* DebugActionNetWorkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugActionNetWorkView.h; sourceTree = "<group>"; };
@@ -210,6 +226,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D75DE2F1D4F3DBC009789CD /* CoreSpotlight.framework in Frameworks */,
+				2D75DE2D1D4F3DB6009789CD /* MobileCoreServices.framework in Frameworks */,
 				4ECEEAC45480F959428E9702 /* libPods-TestTabelController.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +302,8 @@
 				2D6814BA1D3F28FF003659B0 /* ProcessView.m */,
 				2D6AF0851D41C47400CC465F /* BubbleView.h */,
 				2D6AF0861D41C47400CC465F /* BubbleView.m */,
+				2D75DE391D4F475B009789CD /* AnimateVc.h */,
+				2D75DE3A1D4F475B009789CD /* AnimateVc.m */,
 			);
 			path = Animate;
 			sourceTree = "<group>";
@@ -334,6 +354,17 @@
 			children = (
 			);
 			path = Protect;
+			sourceTree = "<group>";
+		};
+		2D75DE2B1D4F3D9E009789CD /* New */ = {
+			isa = PBXGroup;
+			children = (
+				2D75DE301D4F3E6E009789CD /* SearchApiManager.h */,
+				2D75DE311D4F3E6E009789CD /* SearchApiManager.m */,
+				2D75DE331D4F3E99009789CD /* SearchTestVc.h */,
+				2D75DE341D4F3E99009789CD /* SearchTestVc.m */,
+			);
+			path = New;
 			sourceTree = "<group>";
 		};
 		2DB819491D3DDCA9007F099D /* Router */ = {
@@ -390,6 +421,7 @@
 		35403D361D05C556005D25CE /* TestTabelController */ = {
 			isa = PBXGroup;
 			children = (
+				2D75DE2B1D4F3D9E009789CD /* New */,
 				2D6AF0C31D4201C100CC465F /* Button */,
 				2D6814B81D3F28DF003659B0 /* Animate */,
 				2DB819491D3DDCA9007F099D /* Router */,
@@ -443,6 +475,8 @@
 				359142CD1D177578003EC0F4 /* DebugModel.h */,
 				359142CE1D177578003EC0F4 /* DebugModel.m */,
 				359142D41D1F7DC0003EC0F4 /* DebugMarco.h */,
+				2D75DE361D4F46D2009789CD /* DebugVc.h */,
+				2D75DE371D4F46D2009789CD /* DebugVc.m */,
 			);
 			path = DeubgView;
 			sourceTree = "<group>";
@@ -557,6 +591,8 @@
 		DD2431F3260A58BBE325F236 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2D75DE2E1D4F3DBC009789CD /* CoreSpotlight.framework */,
+				2D75DE2C1D4F3DB6009789CD /* MobileCoreServices.framework */,
 				6EFF14C91BF71B0EEAE4BF5E /* libPods-TestTabelController.a */,
 			);
 			name = Frameworks;
@@ -732,9 +768,11 @@
 				35D542D11D1FD3BA00240126 /* NetWork.m in Sources */,
 				35D542BC1D1FD1EE00240126 /* DebugObject.xcdatamodeld in Sources */,
 				35403D391D05C556005D25CE /* main.m in Sources */,
+				2D75DE321D4F3E6E009789CD /* SearchApiManager.m in Sources */,
 				35D542CD1D1FD3BA00240126 /* Crash.m in Sources */,
 				2DC373D31D2CE4DA00CD04EA /* Server+CoreDataProperties.m in Sources */,
 				2D6CCF4A1D2258F700C08A2B /* DebugNetWork.m in Sources */,
+				2D75DE351D4F3E99009789CD /* SearchTestVc.m in Sources */,
 				35D542D31D1FD3BA00240126 /* DeviceID+CoreDataProperties.m in Sources */,
 				2D6AF0C61D4201FB00CC465F /* CustomerLabelContent.m in Sources */,
 				2D9E060C1D23A86500B7934E /* DebugActionView.m in Sources */,
@@ -746,6 +784,8 @@
 				350206371D0C3FCE005787EE /* qingjiaModel.m in Sources */,
 				350206341D0C3FB4005787EE /* baoxiaoModel.m in Sources */,
 				2D47547F1D2510EB0018A5FE /* NetworkSerialization.m in Sources */,
+				2D75DE381D4F46D2009789CD /* DebugVc.m in Sources */,
+				2D75DE3B1D4F475B009789CD /* AnimateVc.m in Sources */,
 				359142CC1D17755F003EC0F4 /* DebugView.m in Sources */,
 				35D542CB1D1FD3BA00240126 /* Crash+CoreDataProperties.m in Sources */,
 				359142C41D131B6C003EC0F4 /* PhotoViewController.m in Sources */,

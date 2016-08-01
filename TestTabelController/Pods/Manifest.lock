@@ -16,9 +16,10 @@ PODS:
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
   - Masonry (1.0.1)
-  - MJExtension (3.0.11)
-  - MJRefresh (3.1.10)
+  - MJExtension (3.0.13)
+  - MJRefresh (3.1.12)
   - pop (1.0.9)
+  - SDAutoLayout (2.1.4)
 
 DEPENDENCIES:
   - AFNetworking
@@ -27,15 +28,17 @@ DEPENDENCIES:
   - MJExtension
   - MJRefresh
   - pop
+  - SDAutoLayout
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
-  MJExtension: f9ae6ddc0f1c482c3c9af750280ccebd14381958
-  MJRefresh: bb72948c985914b0b5cecac573a2c69a8915fb02
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  SDAutoLayout: 1b2926b193a63287f473dae426ed07861e21e271
 
-PODFILE CHECKSUM: b4abe04d81aadf5acdbdba82ab00c8e3b18eb722
+PODFILE CHECKSUM: ce1ef377d7538e0fc70166893de785a4173a1378
 
 COCOAPODS: 1.0.1

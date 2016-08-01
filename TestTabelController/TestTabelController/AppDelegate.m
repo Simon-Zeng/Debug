@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "BaseMarco.h"
 
 @interface AppDelegate ()
 
@@ -46,6 +47,17 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler
+{
+    NSString *idtifier = userActivity.userInfo[@"kCSSearchableItemActivityIdentifier"];
+//    if ([idtifier isEqualToString:@"1"]) {
+//        demoOneVc *ovc = [[demoOneVc alloc]init];
+//        UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+//        [navigationController pushViewController:ovc animated:true];
+//    }
+    return YES;
 }
 
 @end
