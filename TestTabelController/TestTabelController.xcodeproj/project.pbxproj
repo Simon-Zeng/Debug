@@ -11,6 +11,7 @@
 		2D4754831D251B190018A5FE /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4754821D251B190018A5FE /* NSString+Extension.m */; };
 		2D47D19D1D5038E2007CA1A3 /* PasteBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D47D19C1D5038E2007CA1A3 /* PasteBoard.m */; };
 		2D47D2051D5087EB007CA1A3 /* PasteTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D47D2041D5087EB007CA1A3 /* PasteTestController.m */; };
+		2D47D2091D50B573007CA1A3 /* taskDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D47D2081D50B573007CA1A3 /* taskDispatcher.m */; };
 		2D4C8E231D3882A600A1ABED /* NSString+NumberMore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4C8E221D3882A600A1ABED /* NSString+NumberMore.m */; };
 		2D4C8E251D3883C800A1ABED /* Confuse.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D4C8E241D3883C800A1ABED /* Confuse.plist */; };
 		2D4CB4A31D2BC86E00B8023B /* DebugSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4CB4A21D2BC86E00B8023B /* DebugSearchBar.m */; };
@@ -103,6 +104,8 @@
 		2D47D19C1D5038E2007CA1A3 /* PasteBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasteBoard.m; sourceTree = "<group>"; };
 		2D47D2031D5087EB007CA1A3 /* PasteTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasteTestController.h; sourceTree = "<group>"; };
 		2D47D2041D5087EB007CA1A3 /* PasteTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasteTestController.m; sourceTree = "<group>"; };
+		2D47D2071D50B573007CA1A3 /* taskDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = taskDispatcher.h; sourceTree = "<group>"; };
+		2D47D2081D50B573007CA1A3 /* taskDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = taskDispatcher.m; sourceTree = "<group>"; };
 		2D4C8E211D3882A600A1ABED /* NSString+NumberMore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NumberMore.h"; sourceTree = "<group>"; };
 		2D4C8E221D3882A600A1ABED /* NSString+NumberMore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NumberMore.m"; sourceTree = "<group>"; };
 		2D4C8E241D3883C800A1ABED /* Confuse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Confuse.plist; sourceTree = "<group>"; };
@@ -276,6 +279,8 @@
 		2D47D2061D5095E1007CA1A3 /* Task */ = {
 			isa = PBXGroup;
 			children = (
+				2D47D2071D50B573007CA1A3 /* taskDispatcher.h */,
+				2D47D2081D50B573007CA1A3 /* taskDispatcher.m */,
 			);
 			path = Task;
 			sourceTree = "<group>";
@@ -775,6 +780,7 @@
 				2D6814BB1D3F28FF003659B0 /* ProcessView.m in Sources */,
 				35D542D91D1FD46F00240126 /* DebugDB.m in Sources */,
 				350206441D0C4FBA005787EE /* authorizedState.m in Sources */,
+				2D47D2091D50B573007CA1A3 /* taskDispatcher.m in Sources */,
 				3500A4B61D28AF6D00F55CF6 /* NSUserDefaults+Extension.m in Sources */,
 				35403D3F1D05C556005D25CE /* ViewController.m in Sources */,
 				2D6CCF471D2258D000C08A2B /* DebugObject.m in Sources */,
