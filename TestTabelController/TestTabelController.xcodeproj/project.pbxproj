@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2D47547F1D2510EB0018A5FE /* NetworkSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D47547E1D2510EB0018A5FE /* NetworkSerialization.m */; };
 		2D4754831D251B190018A5FE /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4754821D251B190018A5FE /* NSString+Extension.m */; };
+		2D47D19D1D5038E2007CA1A3 /* PasteBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D47D19C1D5038E2007CA1A3 /* PasteBoard.m */; };
+		2D47D2051D5087EB007CA1A3 /* PasteTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D47D2041D5087EB007CA1A3 /* PasteTestController.m */; };
 		2D4C8E231D3882A600A1ABED /* NSString+NumberMore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4C8E221D3882A600A1ABED /* NSString+NumberMore.m */; };
 		2D4C8E251D3883C800A1ABED /* Confuse.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D4C8E241D3883C800A1ABED /* Confuse.plist */; };
 		2D4CB4A31D2BC86E00B8023B /* DebugSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4CB4A21D2BC86E00B8023B /* DebugSearchBar.m */; };
@@ -97,6 +99,10 @@
 		2D47547E1D2510EB0018A5FE /* NetworkSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkSerialization.m; sourceTree = "<group>"; };
 		2D4754811D251B190018A5FE /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		2D4754821D251B190018A5FE /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		2D47D19B1D5038E2007CA1A3 /* PasteBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasteBoard.h; sourceTree = "<group>"; };
+		2D47D19C1D5038E2007CA1A3 /* PasteBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasteBoard.m; sourceTree = "<group>"; };
+		2D47D2031D5087EB007CA1A3 /* PasteTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasteTestController.h; sourceTree = "<group>"; };
+		2D47D2041D5087EB007CA1A3 /* PasteTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasteTestController.m; sourceTree = "<group>"; };
 		2D4C8E211D3882A600A1ABED /* NSString+NumberMore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NumberMore.h"; sourceTree = "<group>"; };
 		2D4C8E221D3882A600A1ABED /* NSString+NumberMore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NumberMore.m"; sourceTree = "<group>"; };
 		2D4C8E241D3883C800A1ABED /* Confuse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Confuse.plist; sourceTree = "<group>"; };
@@ -267,6 +273,13 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		2D47D2061D5095E1007CA1A3 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
 		2D4C8E1F1D3880F200A1ABED /* WiFi */ = {
 			isa = PBXGroup;
 			children = (
@@ -363,6 +376,10 @@
 				2D75DE311D4F3E6E009789CD /* SearchApiManager.m */,
 				2D75DE331D4F3E99009789CD /* SearchTestVc.h */,
 				2D75DE341D4F3E99009789CD /* SearchTestVc.m */,
+				2D47D19B1D5038E2007CA1A3 /* PasteBoard.h */,
+				2D47D19C1D5038E2007CA1A3 /* PasteBoard.m */,
+				2D47D2031D5087EB007CA1A3 /* PasteTestController.h */,
+				2D47D2041D5087EB007CA1A3 /* PasteTestController.m */,
 			);
 			path = New;
 			sourceTree = "<group>";
@@ -421,6 +438,7 @@
 		35403D361D05C556005D25CE /* TestTabelController */ = {
 			isa = PBXGroup;
 			children = (
+				2D47D2061D5095E1007CA1A3 /* Task */,
 				2D75DE2B1D4F3D9E009789CD /* New */,
 				2D6AF0C31D4201C100CC465F /* Button */,
 				2D6814B81D3F28DF003659B0 /* Animate */,
@@ -772,6 +790,7 @@
 				35D542CD1D1FD3BA00240126 /* Crash.m in Sources */,
 				2DC373D31D2CE4DA00CD04EA /* Server+CoreDataProperties.m in Sources */,
 				2D6CCF4A1D2258F700C08A2B /* DebugNetWork.m in Sources */,
+				2D47D2051D5087EB007CA1A3 /* PasteTestController.m in Sources */,
 				2D75DE351D4F3E99009789CD /* SearchTestVc.m in Sources */,
 				35D542D31D1FD3BA00240126 /* DeviceID+CoreDataProperties.m in Sources */,
 				2D6AF0C61D4201FB00CC465F /* CustomerLabelContent.m in Sources */,
@@ -788,6 +807,7 @@
 				2D75DE3B1D4F475B009789CD /* AnimateVc.m in Sources */,
 				359142CC1D17755F003EC0F4 /* DebugView.m in Sources */,
 				35D542CB1D1FD3BA00240126 /* Crash+CoreDataProperties.m in Sources */,
+				2D47D19D1D5038E2007CA1A3 /* PasteBoard.m in Sources */,
 				359142C41D131B6C003EC0F4 /* PhotoViewController.m in Sources */,
 				359142BF1D1317A5003EC0F4 /* Debug.m in Sources */,
 				359142EB1D1F8EBC003EC0F4 /* VVStack.m in Sources */,

@@ -28,10 +28,12 @@
 #import "SearchTestVc.h"
 #import "DebugVc.h"
 #import "AnimateVc.h"
+#import "PasteTestController.h"
+#import "SDAutoLayout.h"
 
 @interface ViewController ()<NSURLSessionTaskDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UIWindow *window;
-@property (weak, nonatomic) IBOutlet UITableView *table;
+@property (strong, nonatomic) UITableView *table;
 @property (nonatomic, strong)NSArray *dataList;
 @end
 
@@ -45,7 +47,7 @@
 
 - (NSArray *)dataList
 {
-    return @[@"debug监听网络",@"新特性-searchapi",@"气泡动画"];
+    return @[@"debug监听网络",@"新特性-searchapi",@"气泡动画",@"粘贴板"];
 }
 
 - (NSArray<UIViewController *> *)subVcs
@@ -53,67 +55,79 @@
     SearchTestVc *search = [[SearchTestVc alloc]init];
     DebugVc *Debug = [[DebugVc alloc]init];
     AnimateVc *animate = [[AnimateVc alloc]init];
-    return [NSArray arrayWithObjects:search,Debug,animate, nil];
+    PasteTestController *paste = [[PasteTestController alloc]init];
+    return [NSArray arrayWithObjects:search,Debug,animate,paste, nil];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [DebugHttpMonitor setNetMonitorEnable:YES];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.table = [[UITableView alloc]init];
+    self.table.delegate = self;
+    self.table.dataSource = self;
+    self.table.tableFooterView = [UIView new];
+    [self.view addSubview:self.table];
     
-//    DebugView *debug  = [[DebugView alloc]init];
-//    debug.root = self;
-//    [debug showOverWindow];
-
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn addTarget:self action:@selector(get) forControlEvents:UIControlEventTouchUpInside];
-    btn.frame = CGRectMake(100, 100, 100, 50);
-    btn.titleLabel.text = @"get";
-    btn.backgroundColor = [UIColor redColor];
-    [self.view addSubview:btn];
-    
-    UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn1 addTarget:self action:@selector(post) forControlEvents:UIControlEventTouchUpInside];
-    btn1.frame = CGRectMake(100, 200, 100, 50);
-    btn1.titleLabel.text = @"post";
-    btn1.backgroundColor = [UIColor redColor];
-    [self.view addSubview:btn1];
-    
-    UIEdgeInsets padding = UIEdgeInsetsMake(10, 10, 10, 10);
-    
-    UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn2.backgroundColor = [UIColor redColor];
-    [btn2 setTitle:@"改变" forState:UIControlStateNormal];
-    [self.view addSubview:btn2];
-    [btn2 addTarget:self action:@selector(changeUrl) forControlEvents:UIControlEventTouchUpInside];
-    [btn2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(100);
-        make.top.mas_equalTo(300);
-        make.height.width.mas_equalTo(50);
-    }];
-    
-    BubbleView *bubble = [[BubbleView alloc]initWithPoint:CGPointMake(100, 400) superView:self.view];
-    bubble.bWidth = 10;
-    bubble.bColor = [UIColor redColor];
-    bubble.title.text = @"99";
-    bubble.viscosity = 0.6;
-
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.window = [[[UIApplication sharedApplication] delegate] window];
-    DebugView *debug = [[DebugView alloc]initWithFrame:CGRectZero];
-    debug.rootVc = self.navigationController;
-    [debug showOverWindow];
-    [[UIApplication sharedApplication].keyWindow addSubview:debug];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetWindow) name:UIWindowDidBecomeKeyNotification object:nil];
-    
-//    ProcessView *process = [[ProcessView alloc]initWithFrame:CGRectMake(100, 100, 200, 200)];
-//    [self.view addSubview:process];
-    
-//    [self aspectGet];
-//    [self aspectPost];
+    self.table.sd_layout.widthRatioToView(self.view,1).heightRatioToView(self.view,1).topSpaceToView(self.view,0).leftSpaceToView(self.view,0);
     
 }
+
+- (void)debugTest
+{
+    //    [DebugHttpMonitor setNetMonitorEnable:YES];
+    //    self.view.backgroundColor = [UIColor whiteColor];
+    //
+    ////    DebugView *debug  = [[DebugView alloc]init];
+    ////    debug.root = self;
+    ////    [debug showOverWindow];
+    //
+    //    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    //    [btn addTarget:self action:@selector(get) forControlEvents:UIControlEventTouchUpInside];
+    //    btn.frame = CGRectMake(100, 100, 100, 50);
+    //    btn.titleLabel.text = @"get";
+    //    btn.backgroundColor = [UIColor redColor];
+    //    [self.view addSubview:btn];
+    //
+    //    UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    //    [btn1 addTarget:self action:@selector(post) forControlEvents:UIControlEventTouchUpInside];
+    //    btn1.frame = CGRectMake(100, 200, 100, 50);
+    //    btn1.titleLabel.text = @"post";
+    //    btn1.backgroundColor = [UIColor redColor];
+    //    [self.view addSubview:btn1];
+    //
+    //    UIEdgeInsets padding = UIEdgeInsetsMake(10, 10, 10, 10);
+    //
+    //    UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    //    btn2.backgroundColor = [UIColor redColor];
+    //    [btn2 setTitle:@"改变" forState:UIControlStateNormal];
+    //    [self.view addSubview:btn2];
+    //    [btn2 addTarget:self action:@selector(changeUrl) forControlEvents:UIControlEventTouchUpInside];
+    //    [btn2 mas_makeConstraints:^(MASConstraintMaker *make) {
+    //        make.left.mas_equalTo(100);
+    //        make.top.mas_equalTo(300);
+    //        make.height.width.mas_equalTo(50);
+    //    }];
+    //
+    //    BubbleView *bubble = [[BubbleView alloc]initWithPoint:CGPointMake(100, 400) superView:self.view];
+    //    bubble.bWidth = 10;
+    //    bubble.bColor = [UIColor redColor];
+    //    bubble.title.text = @"99";
+    //    bubble.viscosity = 0.6;
+    //
+    //    self.view.backgroundColor = [UIColor whiteColor];
+    //    self.window = [[[UIApplication sharedApplication] delegate] window];
+    //    DebugView *debug = [[DebugView alloc]initWithFrame:CGRectZero];
+    //    debug.rootVc = self.navigationController;
+    //    [debug showOverWindow];
+    //    [[UIApplication sharedApplication].keyWindow addSubview:debug];
+    //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetWindow) name:UIWindowDidBecomeKeyNotification object:nil];
+    
+    //    ProcessView *process = [[ProcessView alloc]initWithFrame:CGRectMake(100, 100, 200, 200)];
+    //    [self.view addSubview:process];
+    
+    //    [self aspectGet];
+    //    [self aspectPost];
+    }
 
 - (void)changeUrl
 {
@@ -298,12 +312,22 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     cell.textLabel.text = self.dataList[indexPath.row];
+//    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.width, 33)];
+//    [cell setupAutoHeightWithBottomView:view bottomMargin:5];
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // 获取cell高度
+//    return [self.table cellHeightForIndexPath:indexPath model:nil keyPath:@"cell" cellClass:[UITableViewCell class]  contentViewWidth:self.view.width];
+    return 44;
 }
 #pragma mark UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    UIViewController *vc = [self subVcs][indexPath.row];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 #pragma mark - NSURLSessionDelegate
 //- (void)URLSession:(NSURLSession *)session didBecomeInvalidWithError:(NSError *)error
