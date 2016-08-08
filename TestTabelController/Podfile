@@ -3,7 +3,10 @@ platform :ios, '8.0'
 
 
 target 'TestTabelController' do
+pod 'STAlertView'
+pod 'evernote-cloud-sdk-ios'
 pod 'AFNetworking'
+pod 'OCMock'
 pod 'Aspects'
 # pod 'IQKeyboardManager', '~> 3.2.0.3'
  pod 'MJRefresh'
