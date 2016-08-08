@@ -6,16 +6,18 @@
 //  Copyright © 2016年 王智刚. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import "PhotoDataCase.h"
+#import "ArrayDataSource.h"
 
-@interface PhotoDataCase : XCTestCase
-
+@interface PhotoDataCase()
+@property (nonatomic, strong)NSMutableArray *mocksToVerify;
 @end
 
 @implementation PhotoDataCase
 
 - (void)setUp {
     [super setUp];
+    self.mocksToVerify = nil;
     // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
@@ -34,6 +36,34 @@
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
     }];
+}
+
+- (void)testInitializing
+{
+    XCTAssertNotNil([[ArrayDataSource alloc]init],@"should not be allowed");
+}
+
+/// Returns the URL for a resource that's been added to the test target.
+- (NSURL *)URLForResource:(NSString *)name withExtension:(NSString *)extension
+{
+    return nil;
+}
+
+/// Calls +[OCMockObject mockForClass:] and adds the mock and call -verify on it during -tearDown
+- (id)autoVerifiedMockForClass:(Class)aClass
+{
+    return nil;
+}
+/// C.f. -autoVerifiedMockForClass:
+- (id)autoVerifiedPartialMockForObject:(id)object
+{
+    return nil;
+}
+
+/// Calls -verify on the mock during -tearDown
+- (void)verifyDuringTearDown:(id)mock
+{
+
 }
 
 @end

@@ -8,6 +8,11 @@
 
 #import "AppDelegate.h"
 
+/**
+ *  运行测试
+ */
+static BOOL isRunningTests(void) __attribute__((const));
+
 @interface AppDelegate ()
 
 @end
@@ -40,6 +45,13 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+static BOOL isRunningTests(void)
+{
+    NSDictionary* environment = [[NSProcessInfo processInfo] environment];
+    NSString* injectBundle = environment[@"XCInjectBundle"];
+    return [[injectBundle pathExtension] isEqualToString:@"octest"];
 }
 
 @end

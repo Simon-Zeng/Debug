@@ -139,6 +139,7 @@
 		2D4E447B1D40A8A1006E2A98 /* DebugNetRemoveConfusion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugNetRemoveConfusion.h; sourceTree = "<group>"; };
 		2D4E447C1D40A8A1006E2A98 /* DebugNetRemoveConfusion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugNetRemoveConfusion.m; sourceTree = "<group>"; };
 		2D4E74D51D5837B5008644E4 /* PhotoDataCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDataCase.m; sourceTree = "<group>"; };
+		2D4E758B1D589A92008644E4 /* PhotoDataCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDataCase.h; sourceTree = "<group>"; };
 		2D6814861D3F1807003659B0 /* BaseMarco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMarco.h; sourceTree = "<group>"; };
 		2D6814B91D3F28FF003659B0 /* ProcessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessView.h; sourceTree = "<group>"; };
 		2D6814BA1D3F28FF003659B0 /* ProcessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessView.m; sourceTree = "<group>"; };
@@ -491,6 +492,7 @@
 			children = (
 				2D88F86E1D543530007C3830 /* objc_ioTests.m */,
 				2D88F8701D543530007C3830 /* Info.plist */,
+				2D4E758B1D589A92008644E4 /* PhotoDataCase.h */,
 				2D4E74D51D5837B5008644E4 /* PhotoDataCase.m */,
 			);
 			path = "objc-ioTests";
