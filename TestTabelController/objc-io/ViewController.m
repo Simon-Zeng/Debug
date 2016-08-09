@@ -17,17 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
-    mgr.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
-    [mgr GET:@"http://www.weather.com.cn/adat/sk/101110101.html" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
     
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-
-    
-    }];
-
 }
 
 - (void)didReceiveMemoryWarning {

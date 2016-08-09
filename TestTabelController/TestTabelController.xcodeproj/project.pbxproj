@@ -24,6 +24,9 @@
 		2D6AF0C61D4201FB00CC465F /* CustomerLabelContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6AF0C51D4201FB00CC465F /* CustomerLabelContent.m */; };
 		2D6CCF471D2258D000C08A2B /* DebugObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CCF461D2258D000C08A2B /* DebugObject.m */; };
 		2D6CCF4A1D2258F700C08A2B /* DebugNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CCF491D2258F700C08A2B /* DebugNetWork.m */; };
+		2D6D29DD1D59CFF0008A2997 /* ArrayDataSourceCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D29DC1D59CFF0008A2997 /* ArrayDataSourceCase.m */; };
+		2D6D2A101D59D528008A2997 /* PhotoViewControllerCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D2A0F1D59D528008A2997 /* PhotoViewControllerCase.m */; };
+		2D6D2A121D59D585008A2997 /* PhotoCellCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D2A111D59D585008A2997 /* PhotoCellCase.m */; };
 		2D75DE2D1D4F3DB6009789CD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D75DE2C1D4F3DB6009789CD /* MobileCoreServices.framework */; };
 		2D75DE2F1D4F3DBC009789CD /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D75DE2E1D4F3DBC009789CD /* CoreSpotlight.framework */; };
 		2D75DE321D4F3E6E009789CD /* SearchApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D75DE311D4F3E6E009789CD /* SearchApiManager.m */; };
@@ -74,7 +77,6 @@
 		35403D441D05C556005D25CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35403D431D05C556005D25CE /* Assets.xcassets */; };
 		35403D471D05C556005D25CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35403D451D05C556005D25CE /* LaunchScreen.storyboard */; };
 		359142BF1D1317A5003EC0F4 /* Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 359142BE1D1317A5003EC0F4 /* Debug.m */; };
-		359142C41D131B6C003EC0F4 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 359142C31D131B6C003EC0F4 /* PhotoViewController.m */; };
 		359142C91D177545003EC0F4 /* DebugManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 359142C81D177545003EC0F4 /* DebugManager.m */; };
 		359142CC1D17755F003EC0F4 /* DebugView.m in Sources */ = {isa = PBXBuildFile; fileRef = 359142CB1D17755F003EC0F4 /* DebugView.m */; };
 		359142CF1D177578003EC0F4 /* DebugModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 359142CE1D177578003EC0F4 /* DebugModel.m */; };
@@ -152,6 +154,9 @@
 		2D6CCF461D2258D000C08A2B /* DebugObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugObject.m; sourceTree = "<group>"; };
 		2D6CCF481D2258F700C08A2B /* DebugNetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugNetWork.h; sourceTree = "<group>"; };
 		2D6CCF491D2258F700C08A2B /* DebugNetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugNetWork.m; sourceTree = "<group>"; };
+		2D6D29DC1D59CFF0008A2997 /* ArrayDataSourceCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayDataSourceCase.m; sourceTree = "<group>"; };
+		2D6D2A0F1D59D528008A2997 /* PhotoViewControllerCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewControllerCase.m; sourceTree = "<group>"; };
+		2D6D2A111D59D585008A2997 /* PhotoCellCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCellCase.m; sourceTree = "<group>"; };
 		2D75DE2C1D4F3DB6009789CD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		2D75DE2E1D4F3DBC009789CD /* CoreSpotlight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSpotlight.framework; path = System/Library/Frameworks/CoreSpotlight.framework; sourceTree = SDKROOT; };
 		2D75DE301D4F3E6E009789CD /* SearchApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchApiManager.h; sourceTree = "<group>"; };
@@ -252,8 +257,6 @@
 		35403D481D05C556005D25CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		359142BD1D1317A5003EC0F4 /* Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debug.h; sourceTree = "<group>"; };
 		359142BE1D1317A5003EC0F4 /* Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Debug.m; sourceTree = "<group>"; };
-		359142C21D131B6C003EC0F4 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
-		359142C31D131B6C003EC0F4 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		359142C71D177545003EC0F4 /* DebugManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugManager.h; sourceTree = "<group>"; };
 		359142C81D177545003EC0F4 /* DebugManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugManager.m; sourceTree = "<group>"; };
 		359142CA1D17755F003EC0F4 /* DebugView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebugView.h; path = ../DebugView.h; sourceTree = "<group>"; };
@@ -494,6 +497,9 @@
 				2D88F8701D543530007C3830 /* Info.plist */,
 				2D4E758B1D589A92008644E4 /* PhotoDataCase.h */,
 				2D4E74D51D5837B5008644E4 /* PhotoDataCase.m */,
+				2D6D29DC1D59CFF0008A2997 /* ArrayDataSourceCase.m */,
+				2D6D2A0F1D59D528008A2997 /* PhotoViewControllerCase.m */,
+				2D6D2A111D59D585008A2997 /* PhotoCellCase.m */,
 			);
 			path = "objc-ioTests";
 			sourceTree = "<group>";
@@ -665,8 +671,6 @@
 		359142C11D131B4E003EC0F4 /* SimpleTableView */ = {
 			isa = PBXGroup;
 			children = (
-				359142C21D131B6C003EC0F4 /* PhotoViewController.h */,
-				359142C31D131B6C003EC0F4 /* PhotoViewController.m */,
 			);
 			path = SimpleTableView;
 			sourceTree = "<group>";
@@ -1010,7 +1014,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D4E74D61D5837B5008644E4 /* PhotoDataCase.m in Sources */,
+				2D6D2A101D59D528008A2997 /* PhotoViewControllerCase.m in Sources */,
+				2D6D29DD1D59CFF0008A2997 /* ArrayDataSourceCase.m in Sources */,
 				2D88F86F1D543530007C3830 /* objc_ioTests.m in Sources */,
+				2D6D2A121D59D585008A2997 /* PhotoCellCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1057,7 +1064,6 @@
 				359142CC1D17755F003EC0F4 /* DebugView.m in Sources */,
 				35D542CB1D1FD3BA00240126 /* Crash+CoreDataProperties.m in Sources */,
 				2D47D19D1D5038E2007CA1A3 /* PasteBoard.m in Sources */,
-				359142C41D131B6C003EC0F4 /* PhotoViewController.m in Sources */,
 				359142BF1D1317A5003EC0F4 /* Debug.m in Sources */,
 				359142EB1D1F8EBC003EC0F4 /* VVStack.m in Sources */,
 				3500A4B21D28AC1500F55CF6 /* DebugHttpMonitor.m in Sources */,
