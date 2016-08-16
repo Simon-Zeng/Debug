@@ -13,6 +13,7 @@
 #import "DebugManager.h"
 #import "DebugNetWork.h"
 #import "NetWork.h"
+#import "ReadAndWriteLock.h"
 
 #define degreesToRadians(x) (M_PI*(x)/180.0) //把角度转换成PI的方式
 #define angleNeed(x) (M_PI*(x))
@@ -47,6 +48,22 @@
     //    [self post];
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
+    
+}
+
+
+- (void)testWriteLock
+{
+    for (NSUInteger i = 0; i<10; i++) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            NSLog(@"name:%@",[NSThread currentThread].name);
+            
+        });
+    }
+}
+
+- (void)testRead
+{
     
 }
 

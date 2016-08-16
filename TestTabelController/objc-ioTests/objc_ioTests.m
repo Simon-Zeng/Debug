@@ -22,13 +22,106 @@
 
 @interface objc_ioTests : XCTestCase
 @property (nonatomic, strong)STAlertView *alerView;
+@property (nonatomic, strong)NSCondition *condition;
+@property (nonatomic, assign) NSMutableArray* products;
 @end
 
 @implementation objc_ioTests
 
 - (void)setUp {
     [super setUp];
+    self.condition = [[NSCondition alloc]init];
+    
     // Put setup code here. This method is called before the invocation of each test method in the class.
+}
+
+- (void)testCondition
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self.condition lock];
+        while (self.products.count == 0) {
+            NSLog(@"wait");
+            [self.condition wait];
+        }
+        NSLog(@"customer a product");
+        [self.condition unlock];
+    });
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self.condition lock];
+        self.products = [NSMutableArray array];
+        [self.products addObject:[NSObject new]];
+        NSLog(@"produce a product");
+        [self.condition signal];
+        [self.condition unlock];
+    });
+}
+
+- (void)testDates
+{
+    for (NSUInteger i = 0; i<20; i++) {
+        long long dateTime = ((long long)(arc4random() % 100 * 60000 +1470971160)) * 1000;
+        long long dateTime2 = arc4random() % 100*60000+1470971160;
+
+        NSLog(@"%zi",arc4random() % 100 *60000);
+        NSLog(@"%lld",((long long)(arc4random() % 100 * 60000 +1470971160)) * 1000);
+        NSString *dateStr = [self dateFormatStr:dateTime];
+        NSString *dateStr2 = [self dateFormatStr:dateTime2];
+
+        NSLog(@"%zi----%zi",[[dateStr componentsSeparatedByString:@"-"].firstObject integerValue],[[dateStr2 componentsSeparatedByString:@"-"].firstObject integerValue]);
+        XCTAssert([[dateStr componentsSeparatedByString:@"-"].firstObject integerValue]<3000, @"时间错误");
+        XCTAssert([[dateStr2 componentsSeparatedByString:@"-"].firstObject integerValue]<3000, @"时间错误");
+        
+        
+//        XCTAssert([[dateStr componentsSeparatedByString:@"-"].firstObject integerValue]>2016, @"时间错误");
+        XCTAssert([[dateStr2 componentsSeparatedByString:@"-"].firstObject integerValue]>=2016, @"时间错误");
+            NSLog(@"原始值:%lld---------%lld",dateTime,dateTime2);
+            NSLog(@"%lld---------%lld",(long long)[self dateFormatFromDay:dateStr] * 1000,[self dateFormatFromDay:dateStr2]);
+        XCTAssertEqual([self dateFormatFromDay:dateStr] * 1000, dateTime);
+        XCTAssertEqual([self dateFormatFromDay:dateStr2], dateTime2);
+    }
+}
+
+- (NSString *)randomDate
+{
+    NSUInteger year = arc4random_uniform(98)+2001;
+    NSUInteger month = arc4random_uniform(11)+1;
+    NSUInteger day = arc4random_uniform(27)+1;
+    
+    NSUInteger hour = arc4random_uniform(23)+1;
+    NSUInteger sec = arc4random_uniform(59)+1;
+    
+    return [NSString stringWithFormat:@"%zi-%zi-%zi %zi:%zi",year,[self paddingWithNum:month],[self paddingWithNum:day],[self paddingWithNum:hour],[self paddingWithNum:sec]];
+}
+
+- (NSString *)paddingWithNum:(NSUInteger)num
+{
+    return num < 10 ? [NSString stringWithFormat:@"0%zi",num] : [NSString stringWithFormat:@"%zi",num];
+}
+
+- (NSString *)dateFormatStr:(long long)dateTime{
+    NSString *dateStr = [NSString stringWithFormat:@"%lld",dateTime];
+    if (dateStr.length >= 13) {//5.3数据升级5.4兼容
+        dateTime = dateTime/1000;
+    }
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:dateTime];
+    NSDateFormatter *dFormatter = [[NSDateFormatter alloc] init];
+    dFormatter.dateFormat = @"yyyy-MM-dd HH:mm";
+    return   [dFormatter stringFromDate:date];
+}
+
+- (long long)dateFormatFromDay:(NSString*)string
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    NSDate *destDate= [dateFormatter dateFromString:string];
+    return [self toUnixTimeInMillis:destDate]/1000;
+    
+}
+
+- (long long)toUnixTimeInMillis:(NSDate*)time
+{
+    return time ? (long long)([time timeIntervalSince1970] * 1000): 0;
 }
 
 - (void)tearDown {

@@ -130,7 +130,8 @@
 /// Returns the URL for a resource that's been added to the test target.
 - (NSURL *)URLForResource:(NSString *)name withExtension:(NSString *)extension
 {
-    return nil;
+    NSBundle *bundle = [NSBundle bundleForClass:[PhotoDataCase class]];
+    return [bundle URLForResource:name withExtension:extension];
 }
 
 /// Calls +[OCMockObject mockForClass:] and adds the mock and call -verify on it during -tearDown

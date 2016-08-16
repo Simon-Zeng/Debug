@@ -33,20 +33,20 @@
 }
 
 - (void)testLoading{
-    id mockNavController = [self autoVerifiedMockForClass:[UINavigationController class]];
-    PhotoController *photosvc = [[PhotoController alloc]init];
-    id photosMock = [self autoVerifiedPartialMockForObject:photosvc];
-    [[[photosMock stub] andReturn:mockNavController] navigationController];
-    
-    UIViewController *vc = [OCMArg checkWithBlock:^BOOL(id obj) {
-        PhotoViewController *photoVc = obj;
-        return [photoVc isKindOfClass:[PhotoViewController class]]&& photoVc.photo != nil;
-    }];
-    
-    [[mockNavController expect] pushViewController:vc animated:YES];
-    
-    UIView *view = photosvc.view;
-    XCTAssertNotNil(view,@"");
+//    id mockNavController = [self autoVerifiedMockForClass:[UINavigationController class]];
+//    PhotoController *photosvc = [[PhotoController alloc]init];
+//    id photosMock = [self autoVerifiedPartialMockForObject:photosvc];
+//    [[[photosMock stub] andReturn:mockNavController] navigationController];
+//    
+//    UIViewController *vc = [OCMArg checkWithBlock:^BOOL(id obj) {
+//        PhotoViewController *photoVc = obj;
+//        return [photoVc isKindOfClass:[PhotoViewController class]]&& photoVc.photo != nil;
+//    }];
+//    
+//    [[mockNavController expect] pushViewController:vc animated:YES];
+//    
+//    UIView *view = photosvc.view;
+//    XCTAssertNotNil(view,@"");
     
 }
 

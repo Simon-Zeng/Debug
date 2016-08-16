@@ -12,12 +12,15 @@
 		2D47D19D1D5038E2007CA1A3 /* PasteBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D47D19C1D5038E2007CA1A3 /* PasteBoard.m */; };
 		2D47D2051D5087EB007CA1A3 /* PasteTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D47D2041D5087EB007CA1A3 /* PasteTestController.m */; };
 		2D47D2091D50B573007CA1A3 /* taskDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D47D2081D50B573007CA1A3 /* taskDispatcher.m */; };
+		2D4A903D1D5DA447009D7CFE /* FileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4A903C1D5DA447009D7CFE /* FileReader.m */; };
 		2D4C8E231D3882A600A1ABED /* NSString+NumberMore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4C8E221D3882A600A1ABED /* NSString+NumberMore.m */; };
 		2D4C8E251D3883C800A1ABED /* Confuse.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D4C8E241D3883C800A1ABED /* Confuse.plist */; };
 		2D4CB4A31D2BC86E00B8023B /* DebugSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4CB4A21D2BC86E00B8023B /* DebugSearchBar.m */; };
 		2D4CB4A61D2BC89000B8023B /* UIScrollView+AddSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4CB4A51D2BC89000B8023B /* UIScrollView+AddSearch.m */; };
 		2D4E447D1D40A8A1006E2A98 /* DebugNetRemoveConfusion.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4E447C1D40A8A1006E2A98 /* DebugNetRemoveConfusion.m */; };
 		2D4E74D61D5837B5008644E4 /* PhotoDataCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4E74D51D5837B5008644E4 /* PhotoDataCase.m */; };
+		2D4E897C1D5AD2260042CDBF /* ocmocktestcase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4E897B1D5AD2260042CDBF /* ocmocktestcase.m */; };
+		2D4E89B11D5ADD9D0042CDBF /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4E89B01D5ADD9D0042CDBF /* Car.m */; };
 		2D6814BB1D3F28FF003659B0 /* ProcessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6814BA1D3F28FF003659B0 /* ProcessView.m */; };
 		2D6AF0871D41C47400CC465F /* BubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6AF0861D41C47400CC465F /* BubbleView.m */; };
 		2D6AF0891D41C79600CC465F /* bubbleSignal.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D6AF0881D41C79600CC465F /* bubbleSignal.png */; };
@@ -48,6 +51,7 @@
 		2D88F88E1D546A19007C3830 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88F88D1D546A19007C3830 /* Store.m */; };
 		2D88F8911D546A2B007C3830 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88F8901D546A2B007C3830 /* User.m */; };
 		2D88F8941D546EA0007C3830 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88F8931D546EA0007C3830 /* PhotoViewController.m */; };
+		2D90536F1D61735A00074D99 /* ReadAndWriteLock.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D90536E1D61735A00074D99 /* ReadAndWriteLock.m */; };
 		2D9E060C1D23A86500B7934E /* DebugActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E060B1D23A86500B7934E /* DebugActionView.m */; };
 		2D9E060F1D23A89600B7934E /* DebugActionNetWorkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E060E1D23A89600B7934E /* DebugActionNetWorkView.m */; };
 		2D9E06121D23A8AB00B7934E /* DebugActionCrashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E06111D23A8AB00B7934E /* DebugActionCrashView.m */; };
@@ -131,6 +135,8 @@
 		2D47D2041D5087EB007CA1A3 /* PasteTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasteTestController.m; sourceTree = "<group>"; };
 		2D47D2071D50B573007CA1A3 /* taskDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = taskDispatcher.h; sourceTree = "<group>"; };
 		2D47D2081D50B573007CA1A3 /* taskDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = taskDispatcher.m; sourceTree = "<group>"; };
+		2D4A903B1D5DA447009D7CFE /* FileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileReader.h; sourceTree = "<group>"; };
+		2D4A903C1D5DA447009D7CFE /* FileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileReader.m; sourceTree = "<group>"; };
 		2D4C8E211D3882A600A1ABED /* NSString+NumberMore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NumberMore.h"; sourceTree = "<group>"; };
 		2D4C8E221D3882A600A1ABED /* NSString+NumberMore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NumberMore.m"; sourceTree = "<group>"; };
 		2D4C8E241D3883C800A1ABED /* Confuse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Confuse.plist; sourceTree = "<group>"; };
@@ -142,6 +148,9 @@
 		2D4E447C1D40A8A1006E2A98 /* DebugNetRemoveConfusion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugNetRemoveConfusion.m; sourceTree = "<group>"; };
 		2D4E74D51D5837B5008644E4 /* PhotoDataCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDataCase.m; sourceTree = "<group>"; };
 		2D4E758B1D589A92008644E4 /* PhotoDataCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDataCase.h; sourceTree = "<group>"; };
+		2D4E897B1D5AD2260042CDBF /* ocmocktestcase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ocmocktestcase.m; sourceTree = "<group>"; };
+		2D4E89AF1D5ADD9D0042CDBF /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		2D4E89B01D5ADD9D0042CDBF /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 		2D6814861D3F1807003659B0 /* BaseMarco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMarco.h; sourceTree = "<group>"; };
 		2D6814B91D3F28FF003659B0 /* ProcessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessView.h; sourceTree = "<group>"; };
 		2D6814BA1D3F28FF003659B0 /* ProcessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessView.m; sourceTree = "<group>"; };
@@ -200,6 +209,8 @@
 		2D88F8C91D549293007C3830 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = "Pods/../build/Debug-iphoneos/OCMock/libOCMock.a"; sourceTree = "<group>"; };
 		2D88F8CB1D549297007C3830 /* libSTAlertView.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSTAlertView.a; path = "Pods/../build/Debug-iphoneos/STAlertView/libSTAlertView.a"; sourceTree = "<group>"; };
 		2D88F8CD1D54953C007C3830 /* libPods-TestTabelController.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-TestTabelController.a"; path = "../../../../Library/Developer/Xcode/DerivedData/TestTabelController-feeqsvleqbxflcejtomzfeuaehjh/Build/Products/Debug-iphonesimulator/libPods-TestTabelController.a"; sourceTree = "<group>"; };
+		2D90536D1D61735A00074D99 /* ReadAndWriteLock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadAndWriteLock.h; sourceTree = "<group>"; };
+		2D90536E1D61735A00074D99 /* ReadAndWriteLock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadAndWriteLock.m; sourceTree = "<group>"; };
 		2D9E060A1D23A86500B7934E /* DebugActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugActionView.h; sourceTree = "<group>"; };
 		2D9E060B1D23A86500B7934E /* DebugActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugActionView.m; sourceTree = "<group>"; };
 		2D9E060D1D23A89600B7934E /* DebugActionNetWorkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugActionNetWorkView.h; sourceTree = "<group>"; };
@@ -360,6 +371,24 @@
 			path = Task;
 			sourceTree = "<group>";
 		};
+		2D4A903A1D5DA435009D7CFE /* FileIO */ = {
+			isa = PBXGroup;
+			children = (
+				2D4A903B1D5DA447009D7CFE /* FileReader.h */,
+				2D4A903C1D5DA447009D7CFE /* FileReader.m */,
+				2D90536D1D61735A00074D99 /* ReadAndWriteLock.h */,
+				2D90536E1D61735A00074D99 /* ReadAndWriteLock.m */,
+			);
+			path = FileIO;
+			sourceTree = "<group>";
+		};
+		2D4B61401D5C303000722436 /* objc-io-2-并发编程 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "objc-io-2-并发编程";
+			sourceTree = "<group>";
+		};
 		2D4C8E1F1D3880F200A1ABED /* WiFi */ = {
 			isa = PBXGroup;
 			children = (
@@ -467,6 +496,7 @@
 		2D88F8531D54352F007C3830 /* objc-io */ = {
 			isa = PBXGroup;
 			children = (
+				2D4B61401D5C303000722436 /* objc-io-2-并发编程 */,
 				2D88F8951D547270007C3830 /* objc-io-单元测试 */,
 				2D88F8771D5436B9007C3830 /* objc-2-整洁代码 */,
 				2D88F8571D543530007C3830 /* AppDelegate.h */,
@@ -500,6 +530,7 @@
 				2D6D29DC1D59CFF0008A2997 /* ArrayDataSourceCase.m */,
 				2D6D2A0F1D59D528008A2997 /* PhotoViewControllerCase.m */,
 				2D6D2A111D59D585008A2997 /* PhotoCellCase.m */,
+				2D4E897B1D5AD2260042CDBF /* ocmocktestcase.m */,
 			);
 			path = "objc-ioTests";
 			sourceTree = "<group>";
@@ -538,6 +569,8 @@
 		2D88F8951D547270007C3830 /* objc-io-单元测试 */ = {
 			isa = PBXGroup;
 			children = (
+				2D4E89AF1D5ADD9D0042CDBF /* Car.h */,
+				2D4E89B01D5ADD9D0042CDBF /* Car.m */,
 			);
 			path = "objc-io-单元测试";
 			sourceTree = "<group>";
@@ -600,6 +633,7 @@
 		35403D361D05C556005D25CE /* TestTabelController */ = {
 			isa = PBXGroup;
 			children = (
+				2D4A903A1D5DA435009D7CFE /* FileIO */,
 				2D47D2061D5095E1007CA1A3 /* Task */,
 				2D75DE2B1D4F3D9E009789CD /* New */,
 				2D6AF0C31D4201C100CC465F /* Button */,
@@ -1001,6 +1035,7 @@
 				2D88F85C1D543530007C3830 /* ViewController.m in Sources */,
 				2D88F88A1D544749007C3830 /* PhotoCell+ConfigureForPhoto.m in Sources */,
 				2D88F8591D543530007C3830 /* AppDelegate.m in Sources */,
+				2D4E89B11D5ADD9D0042CDBF /* Car.m in Sources */,
 				2D88F87A1D5436E1007C3830 /* PhotoController.m in Sources */,
 				2D88F88E1D546A19007C3830 /* Store.m in Sources */,
 				2D88F87D1D5436FD007C3830 /* ArrayDataSource.m in Sources */,
@@ -1016,6 +1051,7 @@
 				2D4E74D61D5837B5008644E4 /* PhotoDataCase.m in Sources */,
 				2D6D2A101D59D528008A2997 /* PhotoViewControllerCase.m in Sources */,
 				2D6D29DD1D59CFF0008A2997 /* ArrayDataSourceCase.m in Sources */,
+				2D4E897C1D5AD2260042CDBF /* ocmocktestcase.m in Sources */,
 				2D88F86F1D543530007C3830 /* objc_ioTests.m in Sources */,
 				2D6D2A121D59D585008A2997 /* PhotoCellCase.m in Sources */,
 			);
@@ -1037,6 +1073,7 @@
 				3502063D1D0C4F69005787EE /* Context.m in Sources */,
 				350206411D0C4FAD005787EE /* UnauthorizedState.m in Sources */,
 				2DC373C81D2CE3F400CD04EA /* DebugServer.m in Sources */,
+				2D4A903D1D5DA447009D7CFE /* FileReader.m in Sources */,
 				2D4754831D251B190018A5FE /* NSString+Extension.m in Sources */,
 				35403D3C1D05C556005D25CE /* AppDelegate.m in Sources */,
 				35D542D11D1FD3BA00240126 /* NetWork.m in Sources */,
@@ -1074,6 +1111,7 @@
 				2D4C8E231D3882A600A1ABED /* NSString+NumberMore.m in Sources */,
 				3502063A1D0C469F005787EE /* checkFeed.m in Sources */,
 				35D542CF1D1FD3BA00240126 /* NetWork+CoreDataProperties.m in Sources */,
+				2D90536F1D61735A00074D99 /* ReadAndWriteLock.m in Sources */,
 				2D6AF0871D41C47400CC465F /* BubbleView.m in Sources */,
 				350206471D0CD437005787EE /* feeData.m in Sources */,
 				2D9E060F1D23A89600B7934E /* DebugActionNetWorkView.m in Sources */,

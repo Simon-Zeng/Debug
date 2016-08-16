@@ -15,6 +15,21 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
+  - BlocksKit (2.2.5):
+    - BlocksKit/All (= 2.2.5)
+  - BlocksKit/All (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+    - BlocksKit/MessageUI
+    - BlocksKit/UIKit
+  - BlocksKit/Core (2.2.5)
+  - BlocksKit/DynamicDelegate (2.2.5)
+  - BlocksKit/MessageUI (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - BlocksKit/UIKit (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
   - evernote-cloud-sdk-ios (2.0.5)
   - Masonry (1.0.1)
   - MJExtension (3.0.13)
@@ -27,6 +42,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - Aspects
+  - BlocksKit
   - evernote-cloud-sdk-ios
   - Masonry
   - MJExtension
@@ -39,6 +55,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   evernote-cloud-sdk-ios: 048cf5dcdc0c64069192d1336b7e121bc1a77e12
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
@@ -48,6 +65,6 @@ SPEC CHECKSUMS:
   SDAutoLayout: 1b2926b193a63287f473dae426ed07861e21e271
   STAlertView: bfcbdfed87dc7bfb35c04acd5d96aecebb923d48
 
-PODFILE CHECKSUM: eed6194678516186c8e98d5abfc5fc6a734bd6b4
+PODFILE CHECKSUM: 45b67ce910a41d5e732b69f6eaafe7a2e78ca1fa
 
 COCOAPODS: 1.0.1
