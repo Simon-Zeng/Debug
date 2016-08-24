@@ -4,6 +4,9 @@ platform :ios, '8.0'
 
 target 'TestTabelController' do
 pod 'BlocksKit'
+pod 'GYHttpMock'
+pod 'GYDataCenter'
+pod 'MLeaksFinder'
 pod 'STAlertView'
 pod 'evernote-cloud-sdk-ios'
 pod 'AFNetworking'

@@ -36,14 +36,14 @@
 /**
  *  单写
  */
-- setCount:(NSUInteger)count forKey:(NSString *)key
+- (void)setCount:(NSUInteger)count forKey:(NSString *)key
 {
     key = [key copy];
     dispatch_barrier_async(self.isolation, ^{
         if (count == 0) {
             [self.counts removeObjectForKey:key];
         }else{
-            self.counts[key] = count;
+            self.counts[key] = @(count);
         }
     });
 }
