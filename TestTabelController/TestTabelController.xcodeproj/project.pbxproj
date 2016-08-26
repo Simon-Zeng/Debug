@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D45B3801D702D2E000C51A0 /* calulate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D45B37F1D702D2E000C51A0 /* calulate.m */; };
 		2D47547F1D2510EB0018A5FE /* NetworkSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D47547E1D2510EB0018A5FE /* NetworkSerialization.m */; };
 		2D4754831D251B190018A5FE /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4754821D251B190018A5FE /* NSString+Extension.m */; };
 		2D47D19D1D5038E2007CA1A3 /* PasteBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D47D19C1D5038E2007CA1A3 /* PasteBoard.m */; };
@@ -75,7 +76,7 @@
 		3502064D1D0CD47B005787EE /* feed.m in Sources */ = {isa = PBXBuildFile; fileRef = 3502064C1D0CD47B005787EE /* feed.m */; };
 		350206501D0CD4B1005787EE /* concrteFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 3502064F1D0CD4B1005787EE /* concrteFeed.m */; };
 		35403D391D05C556005D25CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35403D381D05C556005D25CE /* main.m */; };
-		35403D3C1D05C556005D25CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35403D3B1D05C556005D25CE /* AppDelegate.m */; };
+		35403D3C1D05C556005D25CE /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35403D3B1D05C556005D25CE /* AppDelegate.mm */; };
 		35403D3F1D05C556005D25CE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35403D3E1D05C556005D25CE /* ViewController.m */; };
 		35403D421D05C556005D25CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35403D401D05C556005D25CE /* Main.storyboard */; };
 		35403D441D05C556005D25CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35403D431D05C556005D25CE /* Assets.xcassets */; };
@@ -125,6 +126,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D45B37E1D702D2E000C51A0 /* calulate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calulate.h; sourceTree = "<group>"; };
+		2D45B37F1D702D2E000C51A0 /* calulate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calulate.m; sourceTree = "<group>"; };
 		2D47547D1D2510EB0018A5FE /* NetworkSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkSerialization.h; sourceTree = "<group>"; };
 		2D47547E1D2510EB0018A5FE /* NetworkSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkSerialization.m; sourceTree = "<group>"; };
 		2D4754811D251B190018A5FE /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
@@ -259,7 +262,7 @@
 		35403D341D05C556005D25CE /* TestTabelController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTabelController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35403D381D05C556005D25CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35403D3A1D05C556005D25CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		35403D3B1D05C556005D25CE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		35403D3B1D05C556005D25CE /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		35403D3D1D05C556005D25CE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		35403D3E1D05C556005D25CE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		35403D411D05C556005D25CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -651,7 +654,9 @@
 				359142C01D1319F2003EC0F4 /* Memento */,
 				359142BC1D13178A003EC0F4 /* DeubgView */,
 				35403D3A1D05C556005D25CE /* AppDelegate.h */,
-				35403D3B1D05C556005D25CE /* AppDelegate.m */,
+				35403D3B1D05C556005D25CE /* AppDelegate.mm */,
+				2D45B37E1D702D2E000C51A0 /* calulate.h */,
+				2D45B37F1D702D2E000C51A0 /* calulate.m */,
 				35403D3D1D05C556005D25CE /* ViewController.h */,
 				35403D3E1D05C556005D25CE /* ViewController.m */,
 				35403D401D05C556005D25CE /* Main.storyboard */,
@@ -1075,7 +1080,7 @@
 				2DC373C81D2CE3F400CD04EA /* DebugServer.m in Sources */,
 				2D4A903D1D5DA447009D7CFE /* FileReader.m in Sources */,
 				2D4754831D251B190018A5FE /* NSString+Extension.m in Sources */,
-				35403D3C1D05C556005D25CE /* AppDelegate.m in Sources */,
+				35403D3C1D05C556005D25CE /* AppDelegate.mm in Sources */,
 				35D542D11D1FD3BA00240126 /* NetWork.m in Sources */,
 				35D542BC1D1FD1EE00240126 /* DebugObject.xcdatamodeld in Sources */,
 				35403D391D05C556005D25CE /* main.m in Sources */,
@@ -1085,6 +1090,7 @@
 				2D6CCF4A1D2258F700C08A2B /* DebugNetWork.m in Sources */,
 				2D47D2051D5087EB007CA1A3 /* PasteTestController.m in Sources */,
 				2D75DE351D4F3E99009789CD /* SearchTestVc.m in Sources */,
+				2D45B3801D702D2E000C51A0 /* calulate.m in Sources */,
 				35D542D31D1FD3BA00240126 /* DeviceID+CoreDataProperties.m in Sources */,
 				2D6AF0C61D4201FB00CC465F /* CustomerLabelContent.m in Sources */,
 				2D9E060C1D23A86500B7934E /* DebugActionView.m in Sources */,
@@ -1354,6 +1360,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64";
 			};
 			name = Debug;
 		};
@@ -1392,6 +1399,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64";
 			};
 			name = Release;
 		};

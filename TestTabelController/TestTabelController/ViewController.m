@@ -30,11 +30,13 @@
 #import "AnimateVc.h"
 #import "PasteTestController.h"
 #import "SDAutoLayout.h"
+#import "calulate.h"
 
 @interface ViewController ()<NSURLSessionTaskDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UIWindow *window;
 @property (strong, nonatomic) UITableView *table;
 @property (nonatomic, strong)NSArray *dataList;
+@property (nonatomic, strong)dispatch_block_t testblock;
 @end
 
 @implementation ViewController
@@ -47,7 +49,7 @@
 
 - (NSArray *)dataList
 {
-    return @[@"debug监听网络",@"新特性-searchapi",@"气泡动画",@"粘贴板"];
+    return @[@"debug监听网络",@"新特性-searchapi",@"气泡动画",@"粘贴板",@"mockhttp"];
 }
 
 - (NSArray<UIViewController *> *)subVcs
@@ -60,15 +62,19 @@
 }
 
 - (void)viewDidLoad {
+    NSLog(@"dsl---%f",mockCalulate(0).withAdd(5).withmultiply(2).result);
+    
     [super viewDidLoad];
-    
- 
-    
     self.table = [[UITableView alloc]init];
     self.table.delegate = self;
     self.table.dataSource = self;
     self.table.tableFooterView = [UIView new];
     [self.view addSubview:self.table];
+    
+    self.testblock = ^(){
+        NSLog(@"%@",self.dataList);
+    };
+    self.testblock();
     
     self.table.sd_layout.widthRatioToView(self.view,1).heightRatioToView(self.view,1).topSpaceToView(self.view,0).leftSpaceToView(self.view,0);
     

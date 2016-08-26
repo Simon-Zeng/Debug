@@ -15,13 +15,21 @@
 #import "NetWork.h"
 #import "ReadAndWriteLock.h"
 
+
 #define degreesToRadians(x) (M_PI*(x)/180.0) //把角度转换成PI的方式
 #define angleNeed(x) (M_PI*(x))
+
+
+
 @interface TestTabelControllerTests : XCTestCase<NSURLSessionDelegate>
 @property (nonatomic, strong)VVStack *stack;
 @property (nonatomic, strong)NSURLSession *session;
 @property (nonatomic, strong)DebugDB *db;
 @end
+
+
+
+
 
 @implementation TestTabelControllerTests
 
@@ -30,6 +38,13 @@
     _stack = [VVStack new];
     [DebugHttpMonitor setNetMonitorEnable:YES];
 }
+
+- (void)testMockRequest
+{
+    
+}
+
+
 
 - (void)confusionPlist
 {

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "BaseMarco.h"
+//#import "GYHttpMock.h"
 
 @interface AppDelegate ()
 
@@ -18,12 +19,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+    
     ViewController *vc = [[ViewController alloc]init];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
     nav.navigationBar.hidden = YES;
     UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
     window.rootViewController = nav;
     [window makeKeyAndVisible];
+    
+    
+    
+//    mockRequest(@"GET",@"http//www.goole.com");
     return YES;
 }
 
