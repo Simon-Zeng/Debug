@@ -31,6 +31,7 @@
 #import "PasteTestController.h"
 #import "SDAutoLayout.h"
 #import "calulate.h"
+//#import "WebViewController.h"
 
 @interface ViewController ()<NSURLSessionTaskDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UIWindow *window;
@@ -49,7 +50,7 @@
 
 - (NSArray *)dataList
 {
-    return @[@"debug监听网络",@"新特性-searchapi",@"气泡动画",@"粘贴板",@"mockhttp"];
+    return @[@"debug监听网络",@"新特性-searchapi",@"气泡动画",@"粘贴板",@"mockhttp",@"PerformanceWeb"];
 }
 
 - (NSArray<UIViewController *> *)subVcs
@@ -334,8 +335,13 @@
 #pragma mark UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UIViewController *vc = [self subVcs][indexPath.row];
-    [self.navigationController pushViewController:vc animated:YES];
+    if (indexPath.row == [self.dataList indexOfObject:@"PerformanceWeb"]) {
+//        WebViewController *vc = [[WebViewController alloc]init];
+//        [self.navigationController pushViewController:vc animated:YES];
+    }else{
+        UIViewController *vc = [self subVcs][indexPath.row];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 #pragma mark - NSURLSessionDelegate
 //- (void)URLSession:(NSURLSession *)session didBecomeInvalidWithError:(NSError *)error
@@ -369,4 +375,9 @@
 //{
 //    NSLog(@"didCompleteWithError");
 //}
+
+- (void)testMethod
+{
+    sleep(10);
+}
 @end

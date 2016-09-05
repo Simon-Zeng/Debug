@@ -27,9 +27,6 @@
     UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
     window.rootViewController = nav;
     [window makeKeyAndVisible];
-    
-    
-    
 //    mockRequest(@"GET",@"http//www.goole.com");
     return YES;
 }
