@@ -29,6 +29,8 @@ typedef calulate *(^division)(CGFloat);
 @property (nonatomic, strong,readonly)division withdivision;
 
 //calulate *mockCalulate(CGFloat initialize);
+
+- (void)testMethod;
 @end
 
 

@@ -31,7 +31,7 @@
 #import "PasteTestController.h"
 #import "SDAutoLayout.h"
 #import "calulate.h"
-//#import "WebViewController.h"
+#import "PRSQLAOPManager.h"
 
 @interface ViewController ()<NSURLSessionTaskDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UIWindow *window;
@@ -64,7 +64,6 @@
 
 - (void)viewDidLoad {
     NSLog(@"dsl---%f",mockCalulate(0).withAdd(5).withmultiply(2).result);
-    
     [super viewDidLoad];
     self.table = [[UITableView alloc]init];
     self.table.delegate = self;
@@ -78,6 +77,17 @@
     self.testblock();
     
     self.table.sd_layout.widthRatioToView(self.view,1).heightRatioToView(self.view,1).topSpaceToView(self.view,0).leftSpaceToView(self.view,0);
+    
+    PRSQLAOPManager *manager = [[PRSQLAOPManager alloc]init];
+    [PRSQLAOPManager aopFMDBQuery];
+
+    
+//    NSLog(@"开始:%zi,结束:%zi,花费时间:%zi",manager.begin,manager.end,manager.end - manager.begin);
+//    
+//    
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(15 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        NSLog(@"开始:%zi,结束:%zi,花费时间:%zi",manager.begin,manager.end,manager.end - manager.begin);
+//    });
     
 }
 
@@ -376,8 +386,5 @@
 //    NSLog(@"didCompleteWithError");
 //}
 
-- (void)testMethod
-{
-    sleep(10);
-}
+
 @end

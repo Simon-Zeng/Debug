@@ -50,6 +50,12 @@
     return [NSString stringWithFormat:@"result--%f,lastR---%f",self.result,self.lastResult];
 }
 
+- (void)testMethod
+{
+    NSLog(@"进入测试方法");
+    //    sleep(10);
+}
+
 @end
 
 calulate *mockCalulate(CGFloat initialize){

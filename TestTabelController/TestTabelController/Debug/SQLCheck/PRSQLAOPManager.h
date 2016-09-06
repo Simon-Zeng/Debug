@@ -10,10 +10,11 @@
 #import "PRManager.h"
 
 @interface PRSQLAOPManager : PRManager
-
+@property (nonatomic, assign) CFTimeInterval begin;
+@property (nonatomic, assign) CFTimeInterval end;
 /**
  *  监听fmdb的sql执行时间
  */
-- (void)aopFMDBQuery;
++ (void)aopFMDBQuery;
 
 @end

@@ -44,6 +44,7 @@
 		2D75DE351D4F3E99009789CD /* SearchTestVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D75DE341D4F3E99009789CD /* SearchTestVc.m */; };
 		2D75DE381D4F46D2009789CD /* DebugVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D75DE371D4F46D2009789CD /* DebugVc.m */; };
 		2D75DE3B1D4F475B009789CD /* AnimateVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D75DE3A1D4F475B009789CD /* AnimateVc.m */; };
+		2D868A7A1D7E687E008814DF /* PRTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D868A791D7E687E008814DF /* PRTimer.m */; };
 		2D88F8561D54352F007C3830 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88F8551D54352F007C3830 /* main.m */; };
 		2D88F8591D543530007C3830 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88F8581D543530007C3830 /* AppDelegate.m */; };
 		2D88F85C1D543530007C3830 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88F85B1D543530007C3830 /* ViewController.m */; };
@@ -201,6 +202,8 @@
 		2D75DE371D4F46D2009789CD /* DebugVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugVc.m; sourceTree = "<group>"; };
 		2D75DE391D4F475B009789CD /* AnimateVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimateVc.h; sourceTree = "<group>"; };
 		2D75DE3A1D4F475B009789CD /* AnimateVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimateVc.m; sourceTree = "<group>"; };
+		2D868A781D7E687E008814DF /* PRTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRTimer.h; sourceTree = "<group>"; };
+		2D868A791D7E687E008814DF /* PRTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRTimer.m; sourceTree = "<group>"; };
 		2D88F8521D54352F007C3830 /* objc-io.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "objc-io.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D88F8551D54352F007C3830 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2D88F8571D543530007C3830 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -410,6 +413,8 @@
 		2D4B0D6A1D7680580051F409 /* Debug */ = {
 			isa = PBXGroup;
 			children = (
+				2D868A781D7E687E008814DF /* PRTimer.h */,
+				2D868A791D7E687E008814DF /* PRTimer.m */,
 				2D50F21B1D7D59F9007657BF /* PRManager.h */,
 				2D50F21C1D7D59F9007657BF /* PRManager.m */,
 				2D72D34F1D795CB900C4638B /* PRGlobalDefines.h */,
@@ -1170,6 +1175,7 @@
 				35403D3C1D05C556005D25CE /* AppDelegate.mm in Sources */,
 				2D72D34E1D795C8B00C4638B /* PRUIMonitor.m in Sources */,
 				35D542D11D1FD3BA00240126 /* NetWork.m in Sources */,
+				2D868A7A1D7E687E008814DF /* PRTimer.m in Sources */,
 				35D542BC1D1FD1EE00240126 /* DebugObject.xcdatamodeld in Sources */,
 				35403D391D05C556005D25CE /* main.m in Sources */,
 				2D75DE321D4F3E6E009789CD /* SearchApiManager.m in Sources */,
