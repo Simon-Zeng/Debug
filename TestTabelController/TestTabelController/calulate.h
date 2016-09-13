@@ -12,7 +12,9 @@
 
 
 
-@interface calulate : NSObject
+#import "myMath.h"
+
+@interface calulate : myMath
 
 
 typedef calulate *(^add)(CGFloat);

@@ -128,8 +128,8 @@ extern "C" {
         [invocation invoke];
         id ret = nil;
         id obj;
-//        void *ret_p = (__bridge void *)ret;
-        [invocation getReturnValue:&obj];
+        void *ret_p = (__bridge void *)ret;
+        [invocation getReturnValue:&ret_p];
         
         NSTimeInterval intervarl = [timer interval];
         NSLog(@"方法花费的时间:%zi",intervarl);

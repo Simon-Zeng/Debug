@@ -32,12 +32,13 @@
 #import "SDAutoLayout.h"
 #import "calulate.h"
 #import "PRSQLAOPManager.h"
+#import <objc/runtime.h>
 
 @interface ViewController ()<NSURLSessionTaskDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UIWindow *window;
 @property (strong, nonatomic) UITableView *table;
 @property (nonatomic, strong)NSArray *dataList;
-@property (nonatomic, strong)dispatch_block_t testblock;
+@property (nonatomic, strong)dispatch_block_t testblock123;
 @end
 
 @implementation ViewController
@@ -62,19 +63,39 @@
     return [NSArray arrayWithObjects:search,Debug,animate,paste, nil];
 }
 
+- (void)allClassName {
+    int numClasses;
+    Class *classes = NULL;
+    numClasses = objc_getClassList(NULL, 0);
+    classes = NULL;
+    if (numClasses) {
+        classes = (__unsafe_unretained Class *)malloc(sizeof(Class) * numClasses);
+        numClasses = objc_getClassList(classes, numClasses);
+        
+        NSLog(@"类的数量:%d",numClasses);
+        
+        for (int i = 0; i<numClasses; i++) {
+            Class cls = classes[i];
+            NSLog(@"类名:%s",class_getName(cls));
+        }
+    }
+}
+
 - (void)viewDidLoad {
     NSLog(@"dsl---%f",mockCalulate(0).withAdd(5).withmultiply(2).result);
     [super viewDidLoad];
+    [self allClassName];
+    
     self.table = [[UITableView alloc]init];
     self.table.delegate = self;
     self.table.dataSource = self;
     self.table.tableFooterView = [UIView new];
     [self.view addSubview:self.table];
     
-    self.testblock = ^(){
+    self.testblock123 = ^(){
         NSLog(@"%@",self.dataList);
     };
-    self.testblock();
+    self.testblock123();
     
     self.table.sd_layout.widthRatioToView(self.view,1).heightRatioToView(self.view,1).topSpaceToView(self.view,0).leftSpaceToView(self.view,0);
     
@@ -386,5 +407,8 @@
 //    NSLog(@"didCompleteWithError");
 //}
 
-
+- (void)testMethod
+{
+    NSLog(@"进入测试方法");
+}
 @end

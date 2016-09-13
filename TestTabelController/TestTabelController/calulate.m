@@ -8,6 +8,10 @@
 
 #import "calulate.h"
 
+@interface calulate()
+@end
+
+
 @implementation calulate
 - (add)withAdd
 {
@@ -50,10 +54,9 @@
     return [NSString stringWithFormat:@"result--%f,lastR---%f",self.result,self.lastResult];
 }
 
-- (void)testMethod
+-(void)testMethod
 {
-    NSLog(@"进入测试方法");
-    //    sleep(10);
+    NSLog(@"进入子类");
 }
 
 @end
