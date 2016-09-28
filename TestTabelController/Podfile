@@ -2,6 +2,8 @@ platform :ios, '8.0'
 #use_frameworks!
 
 target 'TestTabelController' do
+pod 'SDWebImage'
+pod 'FDStackView'
 pod 'BlocksKit'
 pod 'YYCache'
 pod 'CocoaLumberjack'

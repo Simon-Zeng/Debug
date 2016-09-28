@@ -39,6 +39,7 @@
 		2D6D29DD1D59CFF0008A2997 /* ArrayDataSourceCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D29DC1D59CFF0008A2997 /* ArrayDataSourceCase.m */; };
 		2D6D2A101D59D528008A2997 /* PhotoViewControllerCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D2A0F1D59D528008A2997 /* PhotoViewControllerCase.m */; };
 		2D6D2A121D59D585008A2997 /* PhotoCellCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D2A111D59D585008A2997 /* PhotoCellCase.m */; };
+		2D7054D81D94CC5400B917B3 /* imageList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D7054D71D94CC5400B917B3 /* imageList.plist */; };
 		2D72D34E1D795C8B00C4638B /* PRUIMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D72D34D1D795C8B00C4638B /* PRUIMonitor.m */; };
 		2D72D3511D795CB900C4638B /* PRGlobalDefines.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2D72D3501D795CB900C4638B /* PRGlobalDefines.mm */; };
 		2D75DE2D1D4F3DB6009789CD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D75DE2C1D4F3DB6009789CD /* MobileCoreServices.framework */; };
@@ -65,6 +66,8 @@
 		2D88F8941D546EA0007C3830 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88F8931D546EA0007C3830 /* PhotoViewController.m */; };
 		2D89B6411D86476200BC2D1E /* myMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D89B6401D86476200BC2D1E /* myMath.m */; };
 		2D90536F1D61735A00074D99 /* ReadAndWriteLock.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D90536E1D61735A00074D99 /* ReadAndWriteLock.m */; };
+		2D9382F01D9267B4006E479B /* ImageCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9382EF1D9267B4006E479B /* ImageCacheManager.m */; };
+		2D9382F31D9267C4006E479B /* ImageDownLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9382F21D9267C4006E479B /* ImageDownLoad.m */; };
 		2D9E060C1D23A86500B7934E /* DebugActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E060B1D23A86500B7934E /* DebugActionView.m */; };
 		2D9E060F1D23A89600B7934E /* DebugActionNetWorkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E060E1D23A89600B7934E /* DebugActionNetWorkView.m */; };
 		2D9E06121D23A8AB00B7934E /* DebugActionCrashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E06111D23A8AB00B7934E /* DebugActionCrashView.m */; };
@@ -196,6 +199,7 @@
 		2D6D29DC1D59CFF0008A2997 /* ArrayDataSourceCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayDataSourceCase.m; sourceTree = "<group>"; };
 		2D6D2A0F1D59D528008A2997 /* PhotoViewControllerCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewControllerCase.m; sourceTree = "<group>"; };
 		2D6D2A111D59D585008A2997 /* PhotoCellCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCellCase.m; sourceTree = "<group>"; };
+		2D7054D71D94CC5400B917B3 /* imageList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = imageList.plist; sourceTree = "<group>"; };
 		2D72D34C1D795C8B00C4638B /* PRUIMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRUIMonitor.h; sourceTree = "<group>"; };
 		2D72D34D1D795C8B00C4638B /* PRUIMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRUIMonitor.m; sourceTree = "<group>"; };
 		2D72D34F1D795CB900C4638B /* PRGlobalDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRGlobalDefines.h; sourceTree = "<group>"; };
@@ -249,6 +253,10 @@
 		2D89B6401D86476200BC2D1E /* myMath.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = myMath.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		2D90536D1D61735A00074D99 /* ReadAndWriteLock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadAndWriteLock.h; sourceTree = "<group>"; };
 		2D90536E1D61735A00074D99 /* ReadAndWriteLock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadAndWriteLock.m; sourceTree = "<group>"; };
+		2D9382EE1D9267B4006E479B /* ImageCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCacheManager.h; sourceTree = "<group>"; };
+		2D9382EF1D9267B4006E479B /* ImageCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCacheManager.m; sourceTree = "<group>"; };
+		2D9382F11D9267C4006E479B /* ImageDownLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDownLoad.h; sourceTree = "<group>"; };
+		2D9382F21D9267C4006E479B /* ImageDownLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDownLoad.m; sourceTree = "<group>"; };
 		2D9E060A1D23A86500B7934E /* DebugActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugActionView.h; sourceTree = "<group>"; };
 		2D9E060B1D23A86500B7934E /* DebugActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugActionView.m; sourceTree = "<group>"; };
 		2D9E060D1D23A89600B7934E /* DebugActionNetWorkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugActionNetWorkView.h; sourceTree = "<group>"; };
@@ -690,6 +698,18 @@
 			path = NewFeature;
 			sourceTree = "<group>";
 		};
+		2D9382ED1D92678A006E479B /* Learn */ = {
+			isa = PBXGroup;
+			children = (
+				2D9382EE1D9267B4006E479B /* ImageCacheManager.h */,
+				2D9382EF1D9267B4006E479B /* ImageCacheManager.m */,
+				2D9382F11D9267C4006E479B /* ImageDownLoad.h */,
+				2D9382F21D9267C4006E479B /* ImageDownLoad.m */,
+				2D7054D71D94CC5400B917B3 /* imageList.plist */,
+			);
+			path = Learn;
+			sourceTree = "<group>";
+		};
 		2DB819491D3DDCA9007F099D /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -748,6 +768,7 @@
 		35403D361D05C556005D25CE /* TestTabelController */ = {
 			isa = PBXGroup;
 			children = (
+				2D9382ED1D92678A006E479B /* Learn */,
 				2D89B63E1D8633E300BC2D1E /* NewFeature */,
 				2D46079E1D8147E200297E9C /* Design */,
 				2D72D3521D79690700C4638B /* ThirdPart */,
@@ -1088,6 +1109,7 @@
 			files = (
 				35403D471D05C556005D25CE /* LaunchScreen.storyboard in Resources */,
 				2D6AF0891D41C79600CC465F /* bubbleSignal.png in Resources */,
+				2D7054D81D94CC5400B917B3 /* imageList.plist in Resources */,
 				35403D441D05C556005D25CE /* Assets.xcassets in Resources */,
 				35403D421D05C556005D25CE /* Main.storyboard in Resources */,
 			);
@@ -1228,9 +1250,11 @@
 				3500A4BC1D28B22400F55CF6 /* DebugURLSessionConfiguration.m in Sources */,
 				359142C91D177545003EC0F4 /* DebugManager.m in Sources */,
 				359142CF1D177578003EC0F4 /* DebugModel.m in Sources */,
+				2D9382F01D9267B4006E479B /* ImageCacheManager.m in Sources */,
 				2D4607A11D8147F800297E9C /* FSFeed.m in Sources */,
 				2D89B6411D86476200BC2D1E /* myMath.m in Sources */,
 				350206371D0C3FCE005787EE /* qingjiaModel.m in Sources */,
+				2D9382F31D9267C4006E479B /* ImageDownLoad.m in Sources */,
 				350206341D0C3FB4005787EE /* baoxiaoModel.m in Sources */,
 				2D4B0D701D76B5BC0051F409 /* PRAOPManager.m in Sources */,
 				2D47547F1D2510EB0018A5FE /* NetworkSerialization.m in Sources */,

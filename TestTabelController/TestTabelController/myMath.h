@@ -6,7 +6,7 @@
 //
 //
 
-#import "NSObject.h"
+#import <Foundation/Foundation.h>
 
 @interface myMath : NSObject
 

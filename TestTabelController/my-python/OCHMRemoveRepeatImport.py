@@ -16,12 +16,10 @@ def findStr(str):
         return True
     pass
 
-# line = f.readline()
-for line in f.readlines:
-    print line
-# while line:
-#     print(f.readline())
-#     line = f.readline()
+line = f.readline()
+while line:
+    print(f.readline())
+    line = f.readline()
     # if findStr(f.readline()):
     #     break
     # else:
